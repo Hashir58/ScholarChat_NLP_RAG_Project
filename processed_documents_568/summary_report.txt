@@ -1,0 +1,21 @@
+DOCUMENT PROCESSING SUMMARY (v2 - 'content' & 'content_type')
+==================================================
+
+Total documents processed: 568
+Processing approach: No additional chunking (original files as units)
+
+Documents by category:
+  - Icc: 87 documents
+  - Nlp: 58 documents
+  - Pakistan Studies: 120 documents
+  - Sealed Nectar: 303 documents
+
+Average document size: 582 tokens
+Size range: 17 - 3395 tokens
+
+Content Types (derived string):
+  - Technical, Definitions: 161 documents
+  - Technical, Structured, Definitions: 66 documents
+  - Technical, Structured: 80 documents
+  - Technical: 245 documents
+  - General: 16 documents

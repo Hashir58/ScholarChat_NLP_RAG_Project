@@ -1,0 +1,12 @@
+{
+  "model_name": "intfloat/e5-base",
+  "embedding_dim": 768,
+  "total_documents": 568,
+  "successful_documents": 568,
+  "failed_documents": 0,
+  "processing_time": 17.145676374435425,
+  "documents_per_second": 33.1278852811488,
+  "use_enhanced_metadata": true,
+  "batch_size": 32,
+  "document_format": "original_568_manual_chunks"
+}

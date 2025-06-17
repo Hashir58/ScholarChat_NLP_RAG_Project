@@ -6,11 +6,7 @@ RAG Pipeline Developer Guide & Optimization.pdf
 Summary of Changes Made (Original 568 Document Pathway).docx
 main.ipynb
 Course_RAG/
-faiss_vector_store_568/
-pipelines/
-processed_documents_568/
-rag_embeddings_568_complete/
-testing_on_orginal_Chunks.ipynb
+
 
 # Specific folders to ignore
 enhanced_chunks_650/ # You explicitly don't want this one
