@@ -1,8 +1,12 @@
-# Course-RAG-PROJECT
+# ScholarChat-RAG-PROJECT
 
 ### HOW TO run this Project Intall Python
 
 ### Just Download all the folders and open the ipynb file where the codes are and follow the instrcutions there...
+
+# Summary of Project
+
+## "Developed a multi-domain academic chatbot using a custom Retrieval-Augmented Generation pipeline. Curated and chunked 500+ segments from NLP, Cloud Computing, Pakistan Studies, and The Sealed Nectar. Employed transformer-based embeddings (intfloat/e5-base), FAISS for dense retrieval, and LLaMA 3.2B Instruct to generate context-aware, citation-backed responses."
 
 # DESCRIPTION OF PROJECT
 
