@@ -1,0 +1,22 @@
+Popular NLP Libraries and Tools
+
+StanfordCoreNLP: A powerful toolkit for various NLP tasks, written in Java.
+
+NLTK (Natural Language Toolkit): A Python library for basic and educational NLP tasks.
+
+PyTorch: A Python deep learning framework used for building and training models.
+
+TextBlob: A Python library that simplifies text processing and analysis.
+
+spaCy: An industrial-strength Python library for advanced NLP tasks.
+
+Polyglot: A Python library that supports multilingual NLP tasks.
+
+scikit-learn: A Python machine learning library often used with NLP for classification and clustering.
+
+OpenAI API: Provides access to advanced AI models for text generation, understanding, and more.
+
+SpeechRecognition: A Python library for converting speech to text.
+
+Google Cloud Speech: A cloud-based API for speech recognition services.
+

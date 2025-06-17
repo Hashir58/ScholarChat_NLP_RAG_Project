@@ -1,0 +1,79 @@
+Problems with the Boolean Model
+
+Very rigid:
+
+AND means all keywords must be present in a document.
+
+OR means any keyword can be present.
+This makes it hard to express complex or nuanced user requests.
+
+Difficult to control the number of documents retrieved:
+
+All documents that match the query are returned, often leading to too many or too few results.
+
+No easy way to adjust how many documents you get back.
+
+No ranking of results:
+
+All matched documents satisfy the query equally, so there's no way to order them by relevance.
+
+Difficult to perform relevance feedback:
+
+When a user marks a document as relevant or irrelevant, it’s unclear how to modify the query to improve results.
+
+
+
+Example (Document-Term Matrix)
+
+Imagine a table where:
+
+Rows = documents (D1 to D5)
+
+Columns = terms (T1 to T6)
+
+Each cell shows if a term appears in a document (present or absent).
+
+Example queries and results:
+
+Query: Islamabad OR University
+
+Finds documents containing either "Islamabad" or "University".
+
+Returns documents: D1, D2, D3, and D4.
+
+Query: Islamabad OR Capital
+
+Finds documents with "Islamabad" or "Capital".
+
+Returns: D1, D2, D3, D4, and D5.
+
+Query: Islamabad NOT University
+
+Finds documents with "Islamabad" but not "University".
+
+Returns: D2, D3, and D4.
+
+
+
+Feast or Famine Problem
+
+Boolean queries often return too few or too many results.
+
+Using AND narrows results too much, often too few documents.
+
+Using OR broadens results too much, often too many documents.
+
+It takes skill to write queries that return a useful number of documents.
+
+
+
+Evaluating Results
+
+When using Boolean search, you need to check:
+
+Are the correct documents included?
+
+How many incorrect or irrelevant documents are included?
+
+How do you know if the model is trustworthy and effective?
+

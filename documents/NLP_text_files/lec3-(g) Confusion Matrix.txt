@@ -1,0 +1,34 @@
+Confusion Matrix
+
+A confusion matrix helps us see where a classification model is making mistakes—where it gets "confused" between different classes.
+
+The rows show the actual classes (the true labels).
+
+The columns show the predicted classes (what the model guessed).
+
+For a binary classification (two classes, like Positive and Negative), the confusion matrix has four parts:
+
+True Positive (TP): The model correctly predicted Positive when the actual class is Positive.
+
+False Positive (FP): The model predicted Positive but the actual class is Negative (a wrong positive).
+
+False Negative (FN): The model predicted Negative but the actual class is Positive (a missed positive).
+
+True Negative (TN): The model correctly predicted Negative when the actual class is Negative.
+
+This matrix is essential because it helps calculate evaluation metrics like accuracy, precision, and recall.
+
+
+
+For more than two classes (multi-class), the confusion matrix grows into an N x N matrix, where N is the number of classes.
+
+For example, with three classes like urgent, normal, and spam:
+
+The matrix shows how many items of each actual class were predicted as each possible class.
+
+The diagonal cells represent correct predictions for each class (true positives).
+
+The off-diagonal cells show errors, like an "urgent" message wrongly classified as "normal."
+
+This helps calculate class-specific precision and recall, so you know how well the model performs on each category.
+

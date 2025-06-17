@@ -1,0 +1,123 @@
+Common Applications of NLP
+
+NLP is everywhere around us. It powers many tools and technologies we use every day. Below are some of the most common applications of Natural Language Processing, with simple explanations.
+
+
+
+1. Machine Translation
+
+This is the process of automatically translating text from one language to another.
+It helps people understand content written in other languages.
+Example:
+
+Translating “Good morning” from English to French → “Bonjour”
+
+
+
+2. Text Summarization
+
+NLP can shorten long documents into brief summaries while keeping the main message.
+It is useful for news apps, research papers, and reports.
+Example:
+
+A 3-page news article gets summarized in 3 sentences.
+
+
+
+3. Searching (Information Retrieval)
+
+Search engines like Google use NLP to understand your query and find the most relevant web pages.
+It doesn’t just look for keywords; it understands the meaning of your question.
+Example:
+
+You search: “Best restaurants in Lahore”
+
+Google shows local listings, not just pages that mention the word “restaurant.”
+
+
+
+4. Question Answering
+
+This refers to systems that can read a text or understand a query and give a direct answer.
+Used in search engines, voice assistants, and customer support.
+Example:
+
+You ask: “Who is the founder of Microsoft?”
+
+The system replies: “Bill Gates”
+
+
+
+5. Named Entity Recognition (NER)
+
+NER is used to find and label important pieces of information in text like names of people, places, organizations, dates, etc.
+Example:
+
+From the sentence: “Apple was founded by Steve Jobs in California,”
+
+NLP extracts:
+
+Person: Steve Jobs
+
+Organization: Apple
+
+Location: California
+
+
+
+6. Parts-of-Speech Tagging (POS Tagging)
+
+This involves identifying the grammatical role of each word in a sentence—whether it’s a noun, verb, adjective, etc.
+It helps machines understand sentence structure and meaning.
+Example:
+
+“The cat sleeps.”
+
+POS tags: “The (determiner) cat (noun) sleeps (verb)”
+
+
+
+7. Clustering
+
+This is used to group similar documents or texts together automatically, without labels.
+Very useful for organizing large sets of unstructured data like customer reviews, tweets, or news articles.
+Example:
+
+All articles about sports are grouped together, while articles about politics form another group.
+
+
+
+8. Sentiment Analysis
+
+This is the process of identifying emotions or opinions in text—whether something is positive, negative, or neutral.
+Used in reviews, surveys, social media, etc.
+Example:
+
+“I love this phone!” → Positive sentiment
+
+“This service is terrible.” → Negative sentiment
+
+
+
+9. Text Classification
+
+NLP systems can automatically assign a category or label to a piece of text.
+It’s used for spam detection, topic labeling, intent detection, etc.
+Example:
+
+An email is labeled as “Spam” or “Important”
+
+A tweet is classified as “Sports” or “Entertainment”
+
+
+
+10. Chatbots and Virtual Assistants
+
+NLP helps build chatbots that can talk to humans through text or voice.
+Virtual assistants like Alexa, Siri, and Google Assistant use NLP to understand your commands and respond accordingly.
+Example:
+
+You say: “Set an alarm for 6 AM”
+
+The assistant understands and sets the alarm
+

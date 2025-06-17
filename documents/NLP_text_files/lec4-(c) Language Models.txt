@@ -1,0 +1,68 @@
+Language Models: Deeper Dive
+
+A language model is essentially a probability distribution over sequences of words. It tells us how likely a sequence is to appear in a language.
+
+
+
+Mathematical Formulation
+
+Given a sequence of words W=w1,w2,...,wnW = w_1, w_2, ..., w_nW=w1​,w2​,...,wn​, the language model computes:
+
+P(W)=P(w1,w2,...,wn)P(W) = P(w_1, w_2, ..., w_n)P(W)=P(w1​,w2​,...,wn​) 
+
+This joint probability can be decomposed using the chain rule of probability:
+
+P(W)=P(w1)×P(w2∣w1)×P(w3∣w1,w2)×⋯×P(wn∣w1,...,wn−1)P(W) = P(w_1) \times P(w_2 | w_1) \times P(w_3 | w_1, w_2) \times \cdots \times P(w_n | w_1, ..., w_{n-1})P(W)=P(w1​)×P(w2​∣w1​)×P(w3​∣w1​,w2​)×⋯×P(wn​∣w1​,...,wn−1​) 
+
+
+
+Why Decompose?
+
+Because directly computing P(w1,w2,...,wn)P(w_1, w_2, ..., w_n)P(w1​,w2​,...,wn​) is almost impossible due to the enormous number of possible sequences.
+
+So instead, we calculate the probability of each word given the words that came before it.
+
+
+
+Example
+
+Consider the sentence: "I love natural language processing"
+
+A language model estimates:
+
+P("I love natural language processing")=P("I")×P("love"∣"I")×P("natural"∣"I love")×P("language"∣"I love natural")×P("processing"∣"I love natural language")P(\text{"I love natural language processing"}) = P(\text{"I"}) \times P(\text{"love"}|\text{"I"}) \times P(\text{"natural"}|\text{"I love"}) \times P(\text{"language"}|\text{"I love natural"}) \times P(\text{"processing"}|\text{"I love natural language"})P("I love natural language processing")=P("I")×P("love"∣"I")×P("natural"∣"I love")×P("language"∣"I love natural")×P("processing"∣"I love natural language") 
+
+
+
+Types of Language Models
+
+Unigram Model:
+Assumes each word is independent of others:
+
+P(W)=∏i=1nP(wi)P(W) = \prod_{i=1}^{n} P(w_i)P(W)=i=1∏n​P(wi​) 
+
+(ignores context, so not very accurate)
+
+Bigram Model:
+Looks at only the previous word (Markov assumption):
+
+P(wi∣w1,...,wi−1)≈P(wi∣wi−1)P(w_i | w_1, ..., w_{i-1}) \approx P(w_i | w_{i-1})P(wi​∣w1​,...,wi−1​)≈P(wi​∣wi−1​) 
+
+Trigram Model:
+Considers two previous words:
+
+P(wi∣w1,...,wi−1)≈P(wi∣wi−2,wi−1)P(w_i | w_1, ..., w_{i-1}) \approx P(w_i | w_{i-2}, w_{i-1})P(wi​∣w1​,...,wi−1​)≈P(wi​∣wi−2​,wi−1​) 
+
+Neural Language Models / Transformer-based Models:
+Use deep learning to consider long-range dependencies and complex contexts.
+
+
+
+Summary
+
+Language models predict the next word given the previous context.
+
+They enable applications like autocomplete, speech recognition, machine translation, and text generation.
+
+The core of language models is conditional probability — predicting P(wn∣w1,...,wn−1)P(w_n | w_1, ..., w_{n-1})P(wn​∣w1​,...,wn−1​).
+

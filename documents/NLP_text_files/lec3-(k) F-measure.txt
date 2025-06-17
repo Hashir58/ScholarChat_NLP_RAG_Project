@@ -1,0 +1,49 @@
+F-Measure (F1 Score)
+
+
+
+Definition:
+
+The F-Measure, commonly known as the F1 Score, is a metric that combines precision and recall into a single value. It is the harmonic mean of precision and recall. The F1 score is particularly useful when you need a balance between precision and recall, especially if there's an uneven class distribution.
+
+
+
+Formula:
+
+F1 Score = (2 * Precision * Recall) / (Precision + Recall)
+
+
+
+Alternatively, it can be expressed as:
+
+F1 Score = 2 / ( (1 / Precision) + (1 / Recall) )
+
+
+
+Explanation:
+
+*   Precision: Measures the accuracy of positive predictions (TP / (TP + FP)).
+
+*   Recall: Measures the ability to find all actual positives (TP / (TP + FN)).
+
+
+
+*   The F1 score seeks to find an optimal blend of precision and recall.
+
+*   It ranges from 0 to 1, where 1 indicates perfect precision and recall, and 0 indicates that either precision or recall (or both) is zero.
+
+*   The use of the harmonic mean is significant:
+
+    *   It penalizes extreme values more than an arithmetic mean would. This means if either precision or recall is very low, the F1 score will also be low. To achieve a high F1 score, both precision and recall must be reasonably high.
+
+    *   Unlike the arithmetic mean, which could be high even if one metric is very low and the other very high, the harmonic mean gives more weight to lower values. This reflects the common desire in many classification tasks to optimize both the ability to avoid false positives (precision) and the ability to avoid false negatives (recall) simultaneously.
+
+    *   For instance, if Precision = 1.0 (perfect) but Recall = 0.1 (very poor), the F1 score would be 2 * (1.0 * 0.1) / (1.0 + 0.1) = 0.2 / 1.1 ≈ 0.18, which is low, reflecting the poor recall. An arithmetic mean would be (1.0 + 0.1) / 2 = 0.55, which might give a misleadingly optimistic view of performance.
+
+
+
+When to use F1 Score:
+
+*   When you care equally about precision and recall.
+
+*   When dealing with imbalanced datasets, where accuracy can be misleading. For example, if 99% of instances are negative, a model predicting everything as negative would have 99% accuracy but would be useless for identifying positive cases. The F1 score would better reflect its poor performance on the positive class.

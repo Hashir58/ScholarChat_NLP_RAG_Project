@@ -1,0 +1,26 @@
+Approaches to NER
+
+List Lookup (Gazetteers)
+
+Pros: Simple, fast, language-independent.
+
+Cons: Limited to known entities, no handling of variants or ambiguity.
+
+Shallow Parsing + Contextual Rules
+
+Uses linguistic clues: capitalization, internal word structure, and local context patterns.
+
+Examples:
+
+Capitalized word followed by “Forest” or “Street” → likely location.
+
+Context phrases like “based in [Location]”.
+
+Challenges: Ambiguous capitalization, semantic ambiguity, structural ambiguity.
+
+Statistical and ML-based Approaches
+
+Models like CRF, HMM, or deep learning models (LSTM, Transformer-based).
+
+Learn from annotated corpora, use context and word features.
+

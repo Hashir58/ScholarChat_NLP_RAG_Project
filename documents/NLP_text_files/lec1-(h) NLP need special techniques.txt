@@ -1,0 +1,46 @@
+Why NLP Needs Special Techniques
+
+Because human language is full of ambiguity, context, hidden meanings, and exceptions, we can’t just use simple rules or logic to make computers understand it. We need to combine knowledge from many different fields to teach machines how to process language in a human-like way.
+
+Here’s a short explanation of the key fields that NLP depends on:
+
+
+
+1. Linguistics – Understanding how language works
+
+Linguistics helps us understand the structure of language, like grammar, syntax (sentence structure), semantics (meaning), and phonetics (sound).
+This knowledge is essential for breaking down sentences, identifying parts of speech, and figuring out how words relate to each other.
+
+
+
+2. Mathematics and Statistics – Finding patterns in language
+
+Language data is huge and messy. We use mathematical models and statistical methods to analyze patterns, like how often words appear together, or what word is likely to come next in a sentence.
+For example, we can calculate the probability that the next word after “I am” is “happy”.
+
+
+
+3. Artificial Intelligence and Machine Learning – Learning from data
+
+Instead of writing manual rules, we teach machines to learn from examples.
+Machine learning allows a system to look at thousands of sentences and figure out how language is used. Over time, it can predict answers, translate text, or understand emotions in new sentences it has never seen before.
+
+
+
+4. Psychology – Understanding how humans communicate
+
+Psychology helps us understand how people think, speak, and understand language.
+It gives insight into meaning, emotions, memory, and behavior — all important when building NLP systems like chatbots or voice assistants that need to “think” like a human.
+
+
+
+5. Databases and Algorithms – Handling big data and smart processing
+
+Language data comes from the web, books, news, tweets, emails — it's massive!
+Databases help us store and organize this data.
+Algorithms help us search, sort, and process it quickly — for example, finding the right answer in a question-answering system or clustering similar documents together.
+
+
+
+Each of these fields plays a unique role in helping machines understand the very thing that defines us as humans: language.
+

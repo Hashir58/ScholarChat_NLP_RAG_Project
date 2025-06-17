@@ -1,0 +1,23 @@
+Para-Virtualization  
+Para-Virtualization 
+In para-virtualization, the guest OS is modified to recognize that it's running in a virtualized 
+environment. This key difference allows the OS to directly communicate with the hypervisor, 
+which bypasses the need to emulate hardware, resulting in improved performance. 
+ Key Concepts: 
+ Hypercalls: These are system-call-like instructions sent from the guest OS to the 
+hypervisor instead of the hardware. They're used to request services such as memory 
+management and I/O operations. 
+ Optimized Code Paths: Para-virtualized OS may include special drivers and 
+optimizations that allow better performance in a virtualized setting. 
+Performance Advantage: Since the OS is aware of the virtualization and cooperates with the 
+hypervisor, less work is needed to intercept or emulate instructions, leading to faster execution 
+and lower overhead compared to full virtualization. Image Description: 
+ Bottom Layer (Red): Hardware base physical machine 
+ Above it (Purple): Modified hardware layer 
+ Middle Layer (Blue): Virtual Machine Monitor (Hypervisor) 
+ Top Layer (Green): "Modified Guest OS (Same hardware architecture Supported)" 
+blocks, each with "Applications" (Purple blocks) on top 
+ A blue box labeled VM management extensions points to the hypervisor layer 
+This setup shows modified guest OS instances designed to work efficiently in virtualized 
+environments, often using hypercalls for smoother communication. And they are effective. 
+ 

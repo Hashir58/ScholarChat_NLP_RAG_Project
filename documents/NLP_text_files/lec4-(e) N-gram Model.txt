@@ -1,0 +1,93 @@
+What is an N-gram Model?
+
+
+
+*   An n-gram is a contiguous sequence of 'n' items (typically words, but can also be characters or other linguistic units) from a given sample of text or speech.
+
+    *   Unigram (1-gram): A single word.
+
+        Examples: "please", "turn", "your", "homework", "in"
+
+    *   Bigram (2-gram): A sequence of two consecutive words.
+
+        Examples: "please turn", "turn your", "your homework", "homework in"
+
+    *   Trigram (3-gram): A sequence of three consecutive words.
+
+        Examples: "please turn your", "turn your homework", "your homework in"
+
+    *   And so on for 4-grams (four words), 5-grams (five words), etc.
+
+
+
+*   An n-gram model is a type of probabilistic language model that predicts the probability of a given word (w_n) occurring after a sequence of preceding words. It makes a simplifying assumption (called the Markov assumption) that the probability of the next word depends only on the previous 'n-1' words.
+
+
+
+*   The general probability of a word w_n given all preceding words w_1, w_2, ..., w_{n-1} is written as:
+
+    P(w_n | w_1, w_2, ..., w_{n-1})
+
+
+
+*   In an n-gram model, this probability is approximated by considering only the 'n-1' immediately preceding words:
+
+    P(w_n | w_1, w_2, ..., w_{n-1}) is approximated by P(w_n | w_{n-(n-1)}, ..., w_{n-1})
+
+    This means the model looks at a context window of size 'n-1' to predict the n-th word.
+
+
+
+    For specific values of 'n':
+
+    *   Unigram model (n=1): Assumes the probability of a word is independent of any prior words.
+
+        P(w_n | w_1, ..., w_{n-1}) is approximated by P(w_n)
+
+        This is simply the frequency of the word in the corpus.
+
+
+
+    *   Bigram model (n=2): The probability of a word depends only on the single immediately preceding word.
+
+        P(w_n | w_1, ..., w_{n-1}) is approximated by P(w_n | w_{n-1})
+
+        Example: P("your" | "turn")
+
+
+
+    *   Trigram model (n=3): The probability of a word depends only on the two immediately preceding words.
+
+        P(w_n | w_1, ..., w_{n-1}) is approximated by P(w_n | w_{n-2}, w_{n-1})
+
+        Example: P("homework" | "turn", "your")
+
+
+
+________________________________________
+
+Why do we use N-gram Models?
+
+
+
+*   Simplification (Markov Assumption): Calculating the probability of a word given *all* previous words in a long sequence is computationally very complex and requires an enormous amount of data to estimate reliably (due to the curse of dimensionality). N-gram models simplify this by assuming that only a limited, fixed-size context (the last n-1 words) is relevant for predicting the next word.
+
+
+
+*   Data efficiency and Estimation: The probabilities for n-grams can be estimated directly from their frequencies in a large training corpus.
+
+    For example, P(w_n | w_{n-1}) in a bigram model can be estimated as:
+
+    Count(w_{n-1}, w_n) / Count(w_{n-1})
+
+    where Count(w_{n-1}, w_n) is how many times the sequence "w_{n-1} w_n" appears, and Count(w_{n-1}) is how many times "w_{n-1}" appears. This count-based estimation is relatively straightforward.
+
+
+
+*   Good balance between context and feasibility:
+
+    *   Unigrams capture no context.
+
+    *   Very high 'n' values (e.g., 5-grams, 6-grams) capture more context but lead to sparsity issues (many n-grams will occur very few times or not at all in the training data, making probability estimates unreliable).
+
+    *   Bigrams and trigrams often provide a good balance. They capture some local word-to-word dependencies and context, which is useful for many NLP tasks (like speech recognition, machine translation, spelling correction, text generation), without requiring excessively large datasets or computational power.

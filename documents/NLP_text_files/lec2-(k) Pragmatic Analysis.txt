@@ -1,0 +1,11 @@
+What is Pragmatic Analysis?
+
+Pragmatic Analysis uses real-world knowledge and context to understand the actual meaning or intent behind a sentence.
+
+It helps decide things like whether a sentence is a request, a command, or a question.
+
+Example:
+“Give me the pencil.”
+
+Could be a polite request or a strict order, depending on context.
+

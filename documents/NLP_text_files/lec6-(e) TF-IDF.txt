@@ -1,0 +1,217 @@
+TF-IDF (Term Frequency - Inverse Document Frequency)
+
+
+
+TF-IDF measures the importance of a term in a document relative to a corpus (a collection of documents). It balances how frequent a term is in a document (TF) with how rare it is across all documents (IDF).
+
+
+
+________________________________________
+
+1. Term Frequency (TF)
+
+
+
+*   Measures how often a term appears in a document relative to the total number of terms in that document.
+
+*   Formula:
+
+    TF(t) = (Number of times term t appears in document) / (Total number of terms in document)
+
+________________________________________
+
+2. Inverse Document Frequency (IDF)
+
+
+
+*   Measures how rare or common a term is across all documents in the corpus.
+
+*   Formula:
+
+    IDF(t) = log((Total number of documents) / (Number of documents containing term t))
+
+    (Note: The 'log' here is often the natural logarithm (ln), but other bases can be used consistently.)
+
+*   Terms common to many documents (like "the", "and") have low IDF.
+
+*   Rare terms have high IDF, giving them more weight.
+
+________________________________________
+
+3. TF-IDF Score
+
+
+
+*   The TF-IDF score is the product of Term Frequency and Inverse Document Frequency.
+
+*   Formula:
+
+    TF-IDF(t) = TF(t) * IDF(t)
+
+*   A high TF-IDF score means the term is important in the specific document and rare in the corpus.
+
+________________________________________
+
+Example Calculation
+
+
+
+Sentences:
+
+1.  S1: "I love Pakistan"
+
+2.  S2: "Pakistan Zindabad"
+
+3.  S3: "I am Pakistan"
+
+
+
+Step 1: Tokenize
+
+*   S1 = ["I", "love", "Pakistan"]
+
+*   S2 = ["Pakistan", "Zindabad"]
+
+*   S3 = ["I", "am", "Pakistan"]
+
+
+
+Step 2: Calculate Term Frequency (TF) — What is it?
+
+Term Frequency is just a way to count how often a word shows up in a sentence (or document) compared to the total number of words in that sentence.
+
+
+
+How to calculate:
+
+*   Count how many times the word appears in the sentence.
+
+*   Divide that by the total number of words in the sentence.
+
+
+
+Example:
+
+Sentence 1: "I love Pakistan"
+
+*   Total words = 3
+
+*   "I" appears 1 time -> TF("I", S1) = 1 / 3 = 0.33 (approximately)
+
+*   "love" appears 1 time -> TF("love", S1) = 1 / 3 = 0.33 (approximately)
+
+*   "Pakistan" appears 1 time -> TF("Pakistan", S1) = 1 / 3 = 0.33 (approximately)
+
+This means each word has equal frequency in this sentence because they appear once and the sentence has three words.
+
+
+
+Step 3: Calculate IDF (Assuming natural log ln, corpus size = 3 documents)
+
+*   The term "I" appears in 2 documents (S1, S3).
+
+    IDF("I") = ln(Total number of documents / Number of documents containing "I")
+
+    IDF("I") = ln(3 / 2) which is approximately 0.405
+
+
+
+*   The term "love" appears in 1 document (S1).
+
+    IDF("love") = ln(Total number of documents / Number of documents containing "love")
+
+    IDF("love") = ln(3 / 1) which is approximately 1.099
+
+
+
+*   The term "Pakistan" appears in all 3 documents (S1, S2, S3).
+
+    IDF("Pakistan") = ln(Total number of documents / Number of documents containing "Pakistan")
+
+    IDF("Pakistan") = ln(3 / 3) = ln(1) = 0
+
+
+
+*   The term "Zindabad" appears in 1 document (S2).
+
+    IDF("Zindabad") = ln(Total number of documents / Number of documents containing "Zindabad")
+
+    IDF("Zindabad") = ln(3 / 1) which is approximately 1.099
+
+
+
+*   The term "am" appears in 1 document (S3).
+
+    IDF("am") = ln(Total number of documents / Number of documents containing "am")
+
+    IDF("am") = ln(3 / 1) which is approximately 1.099
+
+
+
+Step 4: Calculate TF-IDF — What is it?
+
+Now, TF-IDF takes the TF (how often the word appears in one sentence) and multiplies it by the IDF (how unique or rare the word is across all sentences).
+
+
+
+Simple meaning:
+
+*   If a word appears a lot in the sentence AND is rare in other sentences, it gets a high score.
+
+*   If a word is common across all sentences (like "Pakistan" in this example), the score will be low or zero.
+
+
+
+How to calculate TF-IDF:
+
+TF-IDF(term, document) = Term Frequency(term, document) * Inverse Document Frequency(term)
+
+
+
+Example:
+
+In Sentence 1, for the term "love":
+
+*   TF("love", S1) = 0.33 (approximately, from step 2)
+
+*   IDF("love") = 1.099 (approximately, because it appears in only 1 sentence out of 3)
+
+*   So, TF-IDF("love", S1) = 0.33 * 1.099 which is approximately 0.36
+
+That means "love" is important in Sentence 1 and unique to it (in this small corpus), so it gets a higher score.
+
+
+
+For the term "Pakistan" in Sentence 1:
+
+*   TF("Pakistan", S1) = 0.33 (approximately)
+
+*   IDF("Pakistan") = 0 (since "Pakistan" appears in all sentences)
+
+*   So, TF-IDF("Pakistan", S1) = 0.33 * 0 = 0, meaning it’s not useful to differentiate sentences based on this term in this corpus.
+
+
+
+Pros & Cons of TF-IDF
+
+
+
+Pros:
+
+*   Weights terms by importance: Gives higher importance to terms that are significant to a document but not common across all documents.
+
+*   Downweights common words: Common stop words like "the", "a", etc., get very low scores (due to high document frequency, leading to low IDF).
+
+*   Good for vector representation: Turns text into numerical vectors which can be used for Machine Learning models or similarity calculations.
+
+*   Language independent: Based purely on statistical counts, no language-specific rules are required for its basic calculation.
+
+
+
+Cons:
+
+*   No semantic understanding: Treats each word independently; doesn't understand synonyms (e.g., "car" and "automobile" are treated as different) or context.
+
+*   Sensitive to rare terms: Rare misspellings or very specific jargon may get high scores even if not broadly meaningful or if they are errors.
+
+*   Assumes documents are bags of words: Ignores word order and grammar, which can be important for understanding meaning.

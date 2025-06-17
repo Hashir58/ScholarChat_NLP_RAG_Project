@@ -1,0 +1,47 @@
+Community Cloud: Definition and Shared Infrastructure 
+A Community Cloud allows systems and services to be accessible by a specific group of 
+organizations that share common concerns, such as mission, security requirements, policy, and 
+compliance considerations.  
+The infrastructure of the community cloud is shared among the participating organizations. This 
+shared infrastructure can be managed in several ways: 
+• By a third party: An external entity might own and operate the community cloud on behalf 
+of the participating organizations. 
+• By a combination of one or more organizations in the community: The member 
+organizations themselves might jointly own, manage, and govern the cloud infrastructure. 
+• Hosted internally or externally: The physical infrastructure might reside on the premises 
+of one or more member organizations or be hosted by a third-party provider. 
+Logical Boundaries in Community Cloud: 
+While resources and infrastructure are shared in a community cloud, each participating 
+organization typically maintains its own logical boundaries within this shared environment. This 
+means: 
+1. Data Segregation: Organizations can keep their data separate and isolated from other 
+members of the community. This is often achieved using logical separation techniques 
+such as virtualization.  
+2. Security Policies: Each organization may implement and enforce its own specific security 
+policies, access controls, and governance rules, even though they are utilizing the same 
+physical infrastructure as other community members. 
+3. Shared Resources, Isolated Applications: While the underlying infrastructure (like 
+servers, storage, and networking hardware) is shared among the community members, the 
+security measures and logical configurations are often designed to ensure that each 
+organization’s data and applications remain isolated from those of others. 
+Purpose of a Community Cloud: 
+The primary purpose of a community cloud is to provide a shared cloud infrastructure tailored 
+to the specific needs of a group of organizations that have similar goals, security requirements, 
+compliance mandates, or operational needs. Organizations choose a community cloud for several 
+reasons: 
+
+1. Cost Sharing: The costs of building and maintaining the cloud infrastructure can be 
+distributed among all member organizations, making it more affordable than each 
+organization building its own private cloud. 
+2. Common Security and Compliance Needs: If multiple organizations operate under 
+similar regulatory, a community cloud can be designed to meet these shared requirements 
+efficiently. 
+3. Collaboration: It facilitates collaboration and data sharing between organizations that 
+have similar missions, research goals, or operational interests. 
+4. Customization: A community cloud can be tailored to the specific needs of its members, 
+offering more flexibility and specialized features than a generic public cloud, while still 
+benefiting from shared resources. 
+5. Improved Resource Utilization: Resources are pooled among the community members, 
+which can lead to better overall utilization of the infrastructure compared to individual 
+private clouds (which might have more idle capacity).  
+  

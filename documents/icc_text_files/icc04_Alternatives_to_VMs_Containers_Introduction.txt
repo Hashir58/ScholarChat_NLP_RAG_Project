@@ -1,0 +1,42 @@
+Do We Have an Alternative? (To Resource-Heavy VMs) 
+The preceding discussions on the drawbacks of virtualization, particularly the significant resource 
+consumption by each Virtual Machine (VM) due to running a full operating system and virtualized 
+hardware, naturally leads to the question of alternatives. The text prompts this with "Do we have 
+an alternative?" often accompanied by an image (like a landscape with wind turbines viewed from 
+a car window) that might metaphorically suggest looking towards new horizons or different 
+approaches. This question sets the stage for introducing a more lightweight virtualization 
+technology. 
+Containers: An Alternative Approach 
+The alternative introduced is Containers. The document often uses an image of physical shipping 
+containers in a logistics or industrial scene (e.g., a yellow container being lifted by a crane, with 
+stacks of other colorful containers in the background, set against a sunset). This visual serves as a 
+powerful analogy: 
+• Standardization: Just as physical shipping containers standardize the transport of goods, 
+software containers standardize the packaging and deployment of applications. 
+• Portability: Shipping containers can be moved between ships, trains, and trucks. Software 
+containers can be moved between different development, testing, and production 
+environments, and across different cloud providers or on-premise systems. 
+• Isolation (within limits): While a shipping container holds its contents separate from 
+others, it shares the transport vehicle. Similarly, software containers isolate applications 
+from each other but share the host operating system's kernel. 
+Container... An Alternatives (Definition and Core Concept) 
+A container is defined as a standard unit of software that packages up application code and 
+all its dependencies (libraries, binaries, configuration files). This packaging ensures that the 
+application runs quickly, reliably, and consistently when moved from one computing environment 
+to another. 
+Key characteristics and benefits of containers highlighted are: 
+• Shared OS Kernel: Unlike VMs, which each have their own full guest OS, all containers 
+running on a single host machine share the same host operating system kernel. They run 
+as isolated processes in user space. 
+• Instant Startup: Because they don't need to boot up an entire OS, containers can start 
+almost instantly, typically in seconds or even milliseconds. This is a significant advantage 
+over VMs, which can take minutes to boot. 
+
+• Efficient RAM Use: By sharing the host OS kernel and not requiring a separate OS for each 
+application, containers make more efficient use of RAM and other system resources 
+compared to VMs. 
+• Higher Density: Consequently, you can "stuff more containers on a server host than 
+VMs. " This means a single physical server can run a significantly larger number of 
+containerized applications than virtualized applications, leading to better server utilization 
+and potentially lower infrastructure costs. 
+ 

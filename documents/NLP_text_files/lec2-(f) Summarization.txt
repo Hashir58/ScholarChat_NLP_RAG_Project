@@ -1,0 +1,45 @@
+What is Text Summarization?
+
+Text summarization is the process of creating a short, clear, and accurate summary from a longer text. It helps you quickly understand the main points without reading the entire document.
+
+For example, search engines show short summaries (called snippets) under each search result to give you a quick idea of what the page is about.
+
+
+
+Real-World Example: Web Search Summarization
+
+When you search for “generative AI” on Google, you see a list of links. Under each link, there’s a short summary — a snippet taken from the web page. These snippets help you decide which link to click by showing key information in a few sentences.
+
+
+
+Types of Summarization
+
+Extractive Summarization
+
+Picks important sentences or phrases directly from the original text.
+
+Example: Taking every 3rd or 4th sentence from a paragraph to form the summary.
+
+It’s like highlighting key sentences.
+
+Abstractive Summarization
+
+Understands the main ideas and rewrites them in simpler, shorter language.
+
+The summary may use new sentences or words not found exactly in the original text.
+
+Similar to how humans write summaries by paraphrasing.
+
+
+
+Simple Example
+
+Original Text:
+“Generative AI refers to artificial intelligence systems that can create new content like text, images, or music. These systems learn patterns from data and generate creative outputs.”
+
+Extractive Summary:
+“Generative AI refers to artificial intelligence systems that can create new content like text, images, or music.”
+
+Abstractive Summary:
+“Generative AI creates new content by learning from existing data.”
+

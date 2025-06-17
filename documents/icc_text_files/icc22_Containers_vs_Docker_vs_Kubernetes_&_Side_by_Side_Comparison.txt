@@ -1,0 +1,52 @@
+Containers vs Docker vs Kubernetes: Defining Roles 
+To clarify the landscape of container technology, it's important to distinguish between three 
+related but distinct concepts: 
+1. Containers: 
+o Definition: A container is a lightweight, portable, executable unit of software that 
+packages up an application's code along with all its runtime dependencies 
+(libraries, configuration files, binaries). This self-contained package enables the 
+application to run consistently and reliably across different computing 
+environments. 
+o Purpose: The primary purpose of containers is to isolate applications from the 
+underlying infrastructure and from each other. This allows for easier deployment, 
+consistent operation, and better scalability, as the application environment is 
+encapsulated within the container. 
+2. Docker: 
+o Definition: Docker is a popular platform and toolset for developing, shipping, 
+and running containers. It provides the necessary tools and a runtime environment 
+to create container "images" (blueprints for containers), manage the lifecycle of 
+containers (start, stop, manage), and share these images via registries (like Docker 
+Hub).  
+o Purpose: Docker's purpose is to simplify the entire process of working with 
+containers, making it significantly easier for developers and operations teams to 
+build, distribute, and run containerized applications. 
+3. Kubernetes (often abbreviated as K8s): 
+o Definition: Kubernetes is an open-source container orchestration platform. It 
+automates the deployment, scaling, management, and operational tasks of 
+containerized applications across clusters of machines (which can be physical or 
+virtual). It was originally designed by Google and is now maintained by the Cloud 
+Native Computing Foundation (CNCF). 
+o Purpose: Kubernetes is designed to manage large numbers of containers 
+effectively in a production environment.  
+How is this different? (Containers vs. Virtual Machines - Architectural Comparison) 
+
+The document often includes a side-by-side visual comparison to starkly contrast the 
+architectures of "Containerized Applications" and "Virtual Machines": 
+Left Side ("Containerized Applications"): 
+• Bottom Layer (Green): "Infrastructure" (physical hardware). 
+• Middle Layer (Light Blue): "Host Operating System" (e.g., Linux, Windows). 
+• Layer Above (Dark Blue): "Docker" (or another containerization engine like containerd, 
+CRI-O). This layer mediates access to the Host OS kernel. 
+• Top Layer: Multiple separate application blocks are shown running directly on top of the 
+Docker layer. This visually implies that all these applications share the single Host OS 
+kernel. 
+Right Side ("Virtual Machines"): 
+• Bottom Layer (Green): "Infrastructure" (physical hardware). 
+• Middle Layer (Dark Blue): "Hypervisor" (e.g., VMware ESXi, Hyper-V , KVM). This runs 
+directly on the hardware (Type 1) or on a host OS (Type 2). 
+• Top Layer: Fewer, larger blocks, each labeled "Virtual Machine. " 
+o Inside each Virtual Machine block, there is a light blue layer for "Guest Operating 
+System" (each VM has its own complete OS). 
+o On top of each Guest OS, there is a darker blue block for the application(s) (e.g., 
+"App A" in one VM, "App B" in another). 
+ 

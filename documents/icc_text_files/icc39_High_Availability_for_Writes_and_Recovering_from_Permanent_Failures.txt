@@ -1,0 +1,41 @@
+High Availability for Writes (Vector Clocks and Reconciliation) 
+Problem: Ensuring high availability for write operations even during node failures or network partitions. 
+Technique Used: Vector Clocks with Reconciliation During Reads 
+High Availability for Writes: 
+Dynamo allows writes to succeed even when parts of the system are offline or disconnected. This can 
+lead to multiple conflicting versions of the same data. 
+Vector Clocks: 
+Each node maintains a logical timestamp that updates whenever it changes data. These timestamps 
+form a vector clock that helps identify which version of the data is newer or whether two versions 
+conflict. 
+Reconciliation During Reads: 
+To avoid blocking writes, Dynamo does not resolve data conflicts at write time. Instead, when a read 
+request is made, Dynamo compares the vector clocks of all versions and merges them if needed to 
+return a consistent version. 
+Example: 
+Imagine three users editing the same document independently. A vector clock tracks who made which 
+change. Reconciliation is like merging all edits into a final, unified document. 
+Purpose: 
+This method ensures that users can continue to write/update data even when some nodes are 
+unavailable, and conflicts are cleanly handled later without data loss. 
+Recovering from Permanent Failures & Membership Detection 
+Problem: Recovery from permanent node failures 
+Technique Used: Anti-Entropy Using Merkle Trees 
+ When a node fails permanently, it may result in lost or inconsistent data across the system. 
+ Dynamo uses anti-entropy protocols, where nodes periodically compare their data to detect 
+inconsistencies. 
+ A Merkle Tree is used for efficient comparison. It breaks the data into smaller pieces and uses 
+checksums (like fingerprints) to identify mismatches quickly. 
+ This allows only the differing parts to be synced, saving time and bandwidth. 
+Problem: Membership and failure detection 
+Technique Used: Gossip-Based Membership Protocol 
+ Nodes must know which other nodes are online or have failed. 
+ The gossip protocol helps achieve this. Each node randomly selects a few peers to share what it 
+knows about the system. 
+ Over time, this information spreads to all nodes, just like rumors in a social setting. 
+
+ This decentralized method is lightweight, scalable, and ensures that all nodes are updated about 
+the system’s state. 
+These techniques are essential for keeping a distributed system consistent, reliable, and fault-tolerant 
+even under stress or failure conditions. 
+ 

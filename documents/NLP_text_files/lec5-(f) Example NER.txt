@@ -1,0 +1,22 @@
+Example NER Output (BIO Tagging)
+
+Text:
+
+Foreign Ministry spokesman Shen Guofang told Reuters...
+
+Annotated tokens:
+
+Foreign (ORG)
+
+Ministry (ORG)
+
+spokesman (O)
+
+Shen (PER)
+
+Guofang (PER)
+
+told (O)
+
+Reuters (ORG)
+

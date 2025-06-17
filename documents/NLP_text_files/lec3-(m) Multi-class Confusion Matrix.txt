@@ -1,0 +1,54 @@
+Multi-class Confusion Matrix and Evaluation
+
+For multiple classes (like "urgent," "normal," and "spam"), the confusion matrix expands beyond 2x2, and you compute precision and recall for each class separately:
+
+For a given class (e.g., "urgent"):
+
+True Positives (TP) are items actually urgent and predicted urgent.
+
+False Positives (FP) are items predicted urgent but actually belong to other classes ("normal" or "spam").
+
+False Negatives (FN) are actual urgent items predicted as other classes.
+
+You calculate:
+
+Precision for "urgent" = TP_urgent / (TP_urgent + FP_urgent)
+
+Recall for "urgent" = TP_urgent / (TP_urgent + FN_urgent)
+
+Similarly, you compute precision and recall for "normal" and "spam" classes.
+
+Overall accuracy is the sum of all correct predictions (all true positives across classes) divided by total items.
+
+
+
+Multi-class Exercise Example (no table format)
+
+Imagine a dataset with these counts:
+
+Actual urgent items predicted as urgent: 96
+
+Actual urgent items predicted as normal: 3
+
+Actual urgent items predicted as spam: 1
+
+Actual normal items predicted as urgent: 4
+
+Actual normal items predicted as normal: 89
+
+Actual normal items predicted as spam: 7
+
+Actual spam items predicted as urgent: 2
+
+Actual spam items predicted as normal: 3
+
+Actual spam items predicted as spam: 95
+
+You can calculate precision and recall for each class using the formulas above:
+
+For urgent precision: true positives are 96; false positives are predictions of urgent that were actually normal or spam (4 + 2).
+
+For urgent recall: false negatives are actual urgent items predicted as normal or spam (3 + 1).
+
+And similarly for the other classes.
+

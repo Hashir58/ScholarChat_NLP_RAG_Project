@@ -1,0 +1,33 @@
+Handling Temporary Failures (Sloppy Quorum & Hinted Handoff) 
+Problem: Handling temporary failures 
+Techniques Used: Sloppy Quorum and Hinted Handoff 
+Traditional Quorum: 
+In distributed systems, a quorum is the number of nodes required to agree on a data update. 
+For example, in a 5-node system, a quorum might require 3 nodes to accept a write. 
+Sloppy Quorum: 
+ Relaxes the requirement of writing to specific nodes. 
+ If one node in the quorum is unavailable, another available node is temporarily used. 
+ This ensures availability and allows operations to continue during failures. 
+How It Works: 
+ If node C is down, write goes to node D instead. 
+ Later, node D syncs the data back to node C once it recovers. 
+Hinted Handoff: 
+ The alternate node (like D) stores the data with a "hint" that it belongs to node C. 
+ When node C comes back, the hinted data is forwarded to it and removed from D. 
+Benefits: 
+1. High Availability: Writes continue despite failures. 
+2. Fault Tolerance: Temporary nodes keep the system running. 
+3. Flexibility: Reduces downtime and delays for users. 
+Challenges: 
+ Eventual Consistency: Data might not be consistent immediately. 
+ Increased Latency: Synchronization introduces delay. 
+ Complexity: Handling handoffs and reconciliation can be intricate. 
+Example: 
+ System with 5 nodes: A, B, C, D, E 
+ Quorum: Write (W) = 3, Read (R) = 3 
+ Node B is down, write happens on Node D. 
+ Once B is back, data is synced from D to B. 
+Formula to Ensure Consistency: 
+
+ R + W > N (e.g., 3 + 3 > 5 = 6 > 5) ensures overlap and consistency. 
+ 

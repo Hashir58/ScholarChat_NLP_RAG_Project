@@ -1,0 +1,26 @@
+Web Technology and Basic Web Technology 
+Web Technology 
+(Image Description: The left side of the slide shows a smartphone angled slightly to the right. Its screen 
+displays a glowing blue world map with various white icons superimposed, such as a dollar sign, gears, a 
+cloud, a data graph, and a target symbol, all interconnected with lines. This visual represents global 
+connectivity and the diverse applications and services accessible via web and mobile technologies.) 
+Cloud Computing and Web Technology: Cloud services depend on the internet, web browsers, and web-
+based development tools. For example, a cloud-based file storage service like Google Drive uses web 
+technology for users to upload and manage files through a web browser, while the service itself 
+operates and manages data on cloud servers. 
+Similarly, AWS Management Console and Google Cloud Console are web-based dashboards allowing 
+users to manage their cloud resources, such as virtual machines and databases, through a browser. 
+Basic Web Technology 
+(Image Description: The left side of the slide features a stylized world map composed of white dots on a 
+light blue background. Several red pins mark locations on the map, and red dashed lines arch between 
+these pins, symbolizing global network connections and the reach of web technologies.) 
+ Uniform Resource Locator (URL): Used to identify and access resources on the web. The URL is 
+often structured using a logical network location. 
+ Hypertext Transfer Protocol (HTTP): The primary communications protocol used to exchange 
+content and data throughout the World Wide Web. URLs are typically transmitted via HTTP. 
+ Markup Languages (HTML, XML): Provide lightweight means of expressing web-centric data and 
+metadata. 
+o HTML: Defines how web pages look. 
+o XML: Describes and organizes data on the web. 
+In short, web technology helps build, access, and manage cloud services efficiently. 
+ 

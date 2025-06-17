@@ -1,0 +1,49 @@
+CAP Theorem: Illustrative Cases (Continued) 
+Building on the CAP theorem's principle that a distributed system can only guarantee two of the 
+three properties (Consistency, Availability, Partition Tolerance) at any given time, we explore 
+further scenarios: 
+• Case 2: Available but Inconsistent System (AP): 
+o This type of system prioritizes Availability and Partition Tolerance over strict, 
+immediate Consistency. 
+o Example: Social media platforms often fall into this category. When you post an 
+update, the platform remains operational and available to all users (Availability) 
+even if there are network issues between its distributed servers (Partition Tolerance). 
+However, your post might not instantly reflect on all servers or be visible to all your 
+followers immediately. There might be a slight delay (e.g., a few seconds) before the 
+data propagates and becomes consistent across the entire system. This eventual 
+consistency is generally acceptable in this context where uptime and 
+responsiveness are paramount. 
+• Case 3: Consistent and Available System (CA - In the absence of partitions): 
+o This scenario typically involves centralized systems, or distributed systems where 
+network partitions are assumed not to occur (a strong and often unrealistic 
+assumption for wide-area distributed systems). 
+o In such a setup, if there's a single server (or a tightly coupled cluster acting as one) 
+managing all requests, it can ensure both Consistency (all reads see the latest write) 
+and Availability (it's always up to respond). 
+o Limitation: The critical weakness here is the lack of Partition Tolerance. If that 
+central server or the communication to it fails, the entire system goes down, failing 
+on both availability and its ability to operate during a partition. This model is not 
+robust for typical distributed environments. 
+Importance of Partition Tolerance in Distributed Systems: 
+Among the three CAP properties, partition tolerance (P) is usually considered the most critical 
+and non-negotiable characteristic for most modern distributed systems.  
+Therefore, the practical design choice for distributed systems often boils down to selecting 
+between strong Consistency (CP systems) and high Availability (AP systems), assuming 
+Partition Tolerance is a must. 
+
+• Real-time applications like banking or financial transactions might prioritize strong 
+Consistency (CP) to ensure data accuracy and integrity, even if it means occasionally 
+sacrificing some availability during network issues. 
+• Applications like social media or e-commerce product listings might prioritize high 
+Availability (AP) to ensure the service is always responsive, even if it means some data 
+might be momentarily inconsistent (eventual consistency). 
+Database as a Service (DBaaS) - AWS DynamoDB Introduction: 
+This section transitions to a practical example of a distributed database designed with CAP trade-
+offs in mind. 
+• AWS DynamoDB: Amazon Web Services (AWS) offers a NoSQL database service 
+called DynamoDB. 
+• Purpose: DynamoDB is specifically used to design highly scalable applications without 
+the significant operational overhead typically associated with managing traditional 
+database infrastructure (like provisioning servers, patching, scaling, etc.). It's a fully 
+managed service. 
+ 

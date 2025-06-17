@@ -1,0 +1,12 @@
+Applications of NER
+
+Indexing and linking entities in documents.
+
+Sentiment analysis focused on companies/products.
+
+Populating knowledge bases and relations.
+
+Improving search engines and question answering.
+
+Enhancing features like smart email replies, calendar event extraction.
+

@@ -1,0 +1,44 @@
+Drawbacks Of Virtualization: Performance Issues 
+While virtualization offers numerous benefits, it's important to acknowledge potential drawbacks, 
+a primary one being performance issues. 
+• Overhead Introduction: Virtualization software (the hypervisor or Virtual Machine Monitor) 
+inherently introduces a certain amount of overhead to the computer system on which it 
+operates. This overhead stems from the additional layer of software that sits between the 
+virtual machines (VMs) and the physical hardware.  
+• Impact Assessment: Determining the precise overall impact that virtualization software 
+imposes on system performance can be a difficult and complex task. The extent of the 
+overhead can vary significantly based on the type of hypervisor used (Type 1 vs. Type 2), the 
+specific workloads running on the VMs, the configuration of the host system, and the 
+efficiency of the hardware's virtualization support. 
+• Areas of Impact: 
+o Processor and Memory: Generally speaking, modern virtualization solutions, 
+especially those leveraging hardware assistance, have a minimal impact on raw 
+processor and memory performance for most workloads. VMs can often execute 
+CPU-bound tasks and access memory with near-native speed. 
+o Disk and Networking: However, a more significant performance impact is often 
+observed in disk I/O and networking performance. Accessing storage and network 
+resources from within a VM usually involves the hypervisor mediating these 
+requests, which can introduce latency and reduce throughput compared to direct 
+hardware access. Optimizing storage and network configurationsis crucial to 
+mitigate these impacts. 
+Drawbacks Of Virtualization: Common Hardware 
+Another consideration when implementing virtualization revolves around the common 
+hardware shared by all virtual machines running on a single physical host. This shared nature 
+presents both benefits (like server consolidation) and potential drawbacks. 
+• Shared Resource Dependency: Since the only physical hardware on which the VMs run 
+is the same for all VMs on that host, all virtual machines are dependent on the capabilities 
+and limitations of that single set of physical components (CPU, RAM, storage controllers, 
+network interface cards). 
+
+• Compatibility and Requirements: A significant drawback arises if the operating system 
+(OS) or application you intend to virtualize has specific hardware requirements that are not 
+met by the host system, or if it's incompatible with the host's hardware architecture. 
+o Example: If an application requires a specialized piece of hardware (e.g., a specific 
+graphics card for CAD software, a particular industrial I/O card) that cannot be 
+effectively virtualized or passed through to the VM, or if the host server simply 
+doesn't possess it, then virtualizing that application on that host becomes 
+problematic or impossible. 
+• "Out of Luck" Scenario: The text succinctly states: "If the OS and application that you 
+want to virtualize are not capable of running on the system hardware or require other 
+hardware, you’re out of luck with virtualization. "  
+ 

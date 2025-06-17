@@ -1,0 +1,101 @@
+1. Accuracy
+
+
+
+Definition:
+
+Accuracy is a performance metric that measures the overall correctness of a classification model. It represents the proportion of total instances (or predictions) that the model classified correctly, encompassing both true positives and true negatives.
+
+
+
+Formula:
+
+Accuracy = (TP + TN) / (TP + FP + FN + TN)
+
+
+
+Explanation:
+
+*   TP (True Positives): The number of positive instances that were correctly classified as positive.
+
+*   TN (True Negatives): The number of negative instances that were correctly classified as negative.
+
+*   FP (False Positives): The number of negative instances that were incorrectly classified as positive (also known as a Type I error).
+
+*   FN (False Negatives): The number of positive instances that were incorrectly classified as negative (also known as a Type II error).
+
+
+
+*   The numerator (TP + TN) represents the total number of correct predictions made by the model.
+
+*   The denominator (TP + FP + FN + TN) represents the total number of instances or predictions made.
+
+*   Accuracy provides a general sense of how often the classifier is right overall. However, it can be misleading for imbalanced datasets (where one class significantly outnumbers others).
+
+
+
+________________________________________
+
+2. Precision
+
+
+
+Definition:
+
+Precision is a performance metric that measures the model’s ability to correctly identify only the relevant (positive) data points from all the instances it predicted as positive. It answers the question: "Of all the instances that the model labeled as positive, how many were actually positive?"
+
+
+
+Formula:
+
+Precision = TP / (TP + FP)
+
+
+
+Explanation:
+
+*   TP (True Positives): The number of positive instances correctly identified as positive.
+
+*   FP (False Positives): The number of negative instances incorrectly identified as positive.
+
+
+
+*   The denominator (TP + FP) represents the total number of instances the model predicted as positive.
+
+*   Precision focuses on the reliability of the positive predictions.
+
+*   High precision indicates that the model makes few false positive errors. For example, if a spam filter has high precision, it means that when it flags an email as spam, it is very likely to actually be spam.
+
+
+
+________________________________________
+
+3. Recall (also known as Sensitivity or True Positive Rate)
+
+
+
+Definition:
+
+Recall measures the model’s ability to find and identify all the actual relevant (positive) cases within the dataset. It answers the question: "Of all the actual positive instances in the data, how many did the model successfully detect?"
+
+
+
+Formula:
+
+Recall = TP / (TP + FN)
+
+
+
+Explanation:
+
+*   TP (True Positives): The number of positive instances correctly identified as positive.
+
+*   FN (False Negatives): The number of positive instances that the model incorrectly identified as negative (i.e., missed positive cases).
+
+
+
+*   The denominator (TP + FN) represents the total number of actual positive instances in the dataset.
+
+*   Recall focuses on the completeness of the positive predictions – how well the model avoids missing positives.
+
+*   High recall indicates that the model makes few false negative errors. For example, in a medical diagnosis task for a serious disease, high recall is crucial to ensure that most patients who actually have the disease are correctly identified.

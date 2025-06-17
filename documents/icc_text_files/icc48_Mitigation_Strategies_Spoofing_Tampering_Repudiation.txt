@@ -1,0 +1,50 @@
+ Mitigation Strategies (Spoofing, Tampering, Repudiation) 
+This section continues detailing mitigation strategies for threats identified through frameworks like 
+STRIDE, focusing on Spoofing, Tampering, and Repudiation. 
+1. Spoofing (Identity or Resource Impersonation) - Mitigation Techniques (Continued from 
+previous file/page context): 
+• Identity Federation: 
+o Technique: This approach allows users to authenticate using credentials from a 
+trusted third-party identity provider (IdP), such as Google, Microsoft (Azure AD), or 
+other enterprise identity systems. The application or service then trusts the 
+authentication performed by this external IdP . 
+o Benefit: Simplifies user management, allows for single sign-on (SSO) experiences, 
+and can leverage the robust security measures of established identity providers, 
+making it harder for attackers to spoof identities within the federated system. 
+2. Tampering (Data or System Modification) - Mitigation Techniques: 
+Tampering involves the unauthorized modification of data, either in transit over a network or at rest 
+within a storage system, or the unauthorized modification of system code or configurations. 
+• Data Integrity Checks: 
+o Technique: Employ mechanisms like hash functions (e.g., SHA-256) or digital 
+signatures to ensure that data has not been altered. A hash of the data is computed 
+before transmission or storage; upon retrieval, the hash is recomputed and 
+compared. If they match, the data's integrity is verified. Digital signatures provide 
+both integrity and authenticity. 
+• Encryption: 
+o Technique: Encrypt data both in transit (e.g., using TLS/SSL for network 
+communication) and at rest (e.g., encrypting data stored in databases or object 
+storage). Encryption makes data unreadable to unauthorized parties, thus 
+preventing meaningful tampering. 
+• Access Control (Least Privilege): 
+o Technique: Implement the principle of least privilege, where users and services are 
+granted only the minimum permissions necessary to perform their intended 
+functions. This minimizes the risk of internal or external attackers with 
+compromised accounts being able to tamper with critical data or systems. 
+
+3. Repudiation (Denial of Action or Accountability) - Mitigation Techniques: 
+Repudiation occurs when an entity denies having performed an action that they did, in fact, 
+perform. Mitigations focus on creating undeniable proof of actions. 
+• Comprehensive Logging and Auditing: 
+o Technique: Ensure that all significant actions, events, and transactions within the 
+system are logged in detail. These logs should be protected from tampering and be 
+readily accessible for review and auditing purposes. 
+• Immutable Logs: 
+o Technique: Use services or techniques that make logs unalterable once written. For 
+instance, services like AWS CloudTrail can be configured to deliver logs to an S3 
+bucket with write-once, read-many (WORM) characteristics or integrate with log 
+management systems that ensure immutability. 
+• Audit Trails: 
+o Technique: Maintain clear audit trails that ensure the traceability of all actions back 
+to a specific, authenticated user or system identity. This provides accountability for 
+any changes or operations performed. 
+ 

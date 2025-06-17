@@ -1,0 +1,27 @@
+Full Virtualization  
+Virtualization Approaches: 
+1. Full-Virtualization 
+2. Para-Virtualization 
+3. Binary Translation 
+4. Hardware-Assisted Virtualization 
+Full Virtualization 
+In full virtualization, the virtual machine (VM) runs an unmodified guest operating system (OS) that 
+believes it has full control over the hardware. This illusion is created by virtualization software, often 
+called a hypervisor, which fully emulates the underlying hardware. As a result, the VM behaves just like 
+it’s running on physical hardware. 
+Key Feature: The guest OS is completely unaware that it’s operating within a virtualized environment. 
+The hypervisor handles all interactions between the guest OS and the hardware. 
+Examples of Full Virtualization Solutions: 
+ VMware ESXi 
+ KVM (Kernel-based Virtual Machine) 
+ Microsoft Hyper-V 
+📊 Image Description: 
+The architecture diagram of Full Virtualization shows: 
+ Bottom Layer (Red): Hardware base physical machine 
+ Middle Layer (Blue): Virtual Machine Monitor (Hypervisor) 
+ Top Layer (Green): Multiple identical blocks labeled "Guest OS (Same hardware architecture 
+Supported)", with "Applications" (Purple blocks) on top 
+ A blue VM management extensions box points to the Hypervisor layer 
+This visual demonstrates how standard, unmodified guest OS instances operate on top of a hypervisor 
+that emulates hardware, creating a seamless virtual environment. 
+ 

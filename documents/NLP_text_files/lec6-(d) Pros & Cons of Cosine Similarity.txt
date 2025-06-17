@@ -1,0 +1,32 @@
+Pros & Cons of Cosine Similarity
+
+Pros:
+
+Scale-invariant:
+Not affected by vector magnitudes, only their direction, which helps when document lengths vary.
+
+Effective for high-dimensional data:
+Handles the large number of dimensions common in text data (e.g., thousands of unique words).
+
+Suitable for large datasets:
+Computationally efficient and scalable for comparing many documents.
+
+Easy interpretability:
+Similarity ranges from -1 (opposite) to 1 (identical), with 0 meaning orthogonal (no similarity).
+
+Invariant to vector length:
+Focuses on similarity in terms of presence or frequency patterns rather than raw word counts (especially with binary vectors).
+
+
+
+Cons:
+
+No semantic understanding:
+Treats each word independently without grasping synonyms or related meanings—unless combined with word embeddings.
+
+Not ideal for very sparse data:
+When documents share few common words, vectors mostly contain zeros, which may lead to unreliable similarity scores.
+
+Sensitive to outliers:
+A small number of rare or unique words might disproportionately influence similarity if not managed (e.g., through weighting).
+

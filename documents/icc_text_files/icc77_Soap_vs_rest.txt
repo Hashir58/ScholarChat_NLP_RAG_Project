@@ -1,0 +1,54 @@
+ 
+SOAP vs REST 
+SOAP (Simple Object Access Protocol) 
+ A protocol introduced in 1999. 
+ Focuses on exchanging structured XML messages between systems. 
+ Platform-agnostic and language-independent. 
+ Suited for enterprise-level systems needing strict standards, security, and reliability. 
+ However, it's considered heavyweight due to its complexity and reliance on XML. 
+REST (REpresentational State Transfer) 
+ Proposed by Roy Fielding in 2000. 
+ An architectural style, not a protocol. 
+ Uses simple HTTP methods: GET, POST, PUT, DELETE. 
+ Sends and receives data in JSON or XML formats. 
+ More lightweight and scalable than SOAP. 
+ Widely used in mobile apps and modern web services due to its simplicity and flexibility. 
+In REST, every interaction targets a resource, and the HTTP method used defines the action on that 
+resource. RESTful APIs became the standard for efficient, device-agnostic communication. 
+REST API in Action 
+A RESTful API uses HTTP methods to perform CRUD operations: 
+ POST → Create a new resource 
+ GET → Read or retrieve data 
+ PUT/PATCH → Update an existing resource 
+ DELETE → Remove a resource 
+Endpoints follow a consistent structure: 
+ Correct: 
+o POST /api/users 
+o GET /api/users 
+o PATCH /api/users/:id 
+o DELETE /api/users/:id 
+
+ Incorrect (non-RESTful): 
+o POST /api/createUsers 
+o GET /api/readUsers 
+o PUT /api/updateUser 
+o DELETE /api/deleteUsers 
+In REST: 
+ The endpoint refers to the resource (like /users). 
+ The HTTP verb defines the action. 
+ You should avoid including verbs in the URI path. 
+REST APIs allow a client (e.g., a mobile app) to request the state of an object from a server and get back 
+its representation—usually in JSON or XML. This is what the term Representational State Transfer 
+means. 
+What is SOAP? 
+SOAP (Simple Object Access Protocol) is a protocol for exchanging structured data via XML. It supports 
+strict security, transaction management, and is ideal for enterprise-level applications requiring 
+reliability. 
+SOAP in Action Example: 
+Imagine a banking service using SOAP to transfer funds: 
+Key Features of SOAP: 
+ Uses only XML. 
+ Has a fixed messaging structure (Envelope, Header, Body). 
+ Supports WS-Security for secure message exchange. 
+ Platform-agnostic but more complex than REST 
+ 

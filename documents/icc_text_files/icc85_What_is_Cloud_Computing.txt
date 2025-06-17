@@ -1,0 +1,39 @@
+What is Cloud Computing? 
+Cloud computing, defined by the National Institute of Standards and Technology (NIST), is: 
+"A model for enabling convenient, on-demand network access to a shared pool of configurable 
+computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly 
+provisioned and released with minimal management effort or service provider interaction." 
+10 Emerging Technologies in the Cloud Computing Zone 
+Cloud computing is closely linked with several emerging technologies that are shaping its future. These 
+include: 
+1. Containers: Lightweight units that package software and its dependencies. 
+2. Serverless Computing: Running applications without managing servers. 
+3. Microservices: Breaking down applications into small, independent services. 
+4. DevOps: Combining software development and IT operations for faster delivery. 
+5. Internet of Things (IoT): Connecting physical devices to the internet. 
+6. Artificial Intelligence (AI): Using machines to perform tasks that typically require human 
+intelligence. 
+7. Edge Computing: Processing data near the source to reduce latency. 
+8. Kubernetes: An open-source system for managing containerized applications. 
+9. DevSecOps: Integrating security into the DevOps process. 
+10. Open Source: Collaborative development that drives innovation. 
+These technologies contribute to cloud computing’s flexibility, scalability, and capability, making cloud 
+solutions more powerful and efficient. 
+ 
+Understanding Cloud Computing Through an Example 
+Consider you need powerful computational resources for a complex problem. Traditionally, you had 
+three options: 
+ Option 1: Buy yourself. 
+Order a server from manufacturers like HP, IBM, or Dell. Install it in your own data center or 
+rented colocation space (e.g., Switch, Equinix). You are responsible for maintenance and 
+upkeep. 
+ Option 2: Lease a server. 
+Lease equipment from a leasing company, which delivers the hardware to you. You still install 
+and configure it in your data center or colocation facility. 
+
+ Option 3: Rent a server. 
+Rent from managed service providers like Savvis, Rackspace, or Terremark. They allocate and 
+deploy servers for you in their data centers. You operate the server, but infrastructure 
+management is theirs. 
+ 
+ 

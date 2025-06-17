@@ -1,0 +1,273 @@
+What are Vector Space Models (VSMs)?
+
+
+
+*   Vector Space Models (VSMs) are a way to represent text documents as mathematical vectors, which are essentially lists of numbers.
+
+*   In this model, each unique word found across the entire collection of documents (corpus) acts as a dimension in a high-dimensional space.
+
+*   This numerical representation allows text to be compared, analyzed, or manipulated using mathematical operations and algorithms.
+
+________________________________________
+
+What are VSMs used for?
+
+
+
+VSMs are utilized in a variety of Natural Language Processing (NLP) and Information Retrieval (IR) tasks, including:
+
+*   Finding similar documents or texts: Identifying documents that share similar content.
+
+*   Classifying documents into categories: Assigning documents to predefined topics or classes.
+
+*   Summarizing content: Extracting key information from texts.
+
+*   Identifying topics: Discovering underlying themes in a collection of documents (topic modeling).
+
+*   Translating languages: As a component in some machine translation systems.
+
+*   Any task where understanding the semantic relationship or comparing text content is important.
+
+________________________________________
+
+How do we build and use a VSM? (Step-by-step)
+
+
+
+1.  Get the text data: Collect the documents, sentences, or text snippets you want to model. This is your corpus.
+
+2.  Clean the text (Preprocessing):
+
+    *   Tokenization: Break down the text into individual words or tokens.
+
+    *   Lowercasing: Convert all text to a consistent case, usually lowercase, to treat words like "The" and "the" as the same.
+
+    *   Stop word removal: Remove common words (e.g., "is", "a", "the", "in") that typically don't carry significant meaning for differentiating documents.
+
+    *   Stemming/Lemmatization: Reduce words to their root or base form (e.g., "running" to "run", "studies" to "study"). Lemmatization is generally more linguistically accurate than stemming.
+
+3.  Build a vocabulary: Create a comprehensive list of all unique words (terms) that remain after the cleaning process across all documents in the corpus. The order of words in this vocabulary will define the order of components in the vectors.
+
+4.  Create vectors (Document Representation): Represent each document as a numerical vector. Each element in the vector corresponds to a word in the vocabulary. The value of each element can be determined in several ways:
+
+    *   Binary: 1 if the word is present in the document, 0 if absent.
+
+    *   Term Frequency (TF): The count of how often a word appears in the document, possibly normalized by the total number of words in that document.
+
+    *   TF-IDF (Term Frequency-Inverse Document Frequency): A weighted score that gives higher importance to words that are frequent in a specific document but rare across the entire corpus.
+
+5.  Calculate similarity: Use a similarity measure (like cosine similarity) to quantify how close or related document vectors are to each other in the vector space.
+
+6.  Search/query (Information Retrieval): For search applications, a user's query is also converted into a vector. This query vector is then compared against all document vectors in the corpus using the chosen similarity measure to find the most relevant documents.
+
+________________________________________
+
+Strengths of VSMs
+
+
+
+*   Flexible: Can be applied to a wide range of text analysis tasks and different types of textual data.
+
+*   Scalable: Can handle large collections of documents and extensive vocabularies, especially with efficient data structures.
+
+*   Effective at measuring similarity: Generally good at determining the degree of relatedness between two pieces of text based on shared terms.
+
+*   Language independent (at a basic level): The core mechanism of counting words and creating vectors doesn't rely on deep grammatical rules of a specific language, making it broadly applicable.
+
+*   Handles sparse data well: Most document vectors will have many zero entries (since a document usually contains only a small subset of the total vocabulary). VSMs and associated algorithms are often designed to work efficiently with such sparse vectors.
+
+________________________________________
+
+Weaknesses of VSMs
+
+
+
+*   No context understanding (Bag-of-Words assumption): VSMs typically treat words as independent units, ignoring the order of words and the grammatical structure. This means the meaning derived from word context (e.g., "apple" the fruit vs. "Apple" the company) can be lost. "Bank" in "river bank" and "investment bank" would be treated as the same dimension.
+
+*   Struggles with phrases or sentence meaning: The model doesn't inherently capture the meaning of multi-word expressions, idioms, or the overall semantic meaning of a sentence beyond the sum of its words.
+
+*   Semantic drift and polysemy problems:
+
+    *   Semantic drift: The meaning of words can change over time, which VSMs built on older corpora might not capture.
+
+    *   Polysemy: Words with multiple meanings can lead to ambiguous or muddled vector representations because the same term contributes to the vector regardless of its intended sense in a particular context.
+
+________________________________________
+
+Example: Vector Space Model with 3 documents
+
+
+
+Documents:
+
+*   Doc1: "I love Pakistan"
+
+*   Doc2: "Pakistan Zindabad"
+
+*   Doc3: "I am Pakistan"
+
+________________________________________
+
+Step 1: Build Vocabulary
+
+(Assuming minimal preprocessing: tokenization and lowercasing. No stop word removal or stemming for this simple example.)
+
+Collect all unique words from these documents:
+
+Vocabulary = ["i", "love", "pakistan", "zindabad", "am"]
+
+The order in this list determines the dimension of our vectors.
+
+________________________________________
+
+Step 2: Calculate Term Frequency (TF)
+
+Term Frequency (TF) for a term 't' in a document 'd' is calculated as:
+
+TF(t, d) = (Number of times term 't' appears in document 'd') / (Total number of terms in document 'd')
+
+
+
+*   Doc1: "i love pakistan" (3 words)
+
+    *   TF("i", Doc1) = 1/3
+
+    *   TF("love", Doc1) = 1/3
+
+    *   TF("pakistan", Doc1) = 1/3
+
+    *   TF("zindabad", Doc1) = 0/3 = 0
+
+    *   TF("am", Doc1) = 0/3 = 0
+
+
+
+*   Doc2: "pakistan zindabad" (2 words)
+
+    *   TF("i", Doc2) = 0/2 = 0
+
+    *   TF("love", Doc2) = 0/2 = 0
+
+    *   TF("pakistan", Doc2) = 1/2
+
+    *   TF("zindabad", Doc2) = 1/2
+
+    *   TF("am", Doc2) = 0/2 = 0
+
+
+
+*   Doc3: "i am pakistan" (3 words)
+
+    *   TF("i", Doc3) = 1/3
+
+    *   TF("love", Doc3) = 0/3 = 0
+
+    *   TF("pakistan", Doc3) = 1/3
+
+    *   TF("zindabad", Doc3) = 0/3 = 0
+
+    *   TF("am", Doc3) = 1/3
+
+________________________________________
+
+Step 3: Represent each document as a vector
+
+Using the vocabulary order ["i", "love", "pakistan", "zindabad", "am"], the TF vectors are:
+
+
+
+*   V_Doc1 = [1/3, 1/3, 1/3, 0, 0]
+
+           (approx. [0.333, 0.333, 0.333, 0, 0])
+
+
+
+*   V_Doc2 = [0, 0, 1/2, 1/2, 0]
+
+           (approx. [0, 0, 0.5, 0.5, 0])
+
+
+
+*   V_Doc3 = [1/3, 0, 1/3, 0, 1/3]
+
+           (approx. [0.333, 0, 0.333, 0, 0.333])
+
+________________________________________
+
+Step 4: Compare documents using these vectors (e.g., using Cosine Similarity)
+
+We can now calculate how similar these documents are by comparing their vectors mathematically. Let's calculate the cosine similarity between Doc1 and Doc3.
+
+
+
+Formula for Cosine Similarity:
+
+Cosine Similarity(A, B) = (A . B) / (||A|| * ||B||)
+
+Where:
+
+A . B = Dot product of A and B
+
+||A|| = Magnitude of A
+
+||B|| = Magnitude of B
+
+
+
+Let A = V_Doc1 = [1/3, 1/3, 1/3, 0, 0]
+
+Let B = V_Doc3 = [1/3, 0, 1/3, 0, 1/3]
+
+
+
+a. Calculate the Dot Product (V_Doc1 . V_Doc3):
+
+V_Doc1 . V_Doc3 = (1/3 * 1/3) + (1/3 * 0) + (1/3 * 1/3) + (0 * 0) + (0 * 1/3)
+
+                 = 1/9 + 0 + 1/9 + 0 + 0
+
+                 = 2/9 (approx. 0.222)
+
+
+
+b. Calculate the Magnitude of V_Doc1 (||V_Doc1||):
+
+||V_Doc1|| = sqrt((1/3)^2 + (1/3)^2 + (1/3)^2 + 0^2 + 0^2)
+
+           = sqrt(1/9 + 1/9 + 1/9 + 0 + 0)
+
+           = sqrt(3/9)
+
+           = sqrt(1/3) (approx. 0.577)
+
+
+
+c. Calculate the Magnitude of V_Doc3 (||V_Doc3||):
+
+||V_Doc3|| = sqrt((1/3)^2 + 0^2 + (1/3)^2 + 0^2 + (1/3)^2)
+
+           = sqrt(1/9 + 0 + 1/9 + 0 + 1/9)
+
+           = sqrt(3/9)
+
+           = sqrt(1/3) (approx. 0.577)
+
+
+
+d. Calculate Cosine Similarity:
+
+Cosine Similarity(V_Doc1, V_Doc3) = (2/9) / (sqrt(1/3) * sqrt(1/3))
+
+                                 = (2/9) / (1/3)
+
+                                 = (2/9) * 3
+
+                                 = 6/9
+
+                                 = 2/3 (approx. 0.667)
+
+
+
+Interpretation of this example:
+
+The cosine similarity between Doc1 ("I love Pakistan") and Doc3 ("I am Pakistan") is approximately 0.667. This indicates a moderate to strong similarity, as they share the terms "i" and "pakistan" with similar term frequencies within their respective documents. Documents sharing more common words with similar frequencies (or TF-IDF scores) will have higher cosine similarity scores, indicating they are more similar in content.

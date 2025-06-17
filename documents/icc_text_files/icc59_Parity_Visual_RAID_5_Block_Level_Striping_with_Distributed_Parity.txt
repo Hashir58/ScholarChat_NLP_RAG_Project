@@ -1,0 +1,41 @@
+Parity in RAID - Visual Explanation: 
+The document describes an image illustrating the concept of parity bits distributed across disks: 
+• Five cylindrical icons represent disks, labeled "Disk 1" through "Disk 5" . 
+• Each disk has five horizontal segments, each containing a binary '0' or '1' , representing data 
+bits. 
+o Example data: 
+▪ Disk 1: 0, 0, 0, 1, 1 
+▪ Disk 2: 0, 0, 1, 1, 1 
+▪ Disk 3: 0, 1, 1, 1, 1 
+▪ Disk 4: 0, 0, 1, 0, 1 
+▪ Disk 5 (example parity calculation or dedicated parity for some levels): 0, 1, 
+1, 0, 1 
+• Interpretation: This visual is a simplified representation. It aims to show how data bits are 
+distributed and how parity bits (which would be calculated based on the data bits, e.g., via 
+XOR) could be stored.  
+RAID 5 (Block-Level Striping with Distributed Parity): Details 
+RAID 5 is a popular RAID level that offers a good balance of performance, storage capacity, and 
+data redundancy. 
+• Data Distribution: In RAID 5, data is striped at the block level across all disks in the 
+array, similar to RAID 0. However, it also calculates parity information for each stripe of 
+data blocks. Crucially, this parity information is distributed across all the disks in the 
+array, rather than being stored on a single dedicated parity disk (as in RAID 3 or RAID 4). For 
+each stripe, one disk will store the parity block, and the other disks will store data blocks. 
+The disk storing the parity block rotates for each stripe. 
+• Performance: 
+o Read Performance: Good, as data can be read in parallel from multiple disks. 
+o Write Performance: Slower than RAID 0 or RAID 1 for random writes. This is 
+because each write operation requires reading the old data block, reading the old 
+parity block, calculating the new parity, writing the new data block, and writing the 
+new parity block (Read-Modify-Write sequence). 
+
+• Fault Tolerance: RAID 5 can tolerate the failure of one single disk in the array. If a disk 
+fails, the missing data on that disk can be rebuilt using the parity information and the data 
+from the remaining functional disks in the stripe. The system can continue to operate in a 
+degraded mode (with reduced performance) until the failed disk is replaced and the data is 
+reconstructed onto the new disk. 
+• Minimum Disks: Requires a minimum of three disks. 
+• Storage Efficiency: If N is the number of disks, the usable capacity is (N-1) times the 
+capacity of the smallest disk. For example, with three 1TB disks, you get 2TB of usable 
+space. 
+ 

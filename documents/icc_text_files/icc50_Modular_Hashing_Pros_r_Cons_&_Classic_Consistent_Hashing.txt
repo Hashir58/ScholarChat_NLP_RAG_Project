@@ -1,0 +1,41 @@
+1. Modular Hashing (Continued): 
+• Advantages of Modular Hashing: 
+o Simple to implement: The logic is straightforward and easy to code. 
+o Low computational overhead: The modulo operation is computationally 
+inexpensive. 
+• Disadvantages of Modular Hashing: 
+o Scalability issues (Rehashing Problem): The primary drawback is its poor 
+scalability. When nodes are added to or removed from the system, the value of 'N' 
+(the total number of nodes) changes. Since the assignment of every key depends on 
+'N' (via hash(key) % N), a change in 'N' means that many, if not most, keys may 
+need to be rehashed and reassigned to different nodes. This can lead to a 
+significant and disruptive redistribution of data across the entire system, causing 
+high network traffic and load. 
+2. Classic Consistent Hashing: 
+To overcome the severe rehashing problem of modular hashing, Classic Consistent Hashing was 
+developed. 
+• Definition: Classic consistent hashing is a technique specifically designed to minimize 
+the rehashing and redistribution of keys when nodes are added or removed in a 
+distributed system. It achieves this by using a virtual ring (or hash ring) where both the 
+keys and the nodes are mapped to points on this ring. 
+• How it works: 
+1. Hash Space Representation: The hash space (the range of possible output values 
+from the hash function) is conceptualized as a circular ring or a continuum. 
+2. Mapping Keys and Nodes: Both keys (e.g., data object IDs) and nodes (e.g., server 
+IPs or IDs) are hashed using the same hash function, and their resulting hash values 
+determine their positions on this circular ring. 
+3. Key Assignment: Each key is then assigned to (or stored on) the first node it 
+encounters when moving in a clockwise direction from the key's own position on 
+the ring. 
+4. Minimized Reassignment: The crucial benefit is that when nodes are added or 
+removed, only a small subset of keys are affected. 
+
+▪ If a node is removed, only the keys that were assigned to that node need to 
+be reassigned (they will now map to the next node clockwise). 
+▪ If a new node is added, it "splits" an existing arc on the ring, and only the keys 
+that fall into its new range of responsibility (previously belonging to the next 
+node clockwise) need to be moved to the new node. 
+This means that, in most cases, only a small number of keys need to be 
+reassigned, drastically reducing data movement compared to modular 
+hashing. 
+ 

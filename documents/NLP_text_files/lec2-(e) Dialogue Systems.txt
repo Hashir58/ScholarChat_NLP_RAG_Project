@@ -1,0 +1,39 @@
+What are Dialogue Systems?
+
+Dialogue systems are computer programs designed to talk or interact with humans in ways both can understand. These interactions can happen through:
+
+Speech (voice assistants like Siri or Alexa)
+
+Text (chatbots on websites, messaging apps)
+
+Gestures or graphics (like virtual avatars)
+
+Other sensory methods (haptics, animations, etc.)
+
+
+
+Examples of Dialogue Systems:
+
+ChatGPT — A popular AI chatbot that answers questions and holds conversations in natural language.
+
+Gemini — An example of a modern conversational AI system.
+
+
+
+Role of Generative AI in Dialogue Systems
+
+Generative AI is crucial because it helps create new, meaningful content based on the input it receives. This means:
+
+If you type or say something, the system can generate relevant responses or content.
+
+It can create text, images, sounds, animations, 3D models, and more.
+
+For example, you can ask ChatGPT to write a poem, generate a story, or explain a concept — all using generative AI.
+
+
+
+Simple Example Interaction:
+
+User: "What’s the weather like today?"
+Dialogue System: "It’s sunny and 25°C in your area."
+

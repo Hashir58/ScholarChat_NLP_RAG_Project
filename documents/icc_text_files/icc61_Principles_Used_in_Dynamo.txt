@@ -1,0 +1,23 @@
+Principles Used in Dynamo (Part 1) 
+1. Incremental Scalability: 
+Dynamo is designed to allow seamless scalability. This means you can add one storage node (or server) 
+at a time without disrupting the system. For instance, when a new node is added, it takes over some of 
+the data and traffic from existing nodes without causing bottlenecks or failures. 
+2. Symmetry: 
+All nodes in Dynamo have the same responsibilities and capabilities. This eliminates any single point of 
+failure. If one node fails, another can take over its responsibilities. Each node stores data, handles 
+read/write requests, and communicates with other nodes equally. 
+3. Decentralization: 
+Dynamo avoids centralized control and instead operates in a peer-to-peer fashion. This means no single 
+node controls the system. The decentralized design eliminates single points of failure and ensures the 
+system continues functioning even when some nodes or regions are unavailable. For example, Dynamo 
+uses consistent hashing to evenly distribute data across nodes. 
+4. Heterogeneity: 
+Dynamo supports nodes with different hardware capabilities (like CPU speed or memory). It balances 
+workload based on the performance of each node. A high-performance node can handle more data or 
+requests, while a lower-performing one takes on less. This ensures efficient use of all resources. 
+Benefits of These Principles: 
+ Scalable: Add more nodes as needed. 
+ Resilient: Symmetry and decentralization eliminate single points of failure. 
+ Flexible: Supports diverse environments and resources. 
+ 

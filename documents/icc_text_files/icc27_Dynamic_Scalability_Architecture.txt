@@ -1,0 +1,36 @@
+Dynamic Scalability Architecture 
+Dynamic Scalability Architecture is designed to automatically adjust the amount of 
+computational resources allocated to an application in real-time, based on its current demand. 
+The core principle is analogous to "adding more seats to a bus when more passengers arrive"—the 
+system expands or contracts its capacity to match the workload precisely. This ensures that the 
+application can handle fluctuating traffic and processing needs efficiently, maintaining 
+performance without over-provisioning resources during periods of low demand. This architecture 
+is crucial for applications with predictable, yet variable, load patterns, such as e-commerce sites 
+during sales or streaming services during peak hours. 
+An automated scaling listener is a key component of this architecture. This listener continuously 
+monitors the performance metrics of the cloud service or application, such as CPU utilization, 
+memory usage, or network traffic. It compares these metrics against predefined capacity 
+thresholds. If these thresholds are exceeded, indicating an increase in demand, the listener 
+triggers a scaling event. 
+Scenario: E-commerce Blessed Friday Sale 
+Consider an online retailer preparing for a "Blessed Friday Sale, " expecting a massive surge in user 
+traffic precisely at midnight when the sale begins. Their website is built using Dynamic Scalability 
+Architecture. 
+• Auto-Scaling Policy: The system has an auto-scaling policy based on CPU utilization. For 
+instance, if the CPU usage on a server exceeds a predefined threshold, say 80%, new 
+instances of the web application are automatically launched to distribute the load. 
+• Load Balancer: A load balancer is in place to evenly distribute the incoming user traffic 
+across all active server instances, including the newly scaled ones. This prevents any single 
+server from being overwhelmed. 
+• Pre-Sale State: At 11:50 PM, before the sale starts, the system might be running with a 
+baseline of 5 server instances, sufficient to handle regular, non-peak traffic. 
+• Traffic Surge & Scaling Out: At 12:01 AM, as the sale goes live, traffic surges dramatically. 
+The CPU utilization on the existing servers spikes to 90%, exceeding the 80% threshold. The 
+auto-scaling system detects this and, according to its policy, automatically spins up an 
+additional 10 server instances.  
+• Traffic Decrease & Scaling In: By 3:00 AM, the initial rush subsides, traffic decreases, and 
+CPU usage across the server instances drops below a lower threshold, for example, 30%. 
+The auto-scaling system then terminates 8 of the surplus instances, leaving 7 active 
+instances to manage the remaining, now moderate, traffic. 
+
+ 

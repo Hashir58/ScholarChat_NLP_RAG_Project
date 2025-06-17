@@ -1,0 +1,30 @@
+Multitenant Technology (Part 2) and Multitenancy vs Virtualization 
+Multitenant Technology (cont’d) 
+Multitenant application architecture is often significantly more complex than that of single-tenant 
+applications. These applications need to support sharing of various artifacts (portals, data schemas, 
+middleware, databases) among multiple users, while maintaining security levels that segregate 
+individual tenant environments. 
+Key Features: 
+ Usage Isolation: One tenant's activity doesn’t affect others. 
+ Data Security: Each tenant’s data is private and secure. 
+ Recovery: Data is backed up and restored individually. 
+ Application Upgrades: Updates applied without impacting tenant operations. 
+ Scalability: System scales to handle more users or tenants. 
+ Metered Usage: Tenants are billed based on actual use. 
+ Data Tier Isolation: Each tenant may have separate databases or tables. 
+Example: In a multitenant email service, different companies use the same software platform 
+but their email data, user settings, and custom features remain separate and secure. 
+Diagram Description (Figure 5.11): 
+Shows two organizations (“Organization A” and “Organization B”) each with a cloud service consumer 
+connecting to a central multitenant application running on a hosting virtual server. This illustrates a 
+single application instance serving multiple tenants while maintaining separation. 
+Multitenancy vs. Virtualization 
+(Image Description: The left side features interconnected translucent green and blue cubes with glowing 
+edges, representing virtualized environments.) 
+Multitenancy is sometimes confused with virtualization, but they differ in what is multiplied within a 
+physical server: 
+ Virtualization: Multiple virtual copies of server environments can be hosted on a single physical 
+server. Each can have its own OS and applications and be independently configured. 
+ Multitenancy: A physical or virtual server hosts an application designed for multiple users, each 
+feeling exclusive usage. 
+ 

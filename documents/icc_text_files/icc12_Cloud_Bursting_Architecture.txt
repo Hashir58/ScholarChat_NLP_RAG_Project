@@ -1,0 +1,37 @@
+Cloud Bursting Architecture 
+Cloud Bursting is a hybrid cloud strategy that allows an organization's on-premise IT environment 
+to dynamically extend its capacity by "bursting" into a public or private cloud when its local 
+resources are insufficient to meet demand. This approach acts like a safety valve, enabling 
+businesses to handle sudden or seasonal spikes in workload without having to permanently over-
+provision their on-premise infrastructure. It combines the security and control of a private 
+environment with the on-demand scalability of the cloud. 
+How It Works: 
+The cloud bursting process typically involves three key phases: 
+1. Pre-Deployment of Cloud Resources: Cloud-based IT resources, such as virtual servers 
+and storage, are set up in advance with a cloud provider but remain inactive or in a standby 
+mode. These are like reserve players, ready to be called upon but not consuming significant 
+resources until needed.  
+2. Threshold-Based Activation ("Bursting Out"): When the demand on the on-premise 
+resources reaches a predefined limit or threshold (e.g., 80% CPU capacity on internal 
+servers), the system automatically triggers the activation of the pre-configured cloud 
+resources. The workload is then seamlessly extended or offloaded to these cloud 
+resources to manage the extra demand. This prevents the on-premise systems from being 
+overwhelmed. 
+3. Resource Deactivation ("Bursting In"): Once the peak demand subsides and the on-
+premise resources can comfortably handle the workload again, the cloud resources are 
+deactivated or scaled down. The system "bursts back in, " returning to primarily using its on-
+premise infrastructure. For the retail company, after Blessed Friday ends and traffic returns 
+to normal, the cloud servers are deactivated, and their own servers resume handling all 
+customer traffic. 
+Key Components: 
+Two crucial components facilitate cloud bursting: 
+• Automated Scaling Listener: This tool or service continuously monitors the load and 
+performance metrics of the on-premise resources. It acts like a sensor, detecting when 
+servers are nearing capacity and automatically deciding when to initiate the burst to the 
+cloud by routing some requests or workloads there. 
+• Resource Replication: This ensures that the applications, data, and configurations on the 
+cloud resources are synchronized and consistent with the on-premise environment. This is 
+
+vital so that when the burst occurs, the cloud resources are up-to-date and can seamlessly 
+take over or augment the processing. 
+ 

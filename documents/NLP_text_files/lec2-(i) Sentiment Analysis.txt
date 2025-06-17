@@ -1,0 +1,32 @@
+What is Sentiment?
+
+Sentiment means the positive, negative, or neutral feeling or attitude a writer shows toward something.
+
+For example:
+
+A movie review might say, “The film was amazing!” (positive sentiment) or “The movie was boring.” (negative sentiment).
+
+A political editorial might express support or criticism for a candidate or policy.
+
+
+
+What is Sentiment Analysis?
+
+Sentiment Analysis is the process of using computers to read and understand digital text (like reviews, tweets, or articles) and decide whether the writer’s attitude is:
+
+Positive (happy, supportive)
+
+Negative (angry, critical)
+
+Neutral (neutral or no strong feeling)
+
+
+
+Simple Example
+
+Text: “I love this phone; the battery lasts all day!”
+Sentiment: Positive
+
+Text: “The service was terrible and the food was cold.”
+Sentiment: Negative
+

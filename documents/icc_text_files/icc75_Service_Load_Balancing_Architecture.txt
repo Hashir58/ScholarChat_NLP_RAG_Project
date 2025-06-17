@@ -1,0 +1,35 @@
+Service Load Balancing Architecture focuses specifically on distributing incoming network 
+traffic or service requests across multiple servers or service instances. While it contributes to 
+efficient resource utilization, its primary goals are to enhance fault tolerance, high availability, 
+and reliability of services. Unlike dynamic scalability which aims to adjust the number of 
+resources, service load balancing primarily ensures that the existing resources are used 
+effectively and that the service remains accessible even if some components fail.  
+In this architecture, services (or instances of a service) are intentionally distributed across 
+multiple servers rather than concentrating multiple instances of the same service on a single 
+server. This design choice is rooted in the need to optimize performance by preventing any single 
+server from being overwhelmed, and crucially, to ensure the service remains available if one 
+server experiences an issue. It deals with distributing network traffic or service requests across 
+these distributed servers or services. 
+Fault Tolerance and High Availability: 
+The core benefit of this architecture lies in its ability to handle failures gracefully. 
+• Problem with Single Server: If all instances of a critical service are hosted on a single 
+server, and that server goes down (due to hardware failure, power outage, etc.), the entire 
+service becomes unavailable, leading to significant disruption. 
+• Solution with Multiple Servers: By distributing instances of the service across multiple, 
+independent servers, the system builds inherent redundancy. If one server fails, the load 
+balancer (which sits in front of these servers) detects the failure and automatically 
+redirects incoming traffic and requests to the healthy instances running on other servers. 
+This ensures that the service remains available to users, minimizing downtime. 
+Scenario Example: 
+Imagine an e-commerce platform. The checkout service is critical for completing sales. 
+• Single Server Risk: If all instances of the checkout service are hosted exclusively on Server 
+A, and Server A crashes, no customer can complete their purchase. The entire checkout 
+functionality becomes unavailable. 
+• Multiple Server Solution: By deploying instances of the checkout service across three 
+separate servers (Server A, Server B, and Server C), and placing a load balancer in front of 
+them, the platform becomes much more resilient. If Server A fails, the load balancer will 
+automatically route all checkout requests to the instances running on Server B and Server 
+C. Users can still complete their transactions seamlessly, often without even noticing that 
+a backend server has failed. 
+
+ 

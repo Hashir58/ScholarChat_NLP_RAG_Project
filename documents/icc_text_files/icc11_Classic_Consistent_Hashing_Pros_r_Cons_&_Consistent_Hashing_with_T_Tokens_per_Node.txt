@@ -1,0 +1,46 @@
+2. Classic Consistent Hashing (Continued): 
+• Advantages of Classic Consistent Hashing: 
+o Scalability: Significantly reduces the number of keys that need to be 
+reassigned when nodes are added to or removed from the system. This is its 
+primary advantage over modular hashing. 
+o Resilience: It is efficient for handling node failures or additions, minimizing 
+disruptions to the overall system because data movement is localized. 
+• Disadvantages of Classic Consistent Hashing: 
+o More complex to implement: The logic involving the hash ring and finding the next 
+clockwise node is more complex than the simple modulo arithmetic of modular 
+hashing. 
+o Potential for Uneven Load Distribution: While it aims to distribute keys, the 
+random placement of nodes on the ring (based on their hash values) can sometimes 
+lead to an imbalanced distribution of keys. Some nodes might end up responsible 
+for a disproportionately larger segment of the hash ring (and thus more keys) than 
+others. This issue is often addressed by introducing the concept of virtual nodes or 
+tokens. 
+1. Consistent Hashing: T Tokens per Node (A Variation/Improvement) 
+• How it works: 
+1. Multiple Tokens per Node: Each physical node is assigned multiple virtual points 
+(tokens) on the hash ring. For example, if there are 3 physical nodes, each might be 
+assigned, say, 100 tokens, resulting in 300 points on the ring representing these 
+nodes. 
+2. Improved Distribution: This use of multiple tokens per node helps to distribute the 
+data more evenly across the physical nodes. A physical node with more tokens 
+effectively "owns" more (smaller and more spread out) segments of the hash ring, 
+increasing the probability of it receiving a proportional share of the keys. 
+3. Reduced Rehashing on Node Changes: When a new physical node is added or an 
+existing one is removed, the impact is still localized. If a node is removed, its tokens 
+are removed from the ring, and the keys previously assigned to those tokens are 
+redistributed to the next tokens (belonging to other physical nodes) in a clockwise 
+direction.  
+
+• Advantages of T Tokens per Node: 
+o Better load distribution: More tokens per physical node generally result in a more 
+even and balanced distribution of keys across the physical nodes, as it mitigates the 
+"hotspot" problem where one node might get a disproportionately large segment of 
+the ring. 
+o Reduced rehashing impact: When physical nodes are added or removed, the 
+redistribution of keys is spread more finely across the remaining tokens/nodes, 
+leading to less data movement per physical node affected. 
+• Disadvantages of T Tokens per Node: 
+o More complex than classic consistent hashing: It involves managing these 
+multiple tokens per node, including their placement and the mapping of tokens 
+back to physical nodes, which adds to the implementation complexity. 
+ 

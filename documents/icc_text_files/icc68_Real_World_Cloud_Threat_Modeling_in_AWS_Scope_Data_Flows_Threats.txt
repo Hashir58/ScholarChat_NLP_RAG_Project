@@ -1,0 +1,54 @@
+Real-World Cloud Threat Modeling in AWS:  
+Define Scope (Components of the E-commerce App): 
+The first step in threat modeling is to clearly define the scope and identify all relevant components 
+of the system: 
+1. Load Balancer Layer: 
+o Component: Elastic Load Balancer (ELB). 
+o Function: The ELB distributes incoming user traffic across multiple instances in the 
+compute layer. This enhances availability and fault tolerance. 
+2. Compute Layer: 
+o Component: Amazon EC2 (Elastic Compute Cloud) instances. 
+o Function: These virtual servers handle the core application logic and process user 
+requests. They execute the e-commerce platform's code, manage user sessions, 
+and interact with the data layer. 
+3. Data Layer: 
+o Component: Amazon RDS (Relational Database Service). 
+o Function: RDS is used to store sensitive and structured customer data, such as 
+personal information (PII), payment details, order history, and product catalogs. 
+Map Data Flows (Identifying Data Movement and Assets): 
+The next crucial step is to map how data flows between these components and identify critical 
+assets: 
+1. Assets: 
+o Critical Data: The most critical asset in this scenario is the sensitive customer 
+data stored in the RDS database, including PII (Personally Identifiable Information) 
+like names, addresses, and contact details, as well as payment information. 
+Protecting this data is paramount. 
+2. Data Flows (Paths of Communication): 
+o Between EC2 and RDS: The EC2 instances (compute layer) communicate with the 
+RDS database (data layer) to read and write customer and order information. This 
+flow involves database queries and results. 
+
+o Between ELB and EC2: The Elastic Load Balancer (ELB) forwards incoming user 
+traffic (HTTP/HTTPS requests) to the EC2 instances. The EC2 instances then send 
+responses back through the ELB. 
+o From Users to ELB: External users access the e-commerce application by sending 
+requests from their browsers or mobile devices to the public-facing ELB. 
+3. Entry Points (Interfaces Exposed to Potential Threats): 
+o Internet-Exposed Components: The ELB is directly internet-exposed, as it's the 
+primary entry point for all user traffic.  
+Find Threats (Initial Identification using STRIDE categories as examples): 
+Once the scope and data flows are understood, the process of identifying potential threats begins, 
+often categorized using frameworks like STRIDE: 
+1. Spoofing (Identity Spoofing): 
+o Threat: Attackers might use fake identities or stolen credentials (e.g., compromised 
+AWS IAM user credentials, stolen application login details) to gain unauthorized 
+access to AWS resources or the application itself. 
+2. Tampering (Data or Code Modification): 
+o Threat: Attackers could attempt to modify application code deployed on EC2 
+instances, or intercept and alter data in transit (e.g., between the user and ELB, or 
+ELB and EC2, if not properly secured with HTTPS/TLS). 
+3. Repudiation (Denying Actions): 
+o Threat: If there are insufficient or no logs to track malicious actions, an attacker (or 
+even a malicious insider) could perform harmful activities and then deny having 
+done so, making investigation and accountability difficult. 
+ 

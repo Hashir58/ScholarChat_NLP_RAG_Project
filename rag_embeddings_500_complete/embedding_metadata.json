@@ -1,0 +1,11 @@
+{
+  "model_name": "intfloat/e5-base",
+  "embedding_dim": 768,
+  "total_chunks": 704,
+  "successful_chunks": 704,
+  "failed_chunks": 0,
+  "processing_time": 21.09411311149597,
+  "chunks_per_second": 33.37424030481427,
+  "use_enhanced_text": true,
+  "batch_size": 32
+}

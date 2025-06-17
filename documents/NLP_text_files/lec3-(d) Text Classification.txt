@@ -1,0 +1,26 @@
+What is Text Classification?
+
+Text Classification is the process of assigning a label or category to a piece of text based on its content.
+
+
+
+Common Applications of Text Classification
+
+Assigning subject categories or topics:
+Automatically sorting news articles into categories like sports, politics, or technology.
+
+Spam detection:
+Identifying unwanted emails or messages and filtering them out.
+
+Authorship identification:
+Figuring out who wrote a particular text based on writing style.
+
+Age/gender identification:
+Predicting the age group or gender of the writer from their text.
+
+Language identification:
+Determining the language of a given text, like English, Spanish, or French.
+
+Sentiment analysis:
+Detecting if the text expresses positive, negative, or neutral feelings.
+

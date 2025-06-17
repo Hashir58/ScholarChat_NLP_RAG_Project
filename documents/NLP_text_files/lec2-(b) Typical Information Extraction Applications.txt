@@ -1,0 +1,91 @@
+Typical Information Extraction Applications
+
+Business Intelligence
+Description:
+Extracting structured data from large volumes of text such as reports, emails, news articles, and social media to help business analysts make informed decisions. The goal is to identify key facts like company names, product launches, market trends, or financial figures automatically.
+
+Example:
+Input Text:
+“ABC Corp announced a 10% increase in revenue this quarter and plans to launch a new product next month.”
+Extracted Information:
+
+Company: ABC Corp
+
+Revenue Growth: 10%
+
+Event: Product launch
+
+Time: Next month
+
+
+
+2. Financial Investigation
+Description:
+Using NLP to find hidden connections and patterns in financial documents, transaction logs, or emails that could indicate fraud, money laundering, or other financial crimes.
+
+Example:
+Input Text:
+“John transferred $5 million to XYZ Ltd., which is linked to offshore accounts.”
+Extracted Information:
+
+Person: John
+
+Amount: $5 million
+
+Company: XYZ Ltd.
+
+Suspicious Link: Offshore accounts
+
+
+
+3. Scientific Research
+Description:
+Automatically extracting references, key findings, or related work from scientific papers to assist researchers in literature review or paper recommendation systems.
+
+Example:
+Input Text:
+“The method proposed by Smith et al. (2020) improves neural network accuracy by 15%.”
+Extracted Information:
+
+Authors: Smith et al.
+
+Year: 2020
+
+Contribution: Improved neural network accuracy
+
+Improvement Percentage: 15%
+
+
+
+4. Media Monitoring
+Description:
+Tracking mentions of companies, products, or people across news articles, blogs, or social media to analyze public sentiment or reputation.
+
+Example:
+Input Text:
+“Brand X received positive feedback after their latest product release.”
+Extracted Information:
+
+Brand: Brand X
+
+Sentiment: Positive feedback
+
+Event: Product release
+
+
+
+5. Healthcare Records Management & Pharma Research
+Description:
+Extracting patient information, diagnosis, medication, and treatment plans from unstructured clinical notes or research papers to improve healthcare delivery and pharmaceutical studies.
+
+Example:
+Input Text:
+“Patient diagnosed with diabetes type 2 was prescribed Metformin 500mg daily.”
+Extracted Information:
+
+Patient Condition: Diabetes type 2
+
+Medication: Metformin
+
+Dosage: 500mg daily
+

@@ -1,0 +1,47 @@
+Increased Data Availability (Continued): Higher Availability 
+• Benefit of Multiple Copies: By increasing the number of places where data exists (i.e., 
+having multiple replicas), the chances of being able to successfully retrieve that data in 
+case of a failure (e.g., disk crash, server outage) increase significantly. If one copy becomes 
+inaccessible, other copies remain available. This directly translates to higher 
+availability of data and the services that depend on it. 
+RAID (Redundant Array of Independent Disks): Introduction 
+RAID technology is a method used to increase the performance and/or reliability of data 
+storage.  
+Fundamental RAID Techniques: 
+There are three fundamental techniques that form the basis of various RAID levels. Different RAID 
+types can use one or more of these core techniques: 
+1. Mirroring: Creating an exact copy (or mirror) of a set of data on two or more disks. If one 
+disk fails, the mirrored disk still has the data. 
+2. Striping: Splitting the flow of data into blocks and spreading these blocks sequentially 
+across multiple disks. This can improve performance by allowing parallel read/write 
+operations. 
+3. Striping with Parity: Combines data striping across multiple disks with parity information. 
+Parity is a calculated value that allows data to be reconstructed in case one of the disks in 
+the set fails. 
+Why RAID is Relevant in Cloud Computing: 
+1. Underlying Infrastructure: 
+o Cloud providers like AWS, Azure, and Google Cloud extensively use RAID 
+configurations within their own data centers as part of their physical storage 
+infrastructure. 
+2. Hybrid or On-Premises Use Cases: 
+o Many organizations adopt hybrid cloud architectures, where some data and 
+applications reside in the public cloud while others are kept on-premises.  
+o Even when using dedicated hardware within a cloud provider's environment (e.g., 
+bare metal servers), users might configure RAID on the local disks of those servers. 
+RAID 0 (Striping): Details 
+
+• Concept: RAID 0, also known as striping, involves dividing data into blocks and 
+distributing these blocks sequentially across two or more different disks. This is primarily a 
+performance-oriented configuration. 
+• Data Distribution: Data is split into equal-sized blocks, and these blocks are written 
+across multiple disks in an alternating fashion (e.g., block A on Disk 1, block B on Disk 2, 
+block C on Disk 1, block D on Disk 2, and so on). 
+• Performance: RAID 0 offers high performance, especially for read and write operations. 
+This is due to parallelism – multiple disks can be accessed simultaneously, increasing the 
+overall data transfer rate. 
+• Fault Tolerance: Crucially, RAID 0 provides no fault tolerance or data redundancy. If any 
+single disk in a RAID 0 array fails, all data across the entire array is lost because parts of 
+every file are spread across all disks. There is no data recovery mechanism inherent in RAID 
+0. 
+• Minimum Disks: Requires a minimum of two disks. 
+ 

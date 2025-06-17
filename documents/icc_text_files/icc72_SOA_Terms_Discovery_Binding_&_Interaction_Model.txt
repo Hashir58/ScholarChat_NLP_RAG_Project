@@ -1,0 +1,47 @@
+SOA Terms (Continued): 
+Building upon the core concepts of Service, Provider, and Consumer, two more essential terms 
+define how services are found and utilized within a Service-Oriented Architecture (SOA): 
+1. Discovery: 
+o Definition: Discovery is the process of finding available services, typically within 
+a designated repository or registry. This mechanism allows potential consumers to 
+locate services that meet their functional requirements without prior knowledge of 
+the service's specific location or provider. 
+o Function: The service registry acts as a directory where service providers can 
+publish descriptions of their services, and consumers can search for services based 
+on various criteria. 
+2. Binding: 
+o Definition: Binding refers to the dynamic connection established between a 
+service provider and a service consumer after the consumer has discovered the 
+service. This connection allows the consumer to invoke the service and exchange 
+messages with the provider. 
+o Runtime Connection: This process typically happens at runtime. Once the 
+consumer identifies a suitable service (often through discovery) and obtains its 
+contract (description of how to interact with it), it then establishes a connection to 
+the service provider to make requests. 
+SOA Interaction Model (Publish-Find-Bind Pattern): 
+The interaction between these SOA components is often visualized and described by the "publish-
+find-bind" pattern, which is a common architectural pattern in service-oriented systems. The OCR 
+describes an image illustrating this: 
+• Service Provider (e.g., an orange rounded rectangle on the left): 
+o Publishes: The Service Provider sends ("1. Service Description using WSDL" via 
+"SOAP Message") its service description to a central Registry. WSDL (Web Services 
+Description Language) is commonly used to define the interface and capabilities of 
+the service. 
+• Registry (Service Description) (e.g., an orange cloud-like shape at the top): 
+o Stores: The Registry receives and stores these service descriptions, making them 
+available for discovery. 
+
+• Service Consumer (e.g., a green rounded rectangle on the right): 
+o Finds: The Service Consumer sends ("2. Registry Queries" via "SOAP Message") 
+queries to the Registry to find services that match its needs. 
+o Retrieves Contract: It receives ("3. Query Response using WSDL") the service 
+description (WSDL) from the Registry. 
+o Binds & Interacts: The Service Consumer then uses the WSDL to send ("4. XML 
+Service Request Based on WSDL" via "SOAP Message") requests directly to the 
+Service Provider. 
+o Receives Response: The Service Provider processes the request and sends back 
+("5. XML Service Response Based on WSDL") a response to the Service Consumer. 
+Basic Terms Familiarity: 
+This section serves as a prelude to discussing more specific technologies often used within SOA, 
+such as SOAP , WSDL, JSON, and HTTP . 
+ 

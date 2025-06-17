@@ -1,0 +1,153 @@
+What is it?
+
+Definition of Question Answering (QA):
+Question Answering (QA) is a field of computer science that focuses on building systems capable of answering questions posed in natural language.
+
+Examples of QA systems:
+
+AskJeeves (a well-known early example)
+
+AnswerBus (an open-domain question answering system)
+
+Ionaut, EasyAsk, AnswerLogic, AnswerFriend, Start, LCC, Quasm, Mulder, Webclopedia, etc.
+
+Why use it?
+
+From AskJeeves: "Search engines do not speak your language. They make you speak their language; a language that's strange, confusing, and includes words that no one is entirely sure of their meaning."
+
+QA engines attempt to let you ask your question the way you'd normally ask it.
+
+QA systems are beneficial for inexperienced users, simplifying the information retrieval process.
+
+The goal is to move beyond simply finding a document to directly providing an answer (Document=Answer?).
+
+How does it work?
+
+A typical Question Answering system involves several key components:
+
+Natural Language Processing (NLP):
+
+Semantic Processing: Understanding the meaning of words and sentences.
+
+Syntactic Processing: Analyzing the grammatical structure of sentences.
+
+Parsing: Breaking down sentences into their grammatical components.
+
+Knowledge Base: A repository of structured information from which answers can be retrieved or inferred.
+
+Answer Processing: The final stage where candidate answers are generated, ranked, and presented to the user.
+
+Natural Language Processing (NLP)
+
+QA Engines have unique processes related to NLP.
+
+START-Natural Language System (an example of an NLP system used in QA):
+
+Parsing: Analyzing sentence structure.
+
+Natural Language Annotation: Tagging and labeling linguistic features.
+
+Processing Component: Core logic for handling natural language.
+
+Answer Processing
+
+Conceptual Table Explanation (QA System Output Types):
+This table outlines various Question Answering (QA) systems and the typical format of the output they provide as answers:
+
+AnswerBus: Provides answers in the form of Sentences.
+
+AskJeeves: Primarily returns relevant Documents.
+
+IONAUT: Delivers Passages (sections of text) as answers.
+
+LCC: Outputs answers as Sentences.
+
+Mulder: Provides Extracted answers, implying precise snippets.
+
+QuASM: Returns Document blocks, which are larger chunks than passages.
+
+START: Outputs a Mixture of answer types.
+
+Webclopedia: Provides answers in the form of Sentences.
+This table highlights the diversity in how different QA systems present their findings, ranging from full documents to specific sentences or extracted facts.
+
+AskJeeves
+
+AskJeeves (now Ask.com) was a popular early QA system with key features:
+
+It had its own knowledge base and partnered with other sources to answer questions.
+
+It catalogued previous questions to improve its understanding and response over time.
+
+It utilized an answer processing engine, often generating responses based on question templates.
+
+AnswerBus
+
+Conceptual Diagram Explanation (AnswerBus Flowchart):
+The flowchart illustrates the process of the AnswerBus Question Answering system:
+
+User Question: The process begins with a natural language question from the user.
+
+Translated Question: The user's question is first translated or transformed into a more structured query.
+
+From the translated question, three parallel paths emerge:
+
+Question Type: The system analyzes the question to determine its type (e.g., factoid, list).
+
+Search Engine Specific Query: A query optimized for traditional search engines is generated.
+
+Matching Words: Keywords or phrases are extracted for direct matching.
+
+Hit Lists from Search Engines: Results (e.g., documents, passages) are retrieved from various search engines based on the generated queries.
+
+Extracted Sentences: Relevant sentences are extracted from the retrieved hit lists.
+
+Candidate Answers: From these extracted sentences, potential answers are identified.
+
+Ranked Answers: Finally, the candidate answers are ranked by relevance and presented to the user.
+This diagram shows AnswerBus as an open-domain QA system that leverages traditional search engines and then applies further processing to extract and rank specific answers from the search results.
+
+Problems (in Question Answering)
+
+Challenges in Question Answering include:
+
+"How" and "Why" questions: These often require deeper reasoning and causal understanding beyond simple fact retrieval.
+
+"What" questions:
+
+"What happened?": Requires understanding events and narratives.
+
+"What did we do?": Requires understanding actions and consequences.
+
+Answer Quality:
+
+Correctness: Ensuring the provided answer is factually accurate.
+
+Answer Presentation: Presenting the answer clearly, concisely, and in an understandable format.
+
+Correct? (From Webclopedia)
+
+Examples of humorous or difficult-to-answer questions from Webclopedia, highlighting challenges in QA:
+
+Question: Where do lobsters like to live?
+
+Answer: on a Canadian airline (Incorrect, likely a result of misinterpretation or a factoid related to a specific event).
+
+Question: Where do hyenas live?
+
+Answer: in Saudi Arabia (Plausible but incomplete).
+
+Answer: in the back of pick-up trucks (Incorrect, likely a humorous or out-of-context misinterpretation).
+
+Question: Where are zebras most likely found?
+
+Answer: near dumps (Incorrect, likely a misinterpretation of a specific text).
+
+Answer: in the dictionary (True, but not the desired geographical answer for a "where" question, highlighting semantic understanding issues).
+
+Question: Why can't ostriches fly?
+
+Answer: Because of American economic sanctions (Completely incorrect and absurd, demonstrating a failure in causal reasoning or semantic relevance).
+
+These examples were collected by Ulf Hermjakob on November 29, 2001, showcasing the limitations of QA systems in dealing with common sense, ambiguity, and real-world knowledge at the time.
+

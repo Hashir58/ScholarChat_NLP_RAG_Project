@@ -1,0 +1,78 @@
+Naive Bayes Classifier
+
+Naive Bayes is a popular classification algorithm used for both binary and multi-class problems. It’s based on Bayes’ theorem, which calculates the probability of a class given some observed data.
+
+
+
+Conceptual Example: Fruit Classification
+
+Imagine you have a mixed basket of fruits—strawberries, watermelons, and bananas. A classifier looks at each fruit and sorts them into groups based on their characteristics. Similarly, Naive Bayes looks at data points and assigns them to categories based on the probability that they belong there.
+
+
+
+Bag of Words Representation (for Text)
+
+Text data needs to be converted into numbers for the classifier to work. One common way is the Bag of Words model:
+
+The text is broken into unique words.
+
+For each word, count how many times it appears in the text.
+
+The order and grammar of words are ignored.
+
+Example:
+"I love this movie! It’s sweet, but with satirical humor."
+
+Words like "It" might appear 6 times, "the" 4 times, "and" 3 times, etc.
+
+This numeric representation helps Naive Bayes understand the content of the text.
+
+
+
+How Naive Bayes Works
+
+Assumption: All features (words) are independent from each other (this is the "naive" assumption).
+
+Bayes’ theorem: It calculates the probability that a text belongs to a class based on the presence of words.
+
+Example: Movie Review Sentiment Classification
+
+Review: "This movie was great!"
+Label: Positive
+
+Review: "The acting was terrible"
+Label: Negative
+
+Review: "I love this film"
+Label: Positive
+
+Review: "It was boring and dull"
+Label: Negative
+
+
+
+Goal: Given a new review, classify it as Positive or Negative based on the words it contains and what the classifier has learned.
+
+
+
+Steps to Build Naive Bayes Classifier
+
+Data Preparation:
+Split the reviews into individual words (tokenization) and create a vocabulary of all unique words.
+
+Feature Extraction:
+Represent each review as a vector indicating which words are present or absent.
+For example, “This movie was great!” might become:
+[1, 1, 1, 0, 0, 0, ...] where 1 means the word exists in the review.
+
+Training:
+Calculate the probability of each word appearing in positive and negative reviews.
+Calculate the prior probabilities of positive and negative classes (how common each class is).
+
+Classification:
+For a new review, compute the probability it is positive or negative using Bayes’ theorem.
+Assign the label with the higher probability.
+
+Evaluation:
+Test the classifier on new data using metrics such as accuracy, precision, recall, and F1-score.
+

@@ -1,0 +1,55 @@
+Introduction to Web Services & Early Evolution 
+A web service is a software application that enables different systems to communicate over the internet 
+using standardized protocols such as HTTP. These services allow the exchange of data or functionality 
+between applications, regardless of the programming languages used on either end. 
+Before REST and SOAP became the leading standards, other technologies attempted to solve the same 
+problem of inter-system communication. However, many lacked flexibility and standardization. 
+1. Remote Procedure Call (RPC) 
+ Description: Enabled a program to execute procedures on a remote server as if they were local. 
+ How It Worked: Used a client-server model. 
+ Limitations: Tight coupling between systems and platform/language dependency. 
+2. CORBA (Common Object Request Broker Architecture) 
+ Description: Created by the Object Management Group (OMG) to help systems in different 
+languages communicate. 
+ Mechanism: Used a middleware called an Object Request Broker (ORB) and Interface Definition 
+Language (IDL). 
+ Limitations: Setup complexity, performance overhead, and poor scalability for web-based 
+systems. 
+3. DCOM (Distributed Component Object Model) 
+ Description: A Microsoft solution that extended COM for networked environments. 
+ Limitations: Windows-only support and not suitable for cross-platform systems. 
+4. Early HTTP APIs 
+ Description: APIs built directly over HTTP, lacking adherence to any specific standards like REST 
+or SOAP. 
+ Limitations: Poor maintainability and scalability due to lack of structure. 
+ 
+Shift Toward REST and SOAP 
+Before REST, traditional web applications commonly received full HTML pages from servers. This made 
+it difficult to extract specific data for use in dynamic apps. The process was cumbersome and inefficient. 
+To improve this, structured data formats like JSON and XML began to emerge. These allowed 
+applications to receive only the relevant data rather than entire pages. 
+Example data structures: 
+ JSON: 
+
+json 
+CopyEdit 
+{ 
+  "city": { 
+    "restaurantname": { 
+      "fooditem": "sandwich" 
+    } 
+  } 
+} 
+ XML: 
+xml 
+CopyEdit 
+<city> 
+  <restaurantname> 
+    <fooditem>sandwich</fooditem> 
+  </restaurantname> 
+</city> 
+Still, working with these formats using various HTTP methods (GET, POST, response data parsing, etc.) 
+was complex, especially at scale. Developers needed a simpler, more consistent approach. 
+This led to the evolution of REST and SOAP, which addressed limitations of older methods by improving 
+interoperability, simplicity, and scalability for modern web and mobile needs. 
+ 

@@ -1,0 +1,22 @@
+Evaluation Measures
+
+After an NLP task (like classification or extraction) is performed, we need to check how well the system did. This is called evaluation.
+
+There are two main ways to evaluate:
+
+Manual evaluation: Experts look at the results and judge how good they are.
+
+Automated evaluation: The system calculates scores using formulas to measure performance.
+
+Most automated evaluation methods use something called a Confusion Matrix, which compares the system’s predictions with the true answers.
+
+Common metrics derived from the Confusion Matrix include:
+
+Accuracy: How many predictions were correct out of all predictions.
+
+Precision: Out of all the results the system said were positive, how many were actually positive.
+
+Recall: Out of all the actual positives, how many did the system correctly find.
+
+F-measure (F1-score): The harmonic mean of precision and recall, balancing both.
+

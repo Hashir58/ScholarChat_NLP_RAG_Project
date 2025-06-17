@@ -1,0 +1,55 @@
+What is Machine Translation (MT)?
+
+Machine Translation is the automatic process of converting text from one natural language (like English) into another language (like Portuguese or French).
+
+
+
+Key Challenges in Machine Translation
+
+Lexical Ambiguity:
+A word can have multiple meanings. For example, the English word “bank” could mean a financial institution or the side of a river. The correct translation depends on the context.
+
+Syntactic Ambiguity:
+Sentence structure can be unclear or complex, causing different possible interpretations and translations.
+
+Because of these challenges, the system needs to understand the correct meaning and structure to provide an accurate translation.
+
+
+
+Real-World Example: Google Translate
+
+You enter “Hello, how are you?” in English.
+
+Google Translate converts it into “Olá, como vai?” in Portuguese.
+
+This shows a simple, direct translation from one language to another.
+
+
+
+Advanced Example: DeepL Translator
+
+DeepL also translates “Hello, how are you?” to “Olá, como estás?” in Portuguese.
+
+It offers extra features like:
+
+Choosing between Formal or Informal tone.
+
+Providing alternative translations.
+
+This makes DeepL more nuanced and flexible than basic translation tools, adapting translations to the situation or style.
+
+
+
+Simple Example of Ambiguity
+
+English:
+“He saw the bat.”
+
+Possible Translations in another language:
+
+Bat (animal)
+
+Bat (baseball equipment)
+
+The system must decide which meaning fits the sentence to translate correctly.
+

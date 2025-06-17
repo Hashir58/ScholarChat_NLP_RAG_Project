@@ -1,0 +1,41 @@
+  
+DynamoDB Security and Cost Optimization: 
+Continuing with Tom's evaluation of DynamoDB for his company's needs: 
+• No-Trust Policy for Sensitive Data & KMS Integration: DynamoDB supports a no-trust 
+policy for storing sensitive data. This means Tom can further enhance security by 
+using AWS Key Management Service (KMS) with a customer-provided key (CMK) to 
+encrypt data stored in DynamoDB. This gives the customer more control over the 
+encryption keys and their lifecycle. 
+• Cost-Minimization and Scalability: Tom also has strict cost-minimization guidelines. He 
+finds that DynamoDB tables are designed to scale up capacity automatically as demand 
+increases (e.g., more traffic, more data) and, importantly, scale down capacity when 
+demand decreases. This elasticity ensures that the company pays only for the resources 
+consumed, saving costs without incurring downtime or performance degradation during 
+scaling operations. 
+Data Durability and Availability Features: 
+• On-Demand Backup to S3: DynamoDB provides on-demand backup capabilities, 
+allowing full backups of tables to be easily created and stored in Amazon S3 buckets for 
+long-term archival and compliance. 
+• Point-in-Time Recovery (PITR): It also offers a point-in-time recovery feature. This 
+enables the restoration of a DynamoDB table to any specific point in time during the last 35 
+days (typically, with per-second granularity), which is crucial for recovering from accidental 
+data deletion or corruption. 
+• Storage on SSDs and Multi-AZ Replication: For data durability and high availability, 
+DynamoDB stores all data on solid-state disks (SSDs), which provide fast I/O 
+performance. Furthermore, it automatically replicates data across multiple Availability 
+Zones (AZs) within an AWS region. This synchronous replication ensures that data is 
+durable (survives AZ failures) and highly available. 
+DynamoDB Streams for Event-Driven Processing: 
+• Change Data Capture: With DynamoDB Streams functionality, every time an item is 
+added, updated, or deleted from a DynamoDB table, an event (a time-ordered sequence of 
+item modifications) is generated and captured in a stream. 
+• Consuming Streams: These events in the stream can be consumed by other AWS 
+services, such as: 
+
+o AWS Lambda: Lambda functions can be triggered by events in a DynamoDB Stream 
+to perform additional processing, such as sending notifications, updating aggregate 
+tables, or triggering other workflows. 
+o Replicating to another DynamoDB table: Streams can be used to replicate data 
+changes to another DynamoDB table, perhaps in a different AWS region for disaster 
+recovery or for creating read replicas. 
+ 

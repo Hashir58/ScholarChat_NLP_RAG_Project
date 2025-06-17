@@ -1,0 +1,37 @@
+Public Cloud: Definition and Characteristics 
+The Public Cloud model makes IT systems and services accessible to virtually anybody over the 
+internet. It is defined as a type of cloud computing in which a third-party service provider owns, 
+manages, and operates the cloud infrastructure (servers, storage, networking, etc.) and offers 
+these resources to the general public or major industry groups. A key characteristic is that 
+the infrastructure is owned by the entity delivering the cloud services, not by the consumer. 
+This model allows customers and users to easily access systems and services on a pay-as-you-go 
+or subscription basis, often without significant upfront investment. For example, services like 
+storage, backup, and retrieval might be offered for free up to a certain limit, on a subscription 
+basis, or based on per-user fees. Google App Engine is cited as an example of a public cloud 
+service (specifically a Platform as a Service, or PaaS). 
+An illustrative diagram often depicts the Public Cloud model with a central "Cloud Service 
+Provider" icon (a cloud shape with server icons inside). Various diverse entities. 
+Use Cases for Public Cloud: 
+The public cloud model is well-suited for a wide variety of applications and scenarios due to its 
+cost-effectiveness, scalability, and ease of use. Common use cases include: 
+• Blogging Platform: A blogger might host their website on a public cloud provider like 
+Amazon Web Services (AWS). This is often affordable, requires no direct infrastructure 
+management by the blogger, and can easily handle fluctuations in website traffic. 
+• Mobile App Startup: A small startup developing a mobile application can use a public 
+cloud like Google Cloud to quickly launch and scale their app. This allows them to start 
+with minimal upfront costs for hardware and infrastructure, and then scale resources as 
+their user base grows. 
+• E-commerce Site: An online shop can run its platform on Microsoft Azure. This enables 
+the business to handle significant traffic spikes, especially during holiday sales or 
+promotional events, without needing to own, manage, and maintain the physical servers 
+required for peak load. They can scale resources up during busy times and down during 
+quieter periods. 
+• Gaming Company: A game developer can host multiplayer game servers on a public 
+cloud. This ensures high availability for gamers across different regions, low latency, and 
+the ability to scale server capacity based on the number of active players, all without the 
+company having to manage the underlying hardware infrastructure. 
+
+These examples highlight the public cloud's strengths in providing on-demand resources, 
+reducing the burden of infrastructure management, and offering a flexible, cost-efficient platform 
+for various applications. 
+  

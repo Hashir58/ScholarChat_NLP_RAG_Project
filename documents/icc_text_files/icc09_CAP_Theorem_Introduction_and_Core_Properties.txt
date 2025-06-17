@@ -1,0 +1,40 @@
+CAP Theorem: Core Concepts 
+The CAP theorem, also known as Brewer's theorem (after computer scientist Eric Brewer), is a 
+fundamental principle in distributed computing systems. It states that it is impossible for a 
+distributed data store to simultaneously provide more than two out of the following three 
+guarantees: Consistency, Availability, and Partition Tolerance. The acronym "CAP" stands for these 
+three properties: 
+1. Consistency (C): 
+o Definition: Consistency means that all nodes (servers) in a distributed system see 
+the same data at the same time. If a write operation is performed on one node, any 
+subsequent read operation, regardless of which node it is directed to, should return 
+that most recently written value. 
+o Implication: Every client always has the same view of the data. 
+2. Availability (A): 
+o Definition: Availability ensures that the system is always operational and 
+responsive. Every request made to a non-failing node in the system must result in a 
+response, although that response is not guaranteed to contain the most recent 
+write. 
+o Implication: The system remains accessible for reads and writes even if some 
+nodes are down or there are network issues (though consistency might be 
+compromised). 
+3. Partition Tolerance (P): 
+o Definition: Partition Tolerance means the system continues to operate correctly 
+even if there are network partitions. A network partition occurs when 
+communication between groups of nodes in the system is lost (e.g., due to network 
+failure). The system must be able to function despite these message losses or 
+partial failures. 
+o Implication: In a distributed system where components are deployed on different 
+servers, if one server or a part of the network goes down, the system should 
+continue to function, often by using replicas of data or by allowing different parts of 
+the system to operate independently for a time. 
+The Trade-off: 
+
+The CAP theorem states that in a distributed system, it is only possible to achieve two out of 
+these three properties (Consistency, Availability, Partition Tolerance) at any given time. This 
+necessitates making trade-offs in system design. 
+• A Venn diagram is often used to illustrate this, with three overlapping circles representing 
+C, A, and P . The overlapping regions (CA, AP , CP) show systems that prioritize two of the 
+three, while the central region (CAP) is deemed impossible to achieve simultaneously in 
+the presence of network partitions. 
+ 

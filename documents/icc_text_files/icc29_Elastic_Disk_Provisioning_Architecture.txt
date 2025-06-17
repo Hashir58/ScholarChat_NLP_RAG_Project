@@ -1,0 +1,33 @@
+Elastic Disk Provisioning Architecture centers around the concept of providing storage to 
+systems, particularly virtual servers, in a flexible and efficient manner. It allows storage capacity to 
+be allocated dynamically, adjusting to actual needs rather than pre-allocating large, fixed amounts 
+that might go unused. This is often achieved through a technique known as thin provisioning.  
+Key Concepts: 
+• Dynamic Storage: The core idea is that storage allocation isn't static. Instead, it adjusts 
+based on the real-time storage requirements of the application or virtual server. As more 
+data is written, more physical storage is allocated from a shared pool. 
+• Thin-Provisioning: This is the mechanism that enables dynamic storage. When a virtual 
+server is provisioned, it might be logically assigned a large amount of disk space (e.g., 450 
+GB).  
+• Usage Monitoring: To support this model and enable accurate billing, the system 
+continuously tracks actual storage usage. This monitoring allows cloud providers to 
+charge customers based on the physical storage consumed, rather than the total 
+provisioned logical capacity. 
+How it Works (Illustrated by Figure 11.14 & 11.15 context): 
+Imagine a cloud consumer requests a virtual server that logically includes three hard disks, each 
+with a capacity of 150 GB, totaling a provisioned disk space of 450 GB. 
+1. Initial Provisioning (Logical Allocation): The virtual server is configured by the elastic disk 
+provisioning architecture to see a total of 450 GB of available disk space. This 450 GB is set 
+as the maximum disk usage allowed for this virtual server. 
+2. No Initial Physical Allocation: Crucially, at this point, no actual physical disk space (or a 
+near-zero amount for metadata) has been reserved or allocated from the underlying 
+physical storage devices for this 450 GB. The system reports "used: 0 GB" physically. 
+3. Data Writing and Physical Allocation: When the cloud consumer starts installing 
+software or copying files onto the virtual server's disks, the actual used space begins to 
+grow. As data is written, the thin-provisioning software, often interacting with a hypervisor 
+and a dynamic disk allocation component, carves out physical storage from the underlying 
+shared storage pool to accommodate this new data. 
+4. Pay-Per-Use Monitoring: A pay-per-use monitor tracks the actual dynamically allocated 
+physical storage. The consumer is billed based on this actual usage, not the initially 
+provisioned 450 GB. If the consumer has used 0 GB, they are not charged for disk space 
+usage (beyond any base fees for the virtual server itself). 

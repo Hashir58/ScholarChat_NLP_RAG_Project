@@ -1,0 +1,8 @@
+What NER is NOT
+
+Not event recognition (doesn't identify events or actions).
+
+Does not perform co-reference (linking different mentions of the same entity).
+
+Not just dictionary or list lookups — needs to handle variants and ambiguity.
+

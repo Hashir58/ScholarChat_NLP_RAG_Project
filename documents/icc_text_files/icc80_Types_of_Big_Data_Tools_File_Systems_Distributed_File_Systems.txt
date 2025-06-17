@@ -1,0 +1,42 @@
+ Two Main Types of Big Data Tools 
+When dealing with Big Data, the tools can generally be categorized into two primary types based 
+on their core function: 
+1. Data Store Tools: 
+o Purpose: These tools address the fundamental challenge of how to store and 
+access the massive volumes of data. They provide the underlying mechanisms for 
+persisting data in a distributed and often fault-tolerant manner. 
+o Key Technology: The File System is a critical component here. In the Big Data 
+context, this often refers to distributed file systems. 
+o Examples: 
+▪ Hadoop HDFS (Hadoop Distributed File System): A cornerstone of the 
+Hadoop ecosystem, designed to store very large files across clusters of 
+commodity hardware. 
+▪ Amazon S3 (Simple Storage Service): A highly scalable object storage 
+service offered by AWS, widely used for data lakes and Big Data storage. 
+2. Data Processing Tools: 
+o Purpose: Once data is stored, these tools are used to process, analyze, and 
+transform it to extract insights, perform computations, or prepare it for other uses. 
+o Examples: 
+▪ Hadoop MapReduce: A programming model and processing engine within 
+the Hadoop framework for parallel processing of large datasets. 
+▪ Google Dataflow: A fully managed stream and batch data processing 
+service from Google Cloud, also underlying Apache Beam. 
+▪ Other examples not explicitly listed but fitting this category include Apache 
+Spark, Apache Flink, and Apache Storm. 
+What is a File System? 
+At its core, a File System is a fundamental part of an operating system or storage solution 
+that controls how data is stored and retrieved from disk (or other storage media). 
+Distributed File Systems 
+
+Distributed File Systems (DFS) are designed to address scenarios where the sheer volume of 
+data outgrows the storage capacity of a single machine. Key characteristics and purposes 
+include: 
+• Addressing Single Machine Limitations: When data becomes too large for one server, a 
+DFS is necessary. 
+• Data Partitioning: A DFS partitions data across a number of separate machines (nodes 
+in a cluster). This allows for storing vastly larger datasets than any single machine could 
+handle. 
+• Networked Storage Management: DFS solutions manage the storage across a network 
+of machines, presenting a unified view of the storage to users and applications, even 
+though the data is physically spread out.  
+ 

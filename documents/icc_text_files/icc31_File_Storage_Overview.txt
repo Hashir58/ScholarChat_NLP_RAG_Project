@@ -1,0 +1,37 @@
+File Storage Overview 
+File storage is a solution that presents files to applications and end-users, storing data as elements 
+within folders accessible via a hierarchical path through folders and subfolders. It's often associated with 
+Network Attached Storage (NAS), enabling users to access and manage files over a network. Examples 
+include AWS Elastic File Storage (EFS) and Azure Files. 
+Common Uses: 
+ Facilitating document collaboration and sharing within organizations. 
+ Best for unstructured data like documents, images, videos, and shared files where metadata and 
+hierarchical organization are needed. 
+Limitations: 
+ Efficient with a moderate number of files, but the hierarchical structure can become limiting 
+with a large volume of files. 
+ Every file has a hierarchical path, and the system must traverse directories to locate files, 
+slowing down the lookup process with many files. 
+ Scaling is complex due to managing a centralized file system across multiple servers, leading to 
+bottlenecks and increased synchronization overhead. 
+File Storage Visual and Scenario 
+A diagram illustrating file storage includes: 
+ Center: An orange rectangle labeled "FILE STORAGE" with "File-sharing space for applications & 
+users" below, showing a hierarchical folder structure icon. 
+ Left: A box listing examples: EFS (AWS), Azure Files (Microsoft), Filestore (Google Cloud), 
+connected by an arrow to the central File Storage. 
+ Right: Arrows showing data flowing to/from user icons and server/database icons, indicating 
+shared access. 
+ Above the diagram: A legend with "+" and "-" symbols indicating: 
+o (+ Ideal): Access control & sharing among multiple users & instances, collaboration and 
+document sharing, simultaneous access by several instances. 
+o (-): Decrease in performance with a large volume of files, complex scaling. 
+Scenario: 
+ A marketing team of 10 people working on a new product launch needs to share presentations, 
+documents, and videos. 
+ Instead of emailing files, they use file storage to access a shared folder where everyone can 
+upload, edit, and organize files into subfolders like "Images," "Reports," and "Videos." 
+
+ File storage ensures proper file permissions, allowing certain members "read-only" access, while 
+others can "edit" the files. 
+ 

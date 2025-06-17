@@ -1,0 +1,58 @@
+What is Question Answering (QA)?
+
+QA systems are computer programs that answer questions posed in natural language. These systems often work by extracting facts from large sources like the web or databases and matching them to the question you ask.
+
+
+
+Common Types of Questions in QA Systems
+
+Factoid Questions
+
+These are simple fact-based questions.
+
+Usually start with question words like Who, What, When, Where.
+
+Example: “Who is the president of the USA?”
+
+Answer: A specific fact like “Joe Biden.”
+
+List Questions
+
+Questions that require multiple answers in a list form.
+
+Example: “What are the countries in the European Union?”
+
+Answer: A list of countries (France, Germany, Italy, etc.).
+
+Casual Questions
+
+These need explanations or reasons about something.
+
+Often start with How or Why.
+
+Example: “Why do leaves change color in autumn?”
+
+Answer: An explanation involving science or facts.
+
+Confirmation Questions
+
+Require a simple Yes or No answer.
+
+These need the system to understand and reason based on facts or common sense.
+
+Example: “Is Paris the capital of Germany?”
+
+Answer: “No.”
+
+Hypothetical Questions
+
+Ask about imagined or “what if” situations.
+
+Usually start with “What would happen if…”
+
+There are no fixed answers, often speculative.
+
+Example: “What would happen if humans could fly?”
+
+Answer: Open-ended or speculative explanations.
+

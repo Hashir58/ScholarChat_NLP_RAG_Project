@@ -1,0 +1,54 @@
+# Explicitly excluded files based on your request and new findings
+
+# Specific files to ignore
+rag_pipeline.pkl
+RAG Pipeline Developer Guide & Optimization.pdf
+Summary of Changes Made (Original 568 Document Pathway).docx
+main.ipynb
+Course_RAG/
+
+# Specific folders to ignore
+enhanced_chunks_650/ # You explicitly don't want this one
+
+# Models folder handling: Ignore all contents but keep the folder itself (via .gitkeep)
+models/*
+!models/.gitkeep
+
+pipelines/*
+!pipelines/.gitkeep
+
+
+# General Python ignores
+__pycache__/
+*.pyc
+*.o
+*.so
+*.egg
+*.dist-info/
+*.egg-info/
+venv/
+.venv/
+env/
+.env/
+build/
+dist/
+*.pyo
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Jupyter Notebook specific ignores
+.ipynb_checkpoints/
+.jupyter/
+
+# Operating System specific ignores
+.DS_Store # macOS
+Thumbs.db # Windows
+desktop.ini # Windows
+
+# IDE specific ignores
+.vscode/ # VS Code
+*.suo    # Visual Studio solution user options
+*.user   # Visual Studio solution user options

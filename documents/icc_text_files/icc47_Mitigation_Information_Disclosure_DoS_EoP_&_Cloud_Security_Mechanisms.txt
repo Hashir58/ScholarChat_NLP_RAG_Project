@@ -1,0 +1,64 @@
+4. Information Disclosure (Exposure of Sensitive Information) - Mitigation Techniques: 
+This threat involves the unauthorized exposure of confidential or sensitive data. 
+• Encryption: 
+o Technique: Encrypt sensitive data both in transit (e.g., using SSL/TLS for web 
+traffic) and at rest (e.g., using AWS KMS for encrypting data in S3 or RDS). This 
+makes data unreadable even if accessed by unauthorized parties. 
+• Access Control: 
+o Technique: Apply strict, granular access control policies, often using Identity and 
+Access Management (IAM) systems, to limit who can access sensitive data and 
+what actions they can perform. This adheres to the principle of least privilege. 
+• Data Masking or Redaction: 
+o Technique: Mask or redact sensitive portions of data when it’s being displayed or 
+used by unauthorized or less-privileged users or in non-production environments 
+(e.g., showing only the last four digits of a credit card number). 
+5. Denial of Service (DoS) or Distributed Denial of Service (DDoS) - Mitigation Techniques: 
+These attacks aim to make a service unavailable by overwhelming it with traffic. 
+• Rate Limiting: 
+o Technique: Use tools like API gateways, web application firewalls (WAFs), and load 
+balancers to limit the number of requests a user or IP address can make within a 
+specific time frame, thus mitigating an attacker's ability to flood the service. 
+• Redundancy and Scaling: 
+o Technique: Implement auto-scaling for resources to automatically handle 
+increased traffic. Deploying resources across multiple availability zones or regions 
+provides redundancy and reduces the risk of service outages due to localized 
+attacks or failures. 
+• DDoS Protection Services: 
+o Technique: Utilize specialized services designed to detect and mitigate DDoS 
+attacks, such as AWS Shield or third-party solutions like Cloudflare. These services 
+can absorb and filter malicious traffic. 
+
+6. Elevation of Privilege (Unauthorized Access or Escalated Permissions) - Mitigation 
+Techniques: 
+This threat involves an attacker or user gaining more access rights than they are legitimately 
+entitled to. 
+• Least Privilege Access: 
+o Technique: Ensure users, roles, and services are granted only the minimum level of 
+access and permissions required for their specific job function or task. 
+• Role-Based Access Control (RBAC): 
+o Technique: Use RBAC to assign specific predefined roles (with associated 
+permissions) to users based on their responsibilities within the organization or 
+system. This provides a structured way to manage permissions. 
+• Regular Access Reviews: 
+o Technique: Continuously review and audit user permissions and access rights to 
+identify and revoke excessive or unnecessary privileges, thereby preventing privilege 
+escalation or misuse of stale permissions. 
+Cloud Security Mechanisms (Core Tools/Concepts): 
+The document then introduces fundamental mechanisms used to implement security in the 
+cloud: 
+• Encryption: 
+o Definition: The process of converting data from a readable format (plaintext) into a 
+secure, unreadable format (ciphertext) to prevent unauthorized access. It ensures 
+that data is unintelligible to anyone who does not possess the proper decryption 
+key. 
+• IAM (Identity and Access Management): 
+o Definition: IAM is a framework of policies and technologies that helps manage and 
+control user identities and their access to cloud resources. It ensures that the right 
+people (or services) have the right level of access to the right resources at the right 
+time. 
+• SSO (Single Sign-On): 
+
+o Definition: SSO allows users to authenticate once (e.g., by logging into their 
+corporate network) and then gain access to multiple related but independent 
+software systems or cloud services without needing to log in again for each one. 
+ 

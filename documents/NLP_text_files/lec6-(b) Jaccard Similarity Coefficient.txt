@@ -1,0 +1,201 @@
+Jaccard Similarity Coefficient
+
+
+
+Definition
+
+The Jaccard Coefficient (also known as Jaccard Index or sometimes referred to as the Tanimoto Coefficient in some contexts, though Tanimoto often applies to binary attributes in vectors) is a statistic used to measure the similarity and diversity between two finite sets. It quantifies the degree of overlap between two sets, let's call them set A and set B.
+
+
+
+________________________________________
+
+Formula
+
+
+
+Jaccard(A, B) = |A intersect B| / |A union B|
+
+
+
+Where:
+
+*   `|A intersect B|` represents the number of elements common to both set A and set B (i.e., the cardinality of the intersection of A and B).
+
+*   `|A union B|` represents the total number of unique elements present in either set A or set B (or both) (i.e., the cardinality of the union of A and B).
+
+    It can also be expressed as: |A union B| = |A| + |B| - |A intersect B|
+
+
+
+________________________________________
+
+Properties
+
+
+
+*   Jaccard(A, A) = 1
+
+    This means a set is perfectly similar to itself. The intersection and union are the set itself, so |A| / |A| = 1.
+
+
+
+*   Jaccard(A, B) = 0 if (A intersect B) is an empty set (∅).
+
+    This means if there are no common elements between set A and set B, their Jaccard similarity is zero.
+
+
+
+*   The Jaccard score is always between 0 and 1, inclusive (0 <= Jaccard(A, B) <= 1).
+
+    A score of 1 indicates perfect similarity, and a score of 0 indicates no similarity.
+
+________________________________________
+
+Conceptual Diagram Explanation
+
+
+
+Imagine a Venn diagram with two overlapping circles representing set A and set B.
+
+*   Intersection (A intersect B): This is the overlapping area in the Venn diagram. It contains all the elements that are present in BOTH set A AND set B. The Jaccard formula uses the count of these common elements in its numerator.
+
+*   Union (A union B): This is the total area covered by both circles in the Venn diagram, including the overlapping part. It contains all unique elements that are present in set A OR set B OR both. The Jaccard formula uses the count of these total unique elements in its denominator.
+
+These visual components directly correspond to the numerator (intersection size) and the denominator (union size) of the Jaccard formula.
+
+________________________________________
+
+Example Calculation
+
+
+
+Sentences:
+
+1.  S1: "I am enrolled in the Bachelors of Computer Science Program at Bahria University, Islamabad."
+
+2.  S2: "The Bachelors of Computer Science Program is offered at Bahria University, Islamabad."
+
+
+
+Tokenization (treating words as elements of sets, case-sensitive for this example, though typically lowercasing is done):
+
+
+
+*   Set A (words from S1):
+
+    A = {'I', 'am', 'enrolled', 'in', 'the', 'Bachelors', 'of', 'Computer', 'Science', 'Program', 'at', 'Bahria', 'University', 'Islamabad'}
+
+    Number of elements in A, |A| = 14
+
+
+
+*   Set B (words from S2):
+
+    B = {'the', 'Bachelors', 'of', 'Computer', 'Science', 'Program', 'is', 'offered', 'at', 'Bahria', 'University', 'Islamabad'}
+
+    Number of elements in B, |B| = 12
+
+________________________________________
+
+Calculate:
+
+
+
+*   Union (A union B):
+
+    This set contains all unique words from both A and B.
+
+    A union B = {'I', 'am', 'enrolled', 'in', 'the', 'Bachelors', 'of', 'Computer', 'Science', 'Program', 'at', 'Bahria', 'University', 'Islamabad', 'is', 'offered'}
+
+    Number of elements in (A union B), |A union B| = 16
+
+
+
+*   Intersection (A intersect B):
+
+    This set contains only the words common to both A and B.
+
+    A intersect B = {'the', 'Bachelors', 'of', 'Computer', 'Science', 'Program', 'at', 'Bahria', 'University', 'Islamabad'}
+
+    Number of elements in (A intersect B), |A intersect B| = 10
+
+________________________________________
+
+Jaccard similarity:
+
+
+
+Jaccard(A, B) = |A intersect B| / |A union B|
+
+Jaccard(A, B) = 10 / 16
+
+Jaccard(A, B) = 0.625
+
+________________________________________
+
+Alternate Formula (Often called Tanimoto Coefficient for binary attributes, equivalent to Jaccard for sets)
+
+
+
+T = Nc / (Na + Nb - Nc)
+
+
+
+Where:
+
+*   Nc = |A intersect B| (number of common elements)
+
+*   Na = |A| (number of elements in set A)
+
+*   Nb = |B| (number of elements in set B)
+
+
+
+Using the example:
+
+Na = 14
+
+Nb = 12
+
+Nc = 10
+
+T = 10 / (14 + 12 - 10)
+
+T = 10 / (26 - 10)
+
+T = 10 / 16
+
+T = 0.625
+
+This confirms that Na + Nb - Nc is an alternative way to calculate |A union B|.
+
+________________________________________
+
+Pros and Cons
+
+
+
+Pros:
+
+*   Simple and intuitive: The concept of overlap relative to total unique items is easy to understand.
+
+*   Efficient to calculate: Requires basic set operations (intersection, union) and counts.
+
+*   Not sensitive to differences in set sizes in the same way some other metrics might be; it focuses on the proportion of shared items.
+
+
+
+Cons:
+
+*   Ignores term frequency: It only considers the presence or absence of an element (e.g., a word). It doesn't care if a word appears once or multiple times within a document when documents are converted to sets of unique words.
+
+*   Doesn’t inherently weight rare terms more than common terms: All shared elements contribute equally to the intersection count.
+
+*   Needs normalization or careful consideration for length variations when term frequency or the magnitude of elements is important. For instance, if comparing very short texts to very long texts, the Jaccard index might be misleading if one is not just interested in shared vocabulary.
+
+________________________________________
+
+Useful Online Calculator
+
+For experimenting with Jaccard similarity calculations, you can find online tools. One such example is: planetcalc.com/1664/

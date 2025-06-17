@@ -1,0 +1,191 @@
+Cosine Similarity
+
+
+
+Definition
+
+Cosine Similarity measures the similarity between two non-zero vectors by calculating the cosine of the angle between them in an inner product space. It focuses on the orientation of the vectors, ignoring their magnitudes (lengths).
+
+*   Range: Cosine similarity values range from -1 to 1. However, when vectors have only non-negative components (like word counts or TF-IDF scores), the similarity typically ranges from 0 to 1.
+
+*   Interpretation:
+
+    *   A value of 1 means the vectors point in the exact same direction (perfectly similar orientation).
+
+    *   A value of 0 means the vectors are orthogonal (perpendicular), indicating no similarity in their orientation.
+
+    *   A value of -1 (possible with vectors containing negative values) means the vectors point in opposite directions.
+
+________________________________________
+
+Formula
+
+
+
+Cosine Similarity = (A . B) / (||A|| * ||B||)
+
+
+
+Where:
+
+*   `A . B` represents the dot product of vectors A and B.
+
+    This is calculated by multiplying corresponding elements of the two vectors and then summing all those products. For vectors A = [a1, a2, ..., an] and B = [b1, b2, ..., bn], the dot product is:
+
+    A . B = (a1*b1) + (a2*b2) + ... + (an*bn)
+
+
+
+*   `||A||` represents the magnitude (also known as the Euclidean norm or length) of vector A.
+
+    This is calculated as the square root of the sum of the squares of its components. For vector A = [a1, a2, ..., an], the magnitude is:
+
+    ||A|| = sqrt(a1^2 + a2^2 + ... + an^2)
+
+
+
+*   `||B||` represents the magnitude of vector B.
+
+    Calculated similarly to ||A||:
+
+    ||B|| = sqrt(b1^2 + b2^2 + ... + bn^2)
+
+________________________________________
+
+Example
+
+
+
+Sentences:
+
+1.  S1: "I am enrolled in the Bachelors of Computer Science Program at Bahria University, Islamabad."
+
+2.  S2: "The Bachelors of Computer Science Program is offered at Bahria University, Islamabad."
+
+________________________________________
+
+Step 1: Tokenize and Create Vocabulary
+
+Combine all unique words from both sentences into a vocabulary. Let's assume a fixed order for the vocabulary:
+
+Vocabulary = ['I', 'am', 'enrolled', 'in', 'the', 'Bachelors', 'of', 'Computer', 'Science', 'Program', 'at', 'Bahria', 'University', 'Islamabad', 'is', 'offered']
+
+(The vocabulary has 16 unique words.)
+
+________________________________________
+
+Step 2: Construct Binary Vectors
+
+Represent each sentence as a vector where each element corresponds to a word in the vocabulary. A '1' indicates the word is present in the sentence, and a '0' indicates it is absent.
+
+
+
+*   Vector for Sentence 1 (V1):
+
+    Based on the vocabulary order: ['I', 'am', 'enrolled', 'in', 'the', 'Bachelors', 'of', 'Computer', 'Science', 'Program', 'at', 'Bahria', 'University', 'Islamabad', 'is', 'offered']
+
+    V1 = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0]
+
+    (The words 'is' and 'offered' are absent from S1, so their corresponding positions are 0.)
+
+
+
+*   Vector for Sentence 2 (V2):
+
+    V2 = [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+    (The words 'I', 'am', 'enrolled', 'in' are absent from S2, so their corresponding positions are 0.)
+
+________________________________________
+
+Step 3: Compute Magnitudes
+
+
+
+Magnitude of V1 (||V1||):
+
+||V1|| = sqrt(sum of the squares of each element in V1)
+
+V1 has 14 ones and 2 zeros.
+
+||V1|| = sqrt( (1^2 * 14) + (0^2 * 2) )
+
+||V1|| = sqrt( (1 * 14) + (0 * 2) )
+
+||V1|| = sqrt(14 + 0)
+
+||V1|| = sqrt(14)
+
+
+
+Magnitude of V2 (||V2||):
+
+||V2|| = sqrt(sum of the squares of each element in V2)
+
+V2 has 12 ones and 4 zeros.
+
+||V2|| = sqrt( (1^2 * 12) + (0^2 * 4) )
+
+||V2|| = sqrt( (1 * 12) + (0 * 4) )
+
+||V2|| = sqrt(12 + 0)
+
+||V2|| = sqrt(12)
+
+________________________________________
+
+Step 4: Compute Dot Product (V1 . V2)
+
+
+
+The dot product V1 . V2 is the sum of the products of corresponding elements.
+
+V1 . V2 = (1*0) + (1*0) + (1*0) + (1*0) + (1*1) + (1*1) + (1*1) + (1*1) + (1*1) + (1*1) + (1*1) + (1*1) + (1*1) + (1*1) + (0*1) + (0*1)
+
+V1 . V2 = 0 + 0 + 0 + 0 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 0 + 0
+
+V1 . V2 = 10
+
+(Alternatively, for binary vectors, the dot product is simply the count of common words, i.e., positions where both vectors have a 1. There are 10 such common words.)
+
+________________________________________
+
+Step 5: Calculate Cosine Similarity
+
+
+
+Cosine Similarity = (V1 . V2) / (||V1|| * ||V2||)
+
+Cosine Similarity = 10 / (sqrt(14) * sqrt(12))
+
+Cosine Similarity = 10 / sqrt(14 * 12)
+
+Cosine Similarity = 10 / sqrt(168)
+
+Using approximations: sqrt(168) is approximately 12.96
+
+Cosine Similarity approx 10 / 12.96
+
+Cosine Similarity approx 0.771
+
+________________________________________
+
+Interpretation
+
+
+
+*   A cosine similarity of approximately 0.771 indicates a fairly strong similarity in terms of shared words (and thus, orientation of their vector representations) between the two sentences.
+
+*   It effectively ignores differences in the length of the sentences (number of words) if those different words are not shared, and focuses on the proportion of shared content relative to their individual complexities (magnitudes).
+
+________________________________________
+
+Summary: Why Use Cosine Similarity?
+
+
+
+*   Captures similarity of orientation (direction) of vectors, regardless of their magnitude (length). This is useful when the length of the document (e.g., word count) is less important than the content.
+
+*   Works well for text similarity, especially when using term frequency vectors (like TF-IDF), where the magnitude can vary significantly between documents of different lengths but the relative importance of terms (direction) is key.
+
+*   Commonly used in information retrieval for document similarity, in recommendation systems (e.g., finding similar users or items), and in clustering tasks.

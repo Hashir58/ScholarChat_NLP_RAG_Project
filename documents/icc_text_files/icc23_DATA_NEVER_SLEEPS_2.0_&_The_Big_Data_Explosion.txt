@@ -1,0 +1,33 @@
+DATA NEVER SLEEPS 2.0: How Much Data is Generated Every Minute? 
+This section, often presented as a graphic or infographic (associated with DOMO), dramatically 
+illustrates the sheer volume and velocity of data being generated across various online platforms 
+and digital activities every single minute of every day. The core message is that data creation is a 
+continuous, often unnoticed, byproduct of our daily digital interactions. The text emphasizes that 
+"Big Data" is not just about massive size but also describes the "massive avalanche of digital 
+activity pulsating through cables and airwaves. " It also points to the new types of measurements 
+and insights now possible; "all the things we were never able to measure before. " 
+Every online action—sharing a status, reading an article, uploading a photo—contributes to a 
+"digital trail that tells a story. " The "DATA NEVER SLEEPS" concept aims to quantify this 
+phenomenon by showcasing statistics for data generated per minute across popular services. This 
+highlights the dynamic, high-velocity nature of data in the modern world, underscoring the 
+challenge and opportunity of harnessing this constant flow of information. The content is typically 
+framed by decorative elements, emphasizing its a regular, updated report on the state of internet 
+data generation. 
+The Big Data Explosion 
+This section formally defines "Big Data" and illustrates the challenges it presents. Big Data is 
+characterized by the "three V's": 
+• Volume: Refers to the enormous quantity of data being generated and stored. 
+• Variety: Pertains to the diverse types of data, ranging from structured (like database 
+entries) to unstructured (like text, images, videos) and semi-structured (like JSON or XML 
+files). 
+• Velocity: Describes the high speed at which data is generated, processed, and consumed. 
+An accompanying image often uses the "needle in a haystack" metaphor to explain the challenge. 
+"Small data" is depicted as a small pile of hay with an easily visible needle. In contrast, "big data" 
+is shown as an overwhelmingly large haystack, with a stressed individual using a pitchfork, 
+highlighting the immense difficulty and time (e.g., "Congratulations, it only took you 65298 
+seconds" to find the needle) involved in finding valuable information or insights within such vast 
+and complex datasets. This metaphor effectively communicates how the challenge of extracting 
+value from data increases dramatically with its size, variety, and velocity. The increasing scale and 
+complexity of Big Data necessitate advanced analytical tools and techniques to manage and 
+derive meaningful insights from these exploding data volumes. 
+ 

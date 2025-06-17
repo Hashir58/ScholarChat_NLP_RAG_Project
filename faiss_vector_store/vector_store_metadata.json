@@ -1,0 +1,26 @@
+{
+  "creation_date": "2025-06-03T04:06:50.570331",
+  "embedding_model": "intfloat/e5-base",
+  "embedding_dimension": 768,
+  "total_vectors": 704,
+  "index_type": "IndexFlatIP",
+  "chunk_count": 704,
+  "original_embedding_metadata": {
+    "model_name": "intfloat/e5-base",
+    "embedding_dim": 768,
+    "total_chunks": 704,
+    "successful_chunks": 704,
+    "failed_chunks": 0,
+    "processing_time": 21.09411311149597,
+    "chunks_per_second": 33.37424030481427,
+    "use_enhanced_text": true,
+    "batch_size": 32
+  },
+  "categories": [
+    "Sealed Nectar",
+    "NLP",
+    "ICC",
+    "Pakistan Studies"
+  ],
+  "build_time_seconds": 0.176941
+}

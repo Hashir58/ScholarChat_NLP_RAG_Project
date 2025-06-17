@@ -1,0 +1,42 @@
+Cloud Storage Overview and Types 
+Cloud storage enables on-demand data storage on remote infrastructures managed by providers like 
+AWS, Microsoft Azure, or Google Cloud. There are three primary types of cloud storage: block storage, 
+file storage, and object storage. Understanding these types is crucial for selecting the storage solution 
+that best fits your needs. Businesses often require multiple storage types based on data usage and the 
+nature of the data itself. 
+A visual representation includes a central cloud icon labeled "Cloud storage" with "Storage as a Service" 
+written below. Arrows point from various data sources (e.g., chat bubbles, code symbols, graphs) 
+towards the central cloud, and from the cloud to the three storage types: 
+ Block Storage: Represented by interconnected cubes. 
+ File Storage: Depicted with a folder icon. 
+ Object Storage: Illustrated with a bucket icon. This diagram summarizes how various data types 
+are stored "as a Service" in the cloud, categorized into Block, File, or Object storage. 
+ 
+ 
+Object Storage Overview 
+Object storage is ideal for storing large volumes of unstructured data, such as videos, images, static web 
+pages, text, audio files, and emails. Examples include AWS S3 and Google Cloud Storage. Objects contain 
+the data itself, metadata (e.g., video recording locations, actors), and a unique object identifier. 
+Structure: 
+ Objects are stored in buckets, modular units often distributed across storage systems to ensure 
+better scalability, fault tolerance, and availability. 
+ Each bucket organizes and groups objects, enabling efficient storage, retrieval, and management 
+in a scalable and structured way. 
+ Object storage offers direct data access via APIs, making data accessible from web applications 
+on any device simultaneously. 
+Advantages: 
+ Highly scalable, rapidly scaling to petabytes of data at a competitive price. 
+ Extensive use of metadata makes data retrieval more straightforward. 
+Limitations: 
+ Not ideal for low-latency or high-performance needs like databases. 
+ Objects cannot be modified; a new object must be created for any changes. 
+ HTTP is used for data access, adding more latency due to the higher-level protocol and 
+distributed nature of object storage. 
+
+ 
+Object Storage Visual and Scenario 
+A diagram illustrating object storage includes: 
+ Center: A bucket icon labeled "Bucket" representing the storage container, with "OBJECT 
+STORAGE" written above. 
+ Left: An "Object" icon (document with magnifying glass 
+ 

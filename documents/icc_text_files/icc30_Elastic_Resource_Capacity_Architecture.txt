@@ -1,0 +1,40 @@
+Elastic Resource Capacity Architecture focuses on the fine-grained, real-time, and event-driven 
+allocation and deallocation of resources, often at the level of individual functions or tasks. Unlike 
+dynamic scalability which typically involves launching or terminating entire server instances 
+(horizontal scaling), elastic capacity often involves adjusting resources like CPU and memory for 
+an existing service instance, or provisioning resources just for the duration of a specific task (akin 
+to vertical scaling or function-level scaling). This model is highly cost-efficient, as users pay only 
+for the precise resources consumed during the execution of a task. 
+A key characteristic is its suitability for workloads with highly variable or unpredictable demands, 
+such as serverless functions (e.g., AWS Lambda) or batch processing jobs. Resources are 
+provisioned almost instantaneously when an event triggers a function or a task begins, and they 
+are released immediately upon completion. 
+Scenario: Image-Processing Service 
+Consider the same online retailer now offering an image-processing service. Customers can 
+upload product images, and the service customizes them. This service utilizes Elastic Resource 
+Capacity Architecture. 
+• Serverless Environment: The service is implemented using a serverless platform like AWS 
+Lambda. This means that compute resources are not continuously running; instead, they 
+are provisioned only when a user triggers an event, in this case, uploading an image. 
+• Dynamic Allocation: When a customer uploads an image, the serverless platform 
+dynamically allocates the necessary CPU, memory, and execution time for the image 
+processing function to run for that specific request. 
+• Immediate Release: As soon as the image processing task for that request is completed, 
+the allocated resources are immediately released. 
+What Happens during Peak Usage: 
+• Simultaneous Uploads: At midnight, coinciding with a new feature launch, 100,000 users 
+might simultaneously upload images. The Elastic Resource Capacity architecture 
+provisions computing resources in real-time for each individual request without 
+perceptible delays.  
+• Automatic Deallocation: At 2:00 AM, as the upload activity slows down, the resources 
+that were provisioned for the completed tasks are automatically deallocated. 
+• Cost Efficiency: The retailer only pays for the exact processing time and resources used 
+for those specific uploads. There's no cost for idle server time, as resources are not pre-
+allocated and waiting. 
+
+Choosing Elastic Resource Capacity: 
+This architecture is ideal for event-driven applications, microservices, or tasks where demand is 
+sporadic, unpredictable, or requires rapid, fine-grained scaling. It contrasts with dynamic 
+scalability by often adding resources to the same server or, more accurately, provisioning 
+resources for individual function instances rather than whole servers 
+ 

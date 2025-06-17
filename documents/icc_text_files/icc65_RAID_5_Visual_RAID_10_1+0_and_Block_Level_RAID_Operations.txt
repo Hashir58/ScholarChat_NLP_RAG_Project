@@ -1,0 +1,36 @@
+RAID 5 (Striping with Distributed Parity) - Visual Explanation: 
+A diagram illustrates RAID level 5: 
+• Four disk icons ("DISK 1" to "DISK 4") are shown, each with four horizontal segments. 
+• Data blocks (A, B, C, etc.) and Parity blocks (Parity) are distributed across these disks. 
+o Example Stripe 1: A (Disk 1), B (Disk 2), C (Disk 3), Parity (Disk 4) 
+o Example Stripe 2: D (Disk 1), E (Disk 2), Parity (Disk 3), F (Disk 4) 
+o (And so on, with the parity block rotating to a different disk for each stripe). 
+This visual demonstrates how data is striped across disks, and crucially, how the 
+parity information for each stripe is also distributed across all the disks in the array. 
+This distributed parity allows the array to reconstruct data if any single disk fails. 
+RAID 10 (RAID 1+0 or Mirrored Stripes): Details 
+RAID 10, also known as RAID 1+0, is a nested RAID level that combines the features of RAID 1 
+(mirroring) and RAID 0 (striping) to provide both high performance and high fault tolerance. 
+• Data Distribution: It works by first creating mirrored sets of disks (RAID 1 pairs) and then 
+striping data (RAID 0) across these mirrored sets. So, data is first mirrored for redundancy, 
+and then these mirrored pairs are striped together for performance. 
+• Performance: Offers excellent read and write performance. Striping across multiple 
+mirrored pairs allows for high throughput, while mirroring ensures data is readily available 
+from redundant copies. It generally provides better write performance than RAID 5 because 
+it doesn't have the overhead of parity calculations. 
+• Fault Tolerance: RAID 10 can tolerate the failure of one disk in each mirrored 
+pair without data loss. If more than one disk fails within the same mirrored pair, the array 
+will fail. However, it can tolerate multiple disk failures as long as no single mirrored pair 
+loses all its disks. It offers strong redundancy combined with high performance. 
+• Minimum Disks: Requires a minimum of four disks (two mirrored pairs, with each pair 
+then striped). 
+• Storage Efficiency: Similar to RAID 1, the usable capacity is 50% of the total raw capacity 
+of all disks (e.g., four 1TB disks in RAID 10 provide 2TB of usable storage). 
+How Block-Level RAID Works (General Read Operation): 
+The text briefly explains how block-level RAID (like RAID 0, 5, 10) operates during data access: 
+
+• Data is divided into blocks and distributed across multiple disks. 
+• During a read operation, the RAID system (managed by a RAID controller, either hardware 
+or software) accesses these blocks from the multiple disks in parallel. 
+• This parallel access speeds up the overall data retrieval process. 
+ 

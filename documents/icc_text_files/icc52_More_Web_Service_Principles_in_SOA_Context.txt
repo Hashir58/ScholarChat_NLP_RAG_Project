@@ -1,0 +1,46 @@
+3. Web Services Support Abstraction: 
+• Hiding Internal Complexity: Web Services follow the principle of abstraction by hiding 
+their internal workings and implementation details from the consumer. The consumer 
+only needs to know the service's public interface (the contract: what operations are 
+available, what data to send, what data to expect back), not how the service performs 
+those operations internally. 
+• Focus on Interface: The consumer interacts with the Web Service based on its defined 
+interface, not its underlying technology stack, programming language, or database 
+structure. 
+4. Web Services Are Naturally Composable: 
+• Combining Services: Web Services can be combined or orchestrated to form larger, 
+more complex services or business processes. This aligns directly with the SOA principle 
+of composability. 
+• Modular Design Philosophy: This capability supports the modular design philosophy of 
+SOA, where complex applications are built by assembling smaller, independent, and 
+reusable service components. 
+5. Autonomy Has to Be Designed In (for Web Services): 
+• Independent Operation: Autonomy refers to the ability of a Web Service to operate 
+independently and control its own logic and resources. 
+• Inherent vs. Designed Autonomy: While Web Services are inherently somewhat 
+autonomous due to their distributed nature and well-defined interfaces, designing self-
+contained logic within the services further enhances their true independence. This 
+means a service should manage its own state (if any, though statelessness is often 
+preferred) and not be overly reliant on the state or specific context of other external 
+services for its core functioning. 
+6. Web Services Support Statelessness: 
+• No Retained Interaction History: Web Services are typically stateless, meaning they do 
+not retain information or context about past interactions with a specific consumer 
+across multiple requests. 
+• Independent Transactions: Each request to a stateless Web Service is treated as 
+an independent transaction, containing all the information necessary for the service to 
+process it. The service does not rely on any memory of previous requests from that same 
+consumer. 
+
+• Benefits: Statelessness simplifies service design, enhances scalability (as any instance of 
+the service can handle any request without needing shared session state), and improves 
+reliability. 
+7. Discoverability Is Beyond the Scope of a Web Service (itself): 
+• Locating Services: Discoverability, while a core SOA principle, is typically handled by 
+mechanisms external to the Web Service itself. It refers to the ability for consumers 
+to locate and identify Web Services dynamically, often using directories or registries. 
+• Role of Registries: Technologies like UDDI (Universal Description, Discovery, and 
+Integration) were designed to serve as registries where service providers could publish 
+descriptions of their Web Services, and consumers could search these registries to find 
+services that meet their needs. 
+ 

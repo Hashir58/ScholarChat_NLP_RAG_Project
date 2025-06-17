@@ -1,0 +1,53 @@
+Service-Oriented Architecture (SOA): Fundamental Definitions 
+Service-Oriented Architecture (SOA) is a software design paradigm based on the concept of 
+"services" as fundamental building blocks. 
+1. Service: 
+o In SOA, a service is defined as the smallest functional unit. It represents a 
+distinct, well-defined piece of business functionality or capability. 
+o Crucially, a service is designed to be self-contained, meaning it can perform its 
+specific function independently without relying on the context or state of other 
+services. An example would be a service that retrieves a bank statement online; this 
+service performs one specific task. 
+2. Service-Oriented Architecture (SOA): 
+o SOA itself is a design approach or architectural style where complex applications 
+are built by combining these reusable, independent "services. " These services 
+often communicate with each other over a network to perform larger tasks. 
+o It emphasizes service-based development, focusing on the outcomes and 
+functionality delivered by each service, rather than on the underlying technology or 
+implementation details of individual components. 
+3. SOA Applications: 
+o An SOA application is typically created by orchestrating or 
+choreographing multiple services together to perform more complex, end-to-end 
+business processes or tasks. The modularity of services allows for flexible 
+composition. 
+Examples of SOA in Action: 
+A common example illustrating SOA principles is an E-commerce Website: 
+1. Service 1: Search for Products. This service would be responsible for accepting search 
+queries from users and returning a list of relevant products from the product catalog. 
+2. Service 2: Handle Payments. This service would manage the payment processing, 
+interacting with payment gateways, validating payment details, and confirming 
+transactions. 
+
+3. Combined Functionality: Together, these (and potentially other services like inventory 
+management, user authentication, and order fulfillment) create a complete online 
+shopping experience. 
+SOA Terms: Core Vocabulary 
+Understanding SOA involves familiarity with a few key terms: 
+1. Service (Revisited): 
+o It represents a business function that performs a specific task. 
+o It processes requests from a "consumer" (an entity that needs the service) 
+and provides responses. 
+o Example: A weather service that accepts a location request (e.g., city name) from a 
+mobile app (the consumer) and returns the current weather forecast for that 
+location. 
+2. Provider: 
+o The entity (or system) that offers and executes the service in response to a 
+consumer’s request. It owns and manages the implementation of the service. 
+o Example: A bank's server system acts as the provider for an account balance 
+service, which might be consumed by the bank's mobile app or website. 
+3. Consumer: 
+o The entity (or application) that uses or invokes the service provided by the 
+provider to achieve a particular goal. 
+o Example: A mobile banking app (the consumer) uses the bank’s account balance 
+service (provided by the bank's servers) to display account information to the user. 
+ 

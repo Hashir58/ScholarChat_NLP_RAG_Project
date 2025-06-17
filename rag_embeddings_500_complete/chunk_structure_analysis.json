@@ -1,0 +1,14 @@
+{
+  "total_chunks": 704,
+  "has_enhanced_text": true,
+  "has_keywords": true,
+  "has_category": true,
+  "has_metadata": true,
+  "chunk_format": "enhanced",
+  "categories": [
+    "NLP",
+    "ICC"
+  ],
+  "avg_text_length": 2373.36,
+  "avg_token_count": 460.95
+}

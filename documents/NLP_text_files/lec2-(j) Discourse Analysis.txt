@@ -1,0 +1,11 @@
+What is Discourse Analysis?
+
+Discourse Analysis studies how sentences connect and influence each other in a larger context like a paragraph or full document.
+
+It looks beyond a single sentence to understand meaning based on what was said before.
+
+Example:
+Sentence 1: “John didn’t come to work.”
+Sentence 2: “He was sick.”
+Sentence 2 makes more sense when we know Sentence 1.
+

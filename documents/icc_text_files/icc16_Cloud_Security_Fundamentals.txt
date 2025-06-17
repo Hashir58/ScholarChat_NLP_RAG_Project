@@ -1,0 +1,46 @@
+Cloud Security Fundamentals - Chapter 6: Introduction 
+The chapter begins by highlighting a significant real-world concern: the security risks associated 
+with cloud storage and applications. It cites a 2021 finding by the mobile security 
+company Zimperium, which discovered that over 14 percent of mobile apps using cloud 
+storage face risks due to unsecured configurations. This problem is not isolated; globally and 
+across all industries, various applications are vulnerable. These vulnerabilities can lead to the 
+exposure of publicly identifiable information (PII), financial fraud, and the unregulated sharing 
+or leakage of internal intellectual property (IP) and sensitive configuration details. 
+The primary reason identified for these prevalent risks is often negligence or a lack of 
+awareness on the part of developers and organizations. Many entities do not prioritize robust 
+security configurations when deploying cloud services. This oversight can lead to unsecured 
+setups that inadvertently expose sensitive data like PII. Additional contributing factors can 
+include: 
+• Time constraints: Rushing applications to market without adequate security reviews. 
+• Resource limitations: Lack of budget or skilled personnel dedicated to security. 
+• Assumptions: Incorrectly assuming that default cloud settings are secure enough or that 
+the cloud provider handles all aspects of security. 
+Basic Terms and Concepts in Security: 
+1. Confidentiality: 
+o Definition: Within cloud environments (and information security in general), 
+confidentiality primarily pertains to restricting access to data and ensuring that 
+information is not disclosed to unauthorized individuals, entities, or processes. 
+o Visual Illustration: An image often depicts this concept. For example, a "cloud 
+consumer" (represented by a computer icon) sends a message (envelope icon). If 
+there's a breach (suggested by a lightning bolt on the envelope), a question arises: 
+"Was this message seen by someone unauthorized?" The message is intended for a 
+"cloud provider" (cloud shape) hosting a "cloud service" (yellow circle). This 
+highlights the core idea of keeping data private and seen only by authorized parties. 
+o Scope in Cloud: Confidentiality in cloud environments extends beyond just data. It 
+also includes restricting access to: 
+▪ Applications: (e.g., Customer Relationship Management - CRM systems). 
+▪ Processes: (e.g., login mechanisms, administrative functions). 
+
+▪ Network resources: (e.g., databases, internal networks). 
+2. Integrity: 
+o Definition: Integrity refers to the characteristic of data or a system not having been 
+altered or tampered with by an unauthorized party. It ensures the accuracy, 
+completeness, and trustworthiness of information and systems. 
+o Visual Illustration: A similar diagram to the confidentiality one is often used. The 
+"cloud consumer" sends a message, but this time the envelope icon has a jagged 
+"altered" line through it. The question posed is: "Was this message altered by 
+someone unauthorized?" The text further clarifies: "Figure 6.2 The message issued 
+by the cloud consumer to the cloud service is considered to have integrity if it has 
+not been altered. " This visually represents that integrity is maintained if data remains 
+unchanged by unauthorized actions. 
+ 

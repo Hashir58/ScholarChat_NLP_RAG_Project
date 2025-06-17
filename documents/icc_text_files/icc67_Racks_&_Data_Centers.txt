@@ -1,0 +1,40 @@
+Racks 
+In data centers, IT equipment, particularly servers, storage arrays, and networking gear, is 
+typically housed and organized within racks. Racks are standardized steel or aluminum frames 
+designed to hold multiple pieces of electronic equipment in a secure, accessible, and space-
+efficient manner. 
+This equipment is engineered in a modular fashion to fit into standardized rack units (U). A rack 
+unit is a measure of height, where 1U is equal to 1.75 inches (44.45 mm). Servers and other rack-
+mountable devices are commonly manufactured in heights that are multiples of U, such as 1U, 
+2U, or 4U. This standardization allows for dense packing of equipment and efficient use of vertical 
+space within the data center. 
+A single, standard data center rack (often 42U tall) can therefore hold up to 42 individual 1U 
+servers, or a combination of devices of different U heights. The image descriptions associated 
+with this often show: 
+• A diagram illustrating different rack unit sizes (1U, 2U, 3U, 4U) as black rectangles of 
+increasing height. 
+• Empty server rack cabinets, some with open shelving and others with more enclosed 
+structures (e.g., with doors and side panels for airflow management and security). 
+• An example of a 1U rack-mountable server (like a Dell PowerEdge server), explicitly labeled 
+"1U Server. " 
+These visuals emphasize how server hardware is standardized into "U" heights to fit into standard 
+racks, which is crucial for efficient space utilization, organized cabling, power distribution, and 
+airflow management within modern data centers. 
+Data Center 
+A data center is a specialized facility designed and built to house computer systems and 
+associated components. This includes not only servers and storage systems but also critical 
+infrastructure such as networking equipment (switches, routers, firewalls), cooling systems 
+(HVAC), Uninterruptible Power Supplies (UPS), backup generators, and air filtration systems. 
+Key characteristics of a data center: 
+• Centralized IT Hub: It serves as a central point for an organization's IT operations and 
+equipment. 
+• Heterogeneous Systems: A data center typically houses a large number of diverse 
+(heterogeneous) networked computer systems working together. 
+
+• Scalable Physical Space: The physical size of a data center can vary significantly. It can 
+occupy a single room within a building, one or more entire floors, or even be a massive, 
+dedicated standalone building. The image often accompanying this is an aerial photograph 
+of a large, modern data center building, showcasing its expansive nature, numerous 
+cooling units on the roof, and surrounding infrastructure like parking lots and landscaping. 
+This visual conveys the scale and specialized nature of these facilities. 
+ 

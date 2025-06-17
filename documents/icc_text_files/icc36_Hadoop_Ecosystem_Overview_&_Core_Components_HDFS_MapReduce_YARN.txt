@@ -1,0 +1,53 @@
+Hadoop EcoSystem:  
+Core Components (Mandatory/Crucial): 
+These are fundamental to Hadoop's operation: 
+1. HDFS (Hadoop Distributed File System): 
+o Representation: Often shown with a green elephant logo and "hadoop HDFS" text. 
+Labeled as "Hadoop Distributed File System. " 
+o Purpose: HDFS is the primary storage system of Hadoop. Its main purpose is 
+to manage and store very large datasets in a distributed manner across clusters 
+of commodity hardware, designed for easy and fault-tolerant access.  
+o Function: It breaks large files into blocks and distributes these blocks across 
+multiple machines in the cluster, also replicating them for fault tolerance. 
+2. MapReduce: 
+o Representation: Typically a yellow elephant logo with "Map Reduce" text. Labeled 
+as "Data Processing. " 
+o Purpose: MapReduce is a programming model and software framework 
+for processing large datasets in parallel across a distributed cluster.  
+3. YARN (Yet Another Resource Negotiator): 
+o Representation: Often a yellow elephant logo with "hadoop YARN" text. Labeled as 
+"Cluster Resource Management. " 
+o Purpose: Introduced in Hadoop 2.0, YARN's primary purpose is to manage cluster 
+resources (CPU, memory) and schedule jobs/tasks running on the Hadoop 
+cluster. 
+o Decoupling: As data volumes and processing needs grew, YARN was introduced to 
+separate resource management and job scheduling from the MapReduce data 
+processing engine.  
+Other Key Categories and Components in the Ecosystem Diagram: 
+• Data Management/Access: Tools that provide different ways to access and manage data 
+stored in Hadoop. 
+o HBase: An orange icon, labeled "Columnar Store. " (A NoSQL database that runs on 
+top of HDFS, providing random real-time read/write access to Big Data). 
+
+o Hive: A bee logo, labeled "(SQL Query). " (A data warehouse system that facilitates 
+reading, writing, and managing large datasets residing in distributed storage using 
+SQL-like queries). 
+o Pig: A pig logo, labeled "(Scripting). " (A high-level platform for creating MapReduce 
+programs used with Hadoop, using a scripting language called Pig Latin). 
+• Data Ingestion: Tools for collecting and loading data into Hadoop. 
+o Sqoop: An elephant logo with "Sqoop" text, labeled "(Data Collection). " (Designed 
+for efficiently transferring bulk data between Hadoop and structured datastores 
+such as relational databases). 
+o Flume: An icon with "Flume" text, labeled "(Data Collection). " (A distributed, 
+reliable, and available service for efficiently collecting, aggregating, and moving 
+large amounts of log data or streaming event data). 
+• Workflow & Coordination: Tools for managing and coordinating complex Hadoop jobs. 
+o Oozie: A gear-like icon, labeled "(Workflow). " (A workflow scheduler system to 
+manage Apache Hadoop jobs). 
+o Zookeeper: Zoo animal icons, labeled "(Coordination). " (A centralized service for 
+maintaining configuration information, naming, providing distributed 
+synchronization, and providing group services). 
+• Machine Learning: 
+o Mahout: An elephant head logo, labeled "(Machine Learning). " (A project to create 
+scalable machine learning algorithms that run on Hadoop). 
+ 

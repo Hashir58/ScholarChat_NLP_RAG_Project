@@ -1,0 +1,49 @@
+SOA Architecture (Triangular Interaction Model): 
+This section often presents a common visual representation of the fundamental components and 
+interactions within a Service-Oriented Architecture, typically a triangular diagram: 
+• Service Requester (Client) (e.g., Orange hexagon on the left): This is the entity (an 
+application, another service, or a user-facing system) that has a need and initiates a 
+request for a service. 
+• Service Provider (e.g., Blue hexagon on the right): This is the entity that owns, 
+implements, and offers the service. It executes the service logic and returns a response to 
+the requester. 
+• Discovery Services (Service Registry/Broker) (e.g., Orange cloud-like shape at the 
+top): This is the mechanism or component that allows service requesters to find available 
+service providers. It acts as a directory where providers can publish information about their 
+services, and requesters can look up services. 
+Interactions in this model: 
+1. Publish (Registration): The Service Provider publishes its service description (e.g., WSDL, 
+capabilities, endpoint) to the Discovery Services (Registry). 
+2. Find (Discovery): The Service Requester queries the Discovery Services to find a service 
+that meets its requirements. The registry returns the service description and endpoint 
+information. 
+3. Interact (Delivery/Binding): The Service Requester uses the information obtained from the 
+discovery process to directly interact (bind and invoke) with the Service Provider, sending 
+requests and receiving responses. 
+SOA Principles: 
+SOA is guided by a set of design principles that aim to create agile, reusable, and interoperable 
+systems. Key principles include: 
+1. Reusability: 
+o Services are designed to be reusable across multiple applications and business 
+processes. A single service can be invoked by different consumers for different 
+purposes. 
+2. Service Contract (Standardized Interface): 
+
+o Services adhere to a well-defined, standardized service contract (often described 
+using WSDL for SOAP services or OpenAPI/Swagger for RESTful services). This 
+contract clearly defines the service's interface, operations, message formats, and 
+policies for how it can be used. 
+3. Loose Coupling: 
+o Services are designed to be independent and minimize dependencies on each 
+other. Consumers are only coupled to the service contract, not the underlying 
+implementation. This means changes to the internal workings of a service provider 
+should not break its consumers, as long as the contract is maintained. 
+4. Abstraction: 
+o Services hide their internal implementation details and complexity from 
+consumers. They expose only the necessary information and functionality through 
+their service contract. 
+5. Composability: 
+o Services can be combined (composed) to create more complex, composite 
+services or end-to-end business processes and workflows. This allows for 
+building sophisticated applications by assembling existing, reusable services. 
+ 

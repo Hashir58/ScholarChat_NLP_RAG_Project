@@ -1,0 +1,50 @@
+Basic Terms and Concepts in Security (Continued): 
+This section continues defining fundamental security terms relevant to cloud environments: 
+• Authentication: 
+o Definition: Authentication is the process of verifying the identity of a user, process, 
+or device. It ensures that something or someone is genuinely who or what it claims 
+to be, confirming it's from an authorized source. 
+• Availability: 
+o Definition: Availability is the characteristic of a system or resource 
+being accessible and usable during a specified time period by authorized users. 
+It means services are operational when needed. 
+• Threat: 
+o Definition: A threat is a potential danger or event that can harm the 
+confidentiality, integrity, or availability of information, systems, or privacy. 
+• Vulnerability: 
+o Definition: A vulnerability is a weakness or flaw in a system, security procedures, 
+design, or implementation that an attacker can exploit to cause harm. 
+• Risk: 
+o Definition: Risk is the chance or likelihood of harm occurring if a specific threat 
+exploits a particular vulnerability. It combines the probability of an event with the 
+expected impact or loss. 
+o Metrics for Determining Risk: Two key metrics are often used: 
+1. The probability of a threat successfully occurring to exploit vulnerabilities in 
+an IT resource. 
+2. The expectation of loss or damage if the IT resource is compromised. 
+Threat Agents: 
+Threat agents are the entities or individuals that actively pose security risks to a system by seeking 
+to exploit vulnerabilities. They can be external to the organization or internal. 
+• Definition: Entities or individuals that can initiate a threat action. 
+The document then defines specific types of threat agents: 
+
+• Anonymous Attacker: 
+o Definition: An individual who conducts malicious activities without revealing their 
+true identity, often using techniques to obscure their origin. 
+• Malicious Service Agent: 
+o Definition: A service or application (which could be a legitimate service 
+compromised, or a purpose-built malicious one) that intentionally causes harm or 
+exploits system weaknesses. This could be a piece of malware or a rogue software 
+agent. 
+• Malicious Tenants: 
+o Definition: In a multi-tenant cloud environment (where multiple customers share 
+the same underlying infrastructure), malicious tenants refer to customers or users 
+of the system who abuse their access or the shared resources to harm other 
+tenants or the cloud provider's system itself. 
+• Malicious Insider: 
+o Definition: An employee, contractor, or other authorized user within an organization 
+who exploits their legitimate access privileges to compromise security, steal 
+data, or cause damage. Insiders often have knowledge of internal systems and 
+security measures, making their attacks potentially very damaging. 
+. 
+ 

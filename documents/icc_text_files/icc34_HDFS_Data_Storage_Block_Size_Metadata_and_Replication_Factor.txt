@@ -1,0 +1,51 @@
+HDFS: Distributed Data Storage and Block Management 
+• Distributed Block Storage: In HDFS, when a file is stored, it's not kept in one contiguous 
+piece on a single server. Instead, the file is divided into smaller, fixed-size chunks called 
+blocks. The default block size in modern Hadoop versions is often 128MB or 256MB 
+(though older defaults or specific configurations might use 64MB or 512MB). These blocks 
+are then distributed and stored on separate DataNodes across the cluster. For example, 
+a 520MB file, if the block size is 128MB, would be split into: 
+o Block 1: 128MB 
+o Block 2: 128MB 
+o Block 3: 128MB 
+o Block 4: 128MB 
+o Block 5: 8MB (The last block is typically the size of the remaining data if it's less than 
+the full block size). 
+Each of these blocks could potentially reside on a different DataNode. 
+• Parallel Access: Storing blocks on separate DataNodes is fundamental to HDFS being 
+a distributed file system. This distribution allows for data to be processed in parallel by 
+computation frameworks like MapReduce or Spark. 
+• Commodity Hardware: HDFS is designed to run on commodity hardware—standard, 
+inexpensive servers—rather than requiring specialized, high-end storage hardware. This 
+makes it a cost-effective solution for storing very large datasets. 
+Metadata Management by the NameNode: 
+Since data blocks are distributed, a mechanism is needed to keep track of where everything is. 
+This is the role of the NameNode. 
+• Tracking Block Locations: If a user or application wants to read a file, they need to know 
+which specific blocks constitute that file and on which DataNodes those blocks are 
+located. The HDFS client doesn't know this directly. 
+• Metadata Repository: The NameNode stores and manages all the metadata for the 
+entire file system. This metadata includes: 
+o The file system namespace (the directory tree structure). 
+o Information for each file: 
+▪ File name 
+
+▪ File permissions 
+▪ File size 
+▪ The list of blocks that make up the file. 
+▪ For each block, the locations (DataNodes) where its replicas are stored. 
+▪ Information about how many replicas of the file (or its blocks) are made. 
+• Central Authority: The NameNode is the central authority for this metadata, responsible 
+for keeping track of the entire file system's layout and state. 
+Replication Factor for Fault Tolerance: 
+HDFS ensures data reliability and fault tolerance through data replication. 
+• Multiple Copies: Blocks are not stored in only one place. Instead, HDFS creates multiple 
+copies (replicas) of each block and stores these replicas on different DataNodes, 
+preferably on different racks. 
+• Default Replication Factor: By default, the replication factor in HDFS is 3. This means for 
+every block of data, HDFS will create and maintain three copies: the original block and two 
+replicas, stored on three different DataNodes. 
+• Fault Tolerance: This replication provides fault tolerance. If one DataNode goes down or a 
+disk on a DataNode fails, the data block stored there is not lost because copies exist on 
+other DataNodes.  
+ 

@@ -1,0 +1,26 @@
+Named Entity Recognition (NER) — Detailed Overview
+
+What is NER?
+
+NER is a fundamental sub-task of Information Extraction (IE) that identifies and classifies proper names (entities) in text.
+
+Entities are classified into predefined categories like person, location, organization, and others.
+
+It does not identify events or relations — only entities themselves.
+
+It’s more than just matching against lists — it involves linguistic and contextual understanding.
+
+
+
+Common Categories in NER
+
+Person: Names of people (e.g., Andrew Wilkie)
+
+Organization: Companies, parties, institutions (e.g., Labor, Greens)
+
+Location: Geographic names (cities, countries)
+
+Date/Time: Dates, years (e.g., 2010)
+
+Others: Measures, email addresses, domain-specific entities like drug names, ships, etc
+

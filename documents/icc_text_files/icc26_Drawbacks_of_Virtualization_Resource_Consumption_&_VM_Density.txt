@@ -1,0 +1,40 @@
+Drawbacks Of Virtualization: VMs Take Up a Lot of System Resources 
+One of the most significant practical drawbacks of virtualization, particularly when deploying 
+multiple virtual machines (VMs), is their substantial consumption of system resources. 
+• Full OS and Virtual Hardware: Each VM is not merely a lightweight application; it runs 
+a full copy of an operating system (OS). This includes the OS kernel, system services, 
+drivers, and all associated processes. Furthermore, each VM also includes a virtual copy 
+of all the hardware that its guest OS needs to run. This virtual hardware (virtual CPU, 
+virtual RAM, virtual network cards, virtual disk controllers) must be emulated or managed 
+by the hypervisor, consuming host resources. 
+• Cumulative Resource Demand: When you host multiple VMs on a single physical server, 
+the resource demands are cumulative. Each VM requires its own allocation of: 
+o RAM (Random Access Memory): The host server must have enough physical RAM 
+to satisfy the memory requirements of all running VMs plus the host OS and 
+hypervisor itself.  
+o CPU Cycles: While CPUs can be shared, each VM's processing needs contribute to 
+the overall load on the host's physical CPUs. High CPU demand from multiple VMs 
+can lead to performance degradation if the host CPU capacity is insufficient. 
+o Disk Space: Each VM requires disk space for its OS, applications, and data. 
+o Network Bandwidth: Each VM will consume network bandwidth for its 
+communications. 
+How Many VMs Per Host? How Much is Too Much? 
+The question of how many VMs can be run on a single host server doesn't have a one-size-fits-all 
+answer. While it might be technically possible to run a very large number of VMs (e.g., "500 VMs on 
+one server host is possible"), the optimal number is often less and depends on several critical 
+factors: 
+• Risk: Concentrating too many critical VMs on a single physical host increases the risk. If 
+that host fails, all the VMs running on it will go down, potentially causing a significant 
+outage. 
+• Utilization Rates: The actual resource utilization (CPU, memory, disk I/O, network I/O) of 
+each VM is crucial 
+• Memory Factor: Memory is often a primary limiting factor. The total RAM required by all 
+VMs cannot exceed the physical RAM available on the host (minus what the host OS and 
+
+hypervisor need) without resorting to slower swapping mechanisms, which severely 
+degrades performance. 
+• Purpose of Virtualization: The text emphasizes that "Virtualization doesn't just 
+consolidate as many servers as possible - it has to actually do something." This means 
+the VMs must perform their intended functions adequately. Overloading a host will lead to 
+poor performance for all hosted VMs. 
+ 

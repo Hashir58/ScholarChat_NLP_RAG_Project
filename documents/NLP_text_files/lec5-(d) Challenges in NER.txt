@@ -1,0 +1,20 @@
+Challenges in NER
+
+Ambiguity: Same word/entity may refer to different categories depending on context.
+
+Example: Washington (person or location)
+
+May (person or month)
+
+Metonymy (one entity name used for related things):
+
+"The ham sandwich wants his bill" (person, not food)
+
+"West Indies won the World Cup" (team = organization vs. place)
+
+Entity variation: Different forms of the same entity (John Smith, J. Smith)
+
+Boundary detection: Correctly determining start/end of multi-word entities.
+
+Domain and genre variability: Formal vs. informal text, punctuation, formatting affect detection.
+

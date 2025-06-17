@@ -1,0 +1,45 @@
+Hardware-Assisted Virtualization 
+Hardware-Assisted Virtualization leverages special features or extensions built directly into 
+modern CPUs (Central Processing Units) by manufacturers like Intel (Intel VT-x) and AMD (AMD-V). 
+These extensions are designed to make virtualization more efficient and performant by reducing 
+the hypervisor's workload. 
+• Reduced Hypervisor Intervention: These CPU extensions allow virtual machines (VMs) to 
+run more efficiently by minimizing the need for the hypervisor to intervene in the execution 
+of privileged instructions. Privileged instructions are those that could potentially affect 
+system stability or security if not managed correctly. 
+• Improved Performance: By offloading some of the virtualization tasks to dedicated 
+hardware capabilities, hardware-assisted virtualization significantly reduces the 
+performance overhead often associated with purely software-based techniques like 
+binary translation. This results in faster and more efficient virtualization. 
+• Direct Execution: The CPU's virtualization extensions provide support for the hypervisor to 
+set up specific control structures. These structures enable guest VMs to execute many 
+privileged instructions directly on the hardware without trapping to the hypervisor, as long 
+as these operations do not break the isolation between VMs or compromise the host 
+system. The hypervisor only needs to step in for a smaller, more critical subset of 
+operations. This direct execution capability makes virtualization faster and more efficient. 
+• Use When: This approach is ideal when you have modern CPUs equipped with these 
+virtualization extensions and need to run unmodified guest operating systems with 
+minimal performance overhead. It has become the standard for most virtualization 
+solutions today due to its efficiency. 
+Virtualization Requirements from Popek and Goldberg 
+Gerald Popek and Robert Goldberg, in their seminal 1974 paper, defined a set of formal 
+requirements that a computer architecture must satisfy to efficiently support virtualization.  
+Equivalence (Same as real machine): 
+o The VMM must present an environment to each virtual machine (VM) that 
+is functionally equivalent to the environment provided by the underlying real 
+hardware. This means that a program running on a VM should behave as if it were 
+running directly on the physical machine, producing the same results (excluding 
+minor timing differences). The VM should essentially be a faithful replica of the 
+physical hardware. 
+
+2. Resource Control (Totally control): 
+o The VMM must have complete control over the physical resources of the system. 
+This includes the CPU, memory, and I/O devices. The VMM must be able to manage 
+these resources effectively and allocate them appropriately among the various VMs 
+running on the host.  
+3. Efficiency (Native execution): 
+o This property aims to ensure that virtualization does not significantly degrade the 
+performance of the VMs. A statistically dominant subset of the virtual processor's 
+instructions must be executed directly by the real processor, without intervention 
+from the VMM.  
+ 

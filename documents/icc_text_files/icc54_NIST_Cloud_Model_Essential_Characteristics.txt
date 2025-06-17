@@ -1,0 +1,36 @@
+NIST Cloud Model: Essential Characteristics 
+NIST outlines five essential characteristics of cloud computing: 
+ On-demand self-service: Users can obtain computing resources automatically without needing 
+to interact with the provider. 
+ Broad network access: Resources are available over the internet and accessible via multiple 
+devices like phones, tablets, and laptops. 
+ Resource pooling: Providers pool resources to serve multiple customers dynamically, 
+abstracting the physical location of resources. 
+ Rapid elasticity: Resources can scale up or down quickly based on demand, often automatically. 
+ Measured service: Cloud systems monitor resource usage for transparency and billing, 
+optimizing resource allocation. 
+These features enable cloud computing’s scalability, efficiency, and cost-effectiveness. 
+Cloud Service Providers in 2023 
+Top cloud providers include: 
+ AWS (Amazon Web Services): 26 regions, 84 availability zones. 
+ Microsoft Azure: 60 regions, 116 availability zones. 
+ Google Cloud Platform: 34 regions, 103 availability zones. 
+ Alibaba Cloud: 27 regions, 84 availability zones. 
+ Oracle Cloud: 38 regions, 46 availability zones. 
+ IBM Cloud (Kyndryl): 11 regions, 29 availability zones. 
+ Tencent Cloud: 21 regions, 65 availability zones. 
+ OVHcloud: 13 regions, 33 availability zones. 
+ DigitalOcean: 8 regions, 14 availability zones. 
+ Linode (Akamai): 11 regions, 11 availability zones. 
+Global Infrastructure Maps of Major Providers 
+ AWS Regions: AWS has data centers globally, including North America, Europe, Middle East, 
+Asia Pacific, South America, Africa, and Australia. 
+ Microsoft Azure Regions: Azure operates data centers worldwide with a strong presence on 
+every continent. 
+ Google Cloud Platform Regions: GCP spans North America, South America, Europe, Middle East, 
+Asia, and Australia, with both existing and planned regions to expand coverage. 
+
+These extensive infrastructures support diverse customer needs worldwide with low latency and high 
+reliability. 
+ 
+ 

@@ -1,0 +1,8 @@
+Why is Recall Hard to Determine?
+
+Recall calculation requires knowing the total number of relevant items in the entire dataset, which may not be available in real life. Two common ways to estimate this are:
+
+Taking a random sample from the dataset and having experts label what is relevant.
+
+Using multiple retrieval systems to find relevant items and combining their results as an estimate of all relevant items.
+

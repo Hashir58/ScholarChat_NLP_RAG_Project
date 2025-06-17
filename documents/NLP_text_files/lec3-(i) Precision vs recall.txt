@@ -1,0 +1,28 @@
+Precision vs. Recall
+
+Precision is the percentage of selected items that are actually correct.
+Example: Out of all the emails your spam filter marked as spam, what fraction truly were spam?
+
+Recall is the percentage of correct items that are successfully selected.
+Example: Out of all the actual spam emails in your inbox, what fraction did the filter catch?
+
+These two metrics have an inverse relationship:
+
+When you try to increase recall (catch more relevant items), precision often drops because you include more irrelevant items too.
+
+When you try to increase precision (be more selective), recall may drop because you miss some relevant items.
+
+
+
+Trade-off Between Precision and Recall (Precision-Recall Curve)
+
+Imagine a graph where the x-axis is recall (from 0 to 1) and the y-axis is precision (also 0 to 1):
+
+In the top-left corner (high precision, low recall), the system returns only highly relevant results but misses many useful ones. It’s very careful but may overlook many positives.
+
+In the bottom-right corner (low precision, high recall), the system finds most relevant items but includes a lot of irrelevant ones too — so it returns “junk” along with the good stuff.
+
+The ideal point is the top-right corner (precision = 1, recall = 1), meaning the system finds all relevant items and nothing irrelevant, but this is very hard to achieve.
+
+This curve shows the typical trade-off between these two metrics.
+

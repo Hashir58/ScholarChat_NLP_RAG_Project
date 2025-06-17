@@ -1,0 +1,40 @@
+Consistent Hashing (Continued): Impact of Server Changes 
+The primary advantage of consistent hashing's circular structure and clockwise data assignment 
+becomes evident when servers join or leave the system: 
+• Server Removal: If a server is removed from the ring (e.g., server 0 goes down), only the 
+data items (keys) that were mapped to that specific server need to be redistributed. These 
+items will now be mapped to the next available server in the clockwise direction on the ring 
+(e.g., server 1). Data mapped to other servers remains unaffected by this change. 
+• Server Addition: Similarly, if a new server is added to the ring, it takes over responsibility 
+for a segment of the hash space. Only the data items that fall into this new server's range 
+(i.e., items that were previously on the next clockwise server but now fall before the new 
+server) need to be moved. Again, most of the data on other servers remains undisturbed. 
+Used In (Applications of Consistent Hashing): 
+Consistent hashing is a widely adopted technique in various distributed systems due to its 
+efficiency in dynamic environments: 
+• Distributed Databases: NoSQL databases like Apache Cassandra and Amazon 
+DynamoDB use consistent hashing for distributing data partitions (shards) across their 
+nodes. 
+• Web Session Management: In large web applications with multiple servers, consistent 
+hashing can be used to determine which server should handle a particular user's session 
+data, ensuring that requests from the same user are routed to the server holding their 
+session information, even if other servers are added or removed. 
+• Distributed Caches: Systems like Memcached use consistent hashing to distribute 
+cached items across multiple cache servers. 
+• Peer-to-Peer (P2P) Networks: Networks such as Torrents also utilize consistent hashing 
+principles (often in the form of Distributed Hash Tables - DHTs) to determine which peer 
+(node) in the network will store and serve specific files or pieces of files to clients. 
+1. Modular Hashing (Recap and Comparison Context): 
+The document revisits modular hashing to contrast it with consistent hashing techniques. 
+• Definition: Modular hashing is a simple approach where a hash function (e.g., hash(key) % 
+N, where N is the number of nodes) is used to assign a key to a particular node in a 
+distributed system. The nodes are typically indexed from 0 to N-1. 
+
+• How it works: The key is hashed, and the result is taken modulo the total number of nodes 
+to determine where the key belongs. 
+• Example: If you have 3 nodes (node 0, 1, 2) and 6 keys, you would hash each key and take 
+the modulo of the hash value by 3 to assign the keys to nodes. For instance: 
+o Key 1 → hash(key1) % 3 → Assigned to Node 1 (if result is 1) 
+o Key 2 → hash(key2) % 3 → Assigned to Node 0 (if result is 0) 
+o Key 3 → hash(key3) % 3 → Assigned to Node 2 (if result is 2) 
+ 

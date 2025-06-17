@@ -1,0 +1,85 @@
+Information Extraction (IE)
+
+Information Extraction is the process of pulling out specific pieces of information from unstructured text — like articles, emails, or reports — and organizing it into a structured form that computers can use.
+
+Instead of reading the entire text manually, IE helps systems automatically detect important facts, such as names, dates, locations, or events.
+
+
+
+🔍 What Does “Unstructured Text” Mean?
+
+Unstructured text means natural language, written the way people talk or write — not stored in neat rows and columns like a spreadsheet.
+
+Example of unstructured text:
+
+"Mohammad Hassan, a 26-year-old aspiring photographer, was stuck in a dilemma when he found out that his wheat yield...”
+
+It’s messy for a computer to read, but full of useful data for a human.
+
+
+
+🎯 Goal of Information Extraction
+
+The main goal is to identify and extract only the relevant information, such as:
+
+Names of people
+
+Places or locations
+
+Dates or times
+
+Events or actions
+
+Amounts or quantities
+
+This helps convert unstructured text into structured data, which can then be used for analysis, searching, or automation.
+
+
+
+✅ Real-Life Example
+
+Your Email → Calendar
+You receive an email:
+
+“Let’s meet on Monday at 2 PM at the coffee shop.”
+
+Your email app detects the date and time and suggests adding a calendar event — this is Information Extraction in action.
+
+
+
+🧠 Why is Information Extraction Useful?
+
+Information Extraction is important for:
+
+Smart search and classification
+Automatically labeling emails or documents (e.g., "Job Offer", "Travel Plan")
+
+Automation
+Pulling details from thousands of resumes, reports, or forms without human effort
+
+Trend analysis
+Mining articles or social media to find out what's trending (e.g., people talking about “floods” in “Sindh”)
+
+Finding hidden connections
+Detecting relationships between people, companies, events, or topics
+
+
+
+📝 Example Text for Extraction:
+
+Mohammad Hassan, a 26-year-old aspiring photographer, was stuck in a dilemma when he found out that his wheat yield, the primary source of income for his family, had dramatically fallen from the usual five sacks to three. An acute water shortage had gripped his hometown, Skardu, located in the heart of the Karakoram mountains, bringing the lives of its residents to a halt.
+
+Let’s extract key information from this paragraph:
+
+Name: Mohammad Hassan
+
+Age: 26
+
+Occupation: Aspiring Photographer
+
+Location: Skardu, Karakoram Mountains
+
+Event: Wheat yield dropped due to water shortage
+
+Cause: Acute water shortage
+

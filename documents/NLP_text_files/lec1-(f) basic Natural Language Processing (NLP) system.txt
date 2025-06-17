@@ -1,0 +1,84 @@
+A Basic Natural Language Processing (NLP) System
+
+To understand how an NLP system works, imagine it as a four-step pipeline where human language enters one end, and machine-generated or processed language comes out the other. Each step plays a vital role in how machines handle natural language.
+
+
+
+🔹 1. Input Language
+
+This is the starting point. A user gives some natural language input — it could be in the form of:
+
+Text (e.g., “What’s the weather today?”)
+
+Voice (which is first converted to text using speech recognition)
+
+The input is usually messy, unstructured, and full of variations, just like how people talk or write.
+
+
+
+🔹 2. Understanding the Language
+
+Once the language enters the system, the machine tries to understand the meaning. This step is the heart of NLP.
+It involves tasks like:
+
+Tokenization (splitting the sentence into words)
+
+Parsing (understanding sentence structure)
+
+Part-of-speech tagging
+
+Named entity recognition
+
+Sentiment detection
+
+Semantic analysis (what the sentence actually means)
+
+This is the "U" in NLP: Understanding.
+Here, the computer is trained to read and comprehend language the way humans do.
+
+
+
+🔹 3. Computer Processing (Reasoning and Decision-Making)
+
+After understanding the input, the system uses logic, machine learning models, or pre-defined rules to decide what to do.
+
+Examples:
+
+A chatbot figures out how to respond.
+
+A translation model determines the equivalent sentence in another language.
+
+A search engine finds the most relevant result.
+
+This is where the thinking or computation happens based on what the system understood.
+
+
+
+🔹 4. Language Generation (Output)
+
+Finally, the system generates language as output.
+This output could be:
+
+A direct response (e.g., “It’s sunny and 30°C”)
+
+A translation (e.g., converting English to French)
+
+A summary or a sentiment label
+
+This is the “G” part: Generation.
+The computer creates or outputs text (or speech) that is clear and meaningful for a human to understand.
+
+
+
+📌 Example:
+
+User: "What's the weather today?"
+
+Input Language: User speaks or types the question.
+
+Understanding: The system breaks the sentence into parts, identifies the question type, and understands the meaning.
+
+Processing: It searches a weather database for today’s data.
+
+Generation: The system replies: “The weather is sunny and 30 degrees.”
+

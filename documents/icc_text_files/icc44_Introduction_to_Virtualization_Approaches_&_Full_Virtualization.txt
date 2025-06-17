@@ -1,0 +1,43 @@
+Virtualization Approaches (Overview) 
+Virtualization is a foundational technology in cloud computing and modern IT infrastructure, 
+enabling the creation of virtual (rather than actual) versions of computing resources. The 
+document outlines several key approaches to achieving virtualization, each with distinct 
+characteristics and use cases. The primary approaches listed are: 
+1. Full-Virtualization: Guest OS runs unmodified, believing it has direct hardware control. 
+2. Para-Virtualization: Guest OS is modified to be aware of the virtualized environment, 
+allowing for more efficient communication with the hypervisor. 
+3. Binary Translation: A software-based technique used when hardware virtualization 
+support is unavailable, where the hypervisor translates privileged guest OS instructions. 
+4. Hardware-Assisted Virtualization: Leverages CPU extensions (like Intel VT-x or AMD-V) to 
+improve virtualization performance and efficiency. 
+These different methods offer various trade-offs in terms of performance, compatibility, and the 
+need for guest OS modification. 
+Virtualization Approaches: Full Virtualization 
+Full Virtualization is a technique where the virtual machine (VM) runs an unmodified guest 
+operating system (OS). The guest OS operates under the illusion that it has complete and direct 
+control over the underlying hardware, just as it would if it were running on a physical machine. In 
+reality, it is running within an isolated, virtualized environment managed by virtualization software. 
+• Key Feature: Guest OS Unawareness: The defining characteristic of full virtualization is 
+that the guest OS is unaware that it's running in a virtual environment. This is because 
+the virtualization software, often called a hypervisor or Virtual Machine Monitor (VMM), 
+fully emulates the underlying hardware (CPU, memory, I/O devices) for each VM. As a 
+result, the VM behaves identically to a physical machine from the guest OS's perspective, 
+requiring no changes or special drivers within the guest. 
+• Example Providers: Prominent examples of virtualization platforms that provide full 
+virtualization include: 
+o VMware ESXi: A widely used enterprise-grade bare-metal hypervisor. 
+o KVM (Kernel-based Virtual Machine): An open-source virtualization solution built 
+into the Linux kernel. 
+o Microsoft Hyper-V: Microsoft's hypervisor technology available for Windows Server 
+and client operating systems. 
+
+An illustrative diagram often shows the architecture of Full Virtualization: 
+• Bottom Layer (Red): "Hardware base physical machine" – the actual physical server. 
+• Middle Layer (Blue): "Virtual Machine Monitor" (Hypervisor) – the virtualization software 
+layer running directly on the hardware or as part of a host OS. 
+• Top Layer (Green): Multiple identical blocks representing "Guest OS (Same hardware 
+architecture Supported). " Each of these unmodified guest OS blocks has an "Applications" 
+block running on top of it. 
+• A separate box for "VM management extensions" might point to the hypervisor layer, 
+indicating tools or interfaces for managing the virtual environment. 
+ 

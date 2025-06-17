@@ -1,0 +1,26 @@
+Network Hardware and Storage Hardware 
+Network Hardware 
+(Image Description: The left side of the slide features a stylized, close-up photograph of server racks in a 
+data center. The servers have glowing blue and yellow indicator lights, creating a sense of advanced 
+technology and high-density computing infrastructure.) 
+Data centers require extensive network hardware in order to enable multiple levels of connectivity. The 
+data center is broken down into five network subsystems: 
+1. Carrier and External Networks Interconnection — Connects the data center to the outside 
+world and other networks. 
+2. Web-Tier Load Balancing and Acceleration — Distributes web traffic across multiple servers. 
+3. LAN Fabric — Internal network that connects all servers and devices within the data center. 
+4. SAN Fabric — Network that links storage devices (like hard disks) to servers for fast data access. 
+5. NAS Gateways — Connects network-attached storage (NAS) systems to the network, allowing 
+shared data access. 
+Storage Hardware 
+Data centers have specialized storage systems that maintain enormous amounts of digital information in 
+order to fulfill considerable storage capacity needs. Storage systems are containers housing numerous 
+hard disks that are organized into arrays. These arrays allow the systems to manage huge data volumes 
+reliably and efficiently. 
+Other Considerations: 
+ IT Hardware Obsolescence: Technology changes quickly, so IT equipment usually becomes 
+outdated in 5 to 7 years. Regular upgrades and replacements are essential for maintaining 
+optimal performance. 
+ Security Concerns: Data centers must protect a lot of data, making security very important. 
+Physical security of the hardware and cyber security to prevent unauthorized access are critical. 
+ 

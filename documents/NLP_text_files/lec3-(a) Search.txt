@@ -1,0 +1,18 @@
+What is Search?
+
+Search is a fundamental task where you look for information or documents that match your needs.
+
+In NLP, search helps find relevant documents or even parts of documents — like a paragraph, section, or sentence — from a large collection.
+
+
+
+How NLP Helps in Search
+
+NLP techniques process the text to understand the meaning of your query and the documents, making the search more accurate.
+
+
+
+Retrieval Models
+
+These are methods or algorithms used to find and rank documents based on how well they match the user’s query. They help identify the most relevant documents quickly.
+

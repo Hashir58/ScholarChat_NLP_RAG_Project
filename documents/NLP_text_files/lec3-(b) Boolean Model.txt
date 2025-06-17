@@ -1,0 +1,32 @@
+What is the Boolean Model?
+
+The Boolean Model is a way to search documents based on whether certain keywords are present or absent in the document.
+
+Each document is treated like a set of keywords (words that appear in it).
+
+A user’s query is made up of keywords combined with Boolean operators like AND, OR, and NOT.
+
+You can also use brackets to group parts of the query for clarity.
+
+
+
+How does it work?
+
+The system checks if the document matches the query exactly.
+
+The output is simple: either the document is relevant (matches) or not relevant.
+
+There is no ranking or partial matching — documents either satisfy the query or they don’t.
+
+
+
+Why is the Boolean Model popular?
+
+It’s easy to understand and use for simple searches.
+
+It has a clear and formal structure.
+
+It can be extended to add ranking if needed.
+
+It’s efficient to implement for typical queries.
+

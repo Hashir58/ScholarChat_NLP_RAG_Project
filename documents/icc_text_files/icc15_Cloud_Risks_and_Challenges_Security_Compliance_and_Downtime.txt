@@ -1,0 +1,24 @@
+Cloud Risks and Challenges – Security, Compliance, and Downtime 
+While cloud computing offers numerous advantages, it also brings its own set of risks and challenges 
+that must be addressed for successful adoption. 
+The foremost concern is security and privacy. Moving data to the cloud can expose organizations to 
+risks such as unauthorized access, data breaches, and loss of control over sensitive information. Unlike 
+on-premise systems where security is entirely in the hands of the organization, cloud environments 
+involve shared responsibility models. This means customers must trust providers with critical aspects of 
+data protection and access management. 
+Compliance and regulatory issues are also significant. Businesses must ensure that their cloud 
+deployments comply with industry-specific standards and legal frameworks such as the General Data 
+Protection Regulation (GDPR) or the Health Insurance Portability and Accountability Act (HIPAA). Since 
+data in the cloud may reside in multiple geographic locations, meeting local data sovereignty laws 
+becomes more complex. 
+Another major risk is downtime and service reliability. Dependence on a cloud provider means that any 
+outage on their end can affect your business operations. While most providers offer high availability 
+guarantees, outages still occur, and organizations must have contingency plans such as backups or multi-
+cloud strategies to mitigate this risk. 
+Finally, vendor lock-in is a practical concern. Cloud services often use proprietary platforms or APIs, 
+making it difficult to migrate applications and data from one provider to another. This lack of portability 
+can limit flexibility and increase long-term costs if switching becomes necessary. 
+Organizations must conduct thorough risk assessments and implement robust governance models 
+before moving critical workloads to the cloud. Understanding these challenges is crucial to building a 
+secure, compliant, and resilient cloud strategy. 
+ 

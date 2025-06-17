@@ -1,0 +1,52 @@
+Cloud Security Threats (Specific Attack Vectors): 
+This section delves into specific types of attacks and security threats commonly encountered in 
+cloud computing environments: 
+• Traffic Eavesdropping: 
+o Definition: Occurs when unauthorized parties intercept and listen to data 
+transmitted over networks. If the data is unencrypted, the eavesdropper can read its 
+contents. 
+• Malicious Intermediary (Man-in-the-Middle Attack): 
+o Definition: A malicious intermediary is a third-party entity that positions itself 
+between two communicating systems (e.g., a user and a cloud service) to intercept, 
+monitor, or alter the communication without their knowledge. 
+• Denial of Service (DoS) / Distributed Denial of Service (DDoS): 
+o Definition: A DoS attack aims to overwhelm a system, network, or service with an 
+excessive amount of traffic or requests, making it unavailable to legitimate users. A 
+DDoS attack uses multiple compromised computer systems (a botnet) to launch 
+the attack. 
+• Insufficient Authorization Attack: 
+o Definition: This occurs when unauthorized users gain access to restricted 
+resources, data, or functionalities due to weak or improperly configured access 
+controls and authorization mechanisms. 
+• Virtualization Attack: 
+o Definition: These attacks specifically target vulnerabilities within the virtualized 
+environment of cloud computing, such as flaws in the hypervisor (the software that 
+creates and manages virtual machines). 
+• Overlapping Trust Boundaries: 
+o Definition: Overlapping trust boundaries occur when multiple systems, services, or 
+users within a cloud environment share trust in a way that inadvertently creates 
+security risks or allows for unintended data leakage. This can happen if trust 
+relationships are too broad or not granular enough. 
+Cloud Threat Modeling: Introduction 
+
+• Definition: Cloud Threat Modeling is a systematic process used to identify, analyze, and 
+prioritize potential security risks and threats in cloud-based systems and applications. It 
+involves understanding how an attacker might attempt to compromise the system and then 
+finding ways to mitigate those threats. 
+• Purpose: The goal is to proactively find and fix security vulnerabilities before they can be 
+exploited. 
+Threat Modelling Frameworks and Methodologies: 
+When conducting cloud threat modeling, organizations don't have to start from scratch. They can 
+use various established frameworks and methodologies to systematically identify, analyze, 
+document, and prioritize potential threats. These frameworks provide a structured approach to 
+thinking about security risks. 
+One widely recognized framework mentioned is STRIDE, which categorizes threats into six types: 
+• Spoofing: Pretending to be someone or something else (e.g., a user, a service). 
+• Tampering: Secretly or illicitly modifying data or code. 
+• Repudiation: Denying that an action was taken when it actually was. 
+• Information Disclosure: Exposing sensitive or confidential data to unauthorized parties. 
+• Denial of Service (DoS - as a threat category): Preventing legitimate users from accessing 
+a system or service. 
+• Elevation of Privilege (EoP): Gaining higher-level access rights or permissions than 
+originally authorized. 
+ 

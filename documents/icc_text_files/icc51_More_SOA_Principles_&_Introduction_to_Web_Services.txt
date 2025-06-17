@@ -1,0 +1,46 @@
+SOA Principles (Continued): 
+Continuing with the core design principles that guide Service-Oriented Architecture: 
+1. Autonomous: 
+o Definition: Services are designed to be self-contained and managed 
+independently. They have control over their own underlying logic, resources, and 
+execution environment. 
+o Implication: This autonomy allows services to be developed, deployed, scaled, and 
+updated independently of other services, which enhances agility and reduces inter-
+service dependencies. 
+2. Stateless (Often Preferred): 
+o Definition: Ideally, services do not retain user-specific or session-specific data 
+(state) between requests. Each request from a consumer is treated as an 
+independent transaction, containing all the information needed for the service to 
+process it. 
+o Benefits: Statelessness simplifies service design, improves scalability (as any 
+instance of the service can handle any request), and enhances reliability (as there's 
+no session state to lose if a service instance fails). 
+3. Discoverable: 
+o Definition: Services are designed to be easily located and identified, typically 
+through a service registry or directory. This allows consumers (applications or 
+developers) to find and understand how to use available services. 
+o Mechanism: Service providers publish metadata about their services (e.g., their 
+capabilities, contract, endpoint address) to a registry, which consumers can then 
+query. 
+Web Services: Introduction 
+1. Definition: 
+• A Web Service is fundamentally a software system designed to allow machine-to-
+machine communication and interoperability over a network, typically the internet. It 
+enables different applications, potentially built with different programming languages and 
+running on different operating systems or platforms, to exchange data and invoke 
+functionality from one another. 
+
+• According to the World Wide Web Consortium (W3C), a key characteristic of a web service 
+is its support for interoperability. This means that diverse systems and applications can 
+work together seamlessly, even if they are built using disparate technologies, as long as 
+they adhere to common web service standards. 
+Key Features of Web Services: 
+Web services are characterized by several important features that enable their widespread 
+adoption and utility: 
+• Standardized Communication: They utilize standard internet protocols for 
+communication, most commonly HTTP (Hypertext Transfer Protocol) and its secure 
+version, HTTPS. This ensures that they can operate over the existing internet infrastructure. 
+• Platform Independence: A major advantage of web services is their platform 
+independence. 
+. 
+ 

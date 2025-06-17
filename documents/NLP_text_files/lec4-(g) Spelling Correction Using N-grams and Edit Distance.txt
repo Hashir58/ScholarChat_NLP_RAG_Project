@@ -1,0 +1,62 @@
+Spelling Correction Using N-grams and Edit Distance
+
+N-grams for Spelling Correction
+
+An n-gram is a sequence of nnn contiguous units (words or characters).
+
+For spelling correction, character n-grams are often used:
+
+Helps detect misspellings by comparing likely sequences of letters.
+
+For example, “spelling” might generate bigrams: "sp", "pe", "el", "ll", "in", "ng".
+
+Comparing n-gram overlaps can suggest the closest correct spelling to a misspelled word.
+
+
+
+Allowing Errors in Spelling Queries
+
+Real-world text input often contains typos or misspellings. To handle this:
+
+Edit Distance (Levenshtein Distance): Measures how many operations (insertions, deletions, substitutions) it takes to transform one string into another.
+
+Example:
+
+"misspell" → "mispell" (distance = 1, delete 's')
+
+"misspell" → "mistell" (distance = 2, substitute 's'→'t', delete 'p')
+
+"misspell" → "misspelling" (distance = 3, add 'ing')
+
+Computed efficiently with dynamic programming in O(mn)O(mn)O(mn) time where m,nm,nm,n are string lengths.
+
+Longest Common Subsequence (LCS): Finds the longest sequence of characters common to both strings in order, useful to judge similarity.
+
+Proximity Search: Retrieve documents/words within a certain edit distance threshold from the query to handle typos or variations.
+
+
+
+Pattern Matching
+
+Searching for variations or partial matches in text requires pattern matching:
+
+Simple Patterns:
+
+Prefixes: match start of words
+
+"anti" → matches "antibody", "antique"
+
+Suffixes: match end of words
+
+"ix" → matches "matrix", "fix"
+
+Substrings: match any part within a word
+
+"rapt" → matches "enrapture", "velociraptor"
+
+Ranges: match words lexicographically between two strings
+
+"tin" to "tix" → matches "tip", "tire", "title"
+
+Pattern matching is more complex than exact word lookup and requires specialized data structures beyond inverted indices, like tries or suffix trees.
+

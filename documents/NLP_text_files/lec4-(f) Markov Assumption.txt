@@ -1,0 +1,36 @@
+Markov Assumption
+
+The Markov assumption states:
+The probability of the next word depends only on a limited number of previous words (usually one or two), not the entire history.
+
+In language modeling terms:
+For a first-order Markov model (bigram model),
+
+P(wn∣w1,w2,...,wn−1)≈P(wn∣wn−1)P(w_n | w_1, w_2, ..., w_{n-1}) \approx P(w_n | w_{n-1})P(wn​∣w1​,w2​,...,wn−1​)≈P(wn​∣wn−1​) 
+
+For a second-order Markov model (trigram model),
+
+P(wn∣w1,w2,...,wn−1)≈P(wn∣wn−2,wn−1)P(w_n | w_1, w_2, ..., w_{n-1}) \approx P(w_n | w_{n-2}, w_{n-1})P(wn​∣w1​,w2​,...,wn−1​)≈P(wn​∣wn−2​,wn−1​) 
+
+
+
+Example of Markov Assumption in Practice
+
+Let's say you want to estimate:
+
+P("the"∣"its water so transparent that")P(\text{"the"} | \text{"its water so transparent that"})P("the"∣"its water so transparent that") 
+
+Without Markov assumption, you consider the entire history:
+
+P("the"∣"its water so transparent that")P(\text{"the"} | \text{"its water so transparent that"})P("the"∣"its water so transparent that") 
+
+With a first-order Markov assumption (bigram), you approximate:
+
+P("the"∣"that")P(\text{"the"} | \text{"that"})P("the"∣"that") 
+
+Or with a second-order Markov assumption (trigram), you approximate:
+
+P("the"∣"transparent that")P(\text{"the"} | \text{"transparent that"})P("the"∣"transparent that") 
+
+This massively reduces complexity and data requirements.
+

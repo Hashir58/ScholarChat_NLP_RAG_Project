@@ -1,0 +1,57 @@
+What is Information Retrieval (IR)?
+
+Information Retrieval means finding useful information from a large collection of resources like websites, documents, images, or sounds.
+
+Imagine you want to find answers to a question or get documents related to a topic. IR systems help you do that by searching through all available data and showing you the most relevant results.
+
+
+
+Two ways to think about IR:
+
+Definition 1:
+It’s the process of getting information (like documents or websites) that match what you’re looking for from a big collection.
+
+Definition 2:
+It’s the science of searching through different types of data — like documents, images, or even sounds — to find exactly what you need.
+
+
+
+Typical IR Task:
+
+You have a collection of documents (called a corpus).
+
+You enter a search query (a few words or a question).
+
+The IR system looks through the documents and gives you a list of documents ranked by how relevant they are to your query.
+
+
+
+How Does an IR System Work? (Simple Overview)
+
+You type your query into the system.
+
+The system looks through its collection of documents.
+
+It ranks these documents by how well they match your query.
+
+It shows you the ranked list of documents.
+
+
+
+Detailed IR Process in Simple Terms:
+
+Documents collection:
+The system starts with many documents — articles, webpages, reports, etc.
+
+Indexing:
+The system organizes and summarizes these documents in a way that makes searching faster. This is like making a "map" or "catalog" of what’s inside each document.
+
+Query processing:
+When you enter your search words, the system processes your query to understand what you want.
+
+Searching:
+The system compares your processed query to the index, trying to find documents that match best. It uses special models (like comparing words as vectors or calculating probabilities) to decide which documents are most relevant.
+
+Ranking:
+Finally, it orders the documents from most to least relevant and shows you the list.
+

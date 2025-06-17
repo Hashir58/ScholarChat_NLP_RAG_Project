@@ -1,0 +1,321 @@
+(TREC) -- Text Retrieval Conference
+
+TREC is a yearly information retrieval competition.
+
+Began in 1992, with the Question Answering (QA) track introduced in 1999.
+
+Its purpose is to encourage research into systems that return direct answers rather than just lists of documents.
+
+Questions (Q's) are typically "open domain" (can be about any topic) and "closed class" (expect a specific type of answer, like a name, date, or number).
+
+Answers (A's) are constrained to be less than 50 characters and usually entities or noun phrases.
+
+(TREC) -- Text Retrieval Conference (Continued)
+
+TREC QA Track in 2001:
+
+Included 500 questions.
+
+Some answers were "nil" (no answer found) or presented large difficulty.
+
+Many questions were "definition questions" (e.g., "What is X?").
+
+QA list tasks (Example):
+
+"Name 4 cities that have a 'Shubert' theater." (Requires extracting multiple entities of a specific type).
+
+QA context tasks (Examples):
+
+"How many species of spiders are there?"
+
+"How many are poisonous to humans?"
+
+"What percentage of spider bites in the US are fatal?"
+These questions require extracting specific numerical or factual information, often requiring aggregation or calculation from text.
+
+Example Questions and Results
+
+Example Questions and the systems that would attempt to answer them:
+
+Question: "What river in the US is known as the Big Muddy?"
+
+Systems: AskJeeves, AnswerBus, Google
+
+Question: "What person’s head is on a dime?"
+
+Systems: AskJeeves, AnswerBus, AltaVista
+
+Question: "Show some paintings by Claude Monet"
+
+System: START
+
+Looking Ahead
+
+The field of Question Answering shows:
+
+Strong User Demand: Users increasingly expect direct answers.
+
+Enormous Interest in the Problem: Significant research and development focus.
+
+Successes: Continuous advancements in QA system capabilities.
+
+Sources
+
+AskMSR: Question Answering Using the Worldwide Web
+
+Authors: Michele Banko, Eric Brill, Susan Dumais, Jimmy Lin
+
+Paper URL: http://www.ai.mit.edu/people/jimmylin/publications/Banko-etal-AAAI02.pdf
+
+Published in: Proceedings of 2002 AAAI SYMPOSIUM on Mining Answers from Text and Knowledge Bases, March 2002
+
+Web Question Answering: Is More Always Better?
+
+Authors: Susan Dumais, Michele Banko, Eric Brill, Jimmy Lin, Andrew Ng
+
+Paper URL: http://research.microsoft.com/~sdumais/SIGIR2002-QA-Submit-Conf.pdf
+
+AnswerBus
+
+Website: www.answerbus.com
+
+Related resources:
+
+http://misshoover.si.umich.edu/~zzheng/qa-new/
+
+http://www2002.org/CDROM/poster/203/
+
+AskJeeves
+
+About page: http://www.ask.co.uk/docs/about/what_is.asp
+
+Webclopedia
+
+TREC paper: http://trec.nist.gov/pubs/trec9/papers/webclopedia.pdf
+
+Project page: http://www.isi.edu/natural-language/projects/webclopedia/
+
+START
+
+Project page: http://www.ai.mit.edu/projects/infolab/ailab.html
+
+Text Retrieval Conference (TREC)
+
+Introduction (Revisited)
+
+Natural Language Processing (NLP)
+
+Field of Computer Science.
+
+Includes tasks like Sentiment Analysis, Word prediction, Translation, and Question Answering.
+
+Question Answering (QA)
+
+An important sub-domain of NLP.
+
+Approaches used to develop QA Systems:
+
+Conventional (Machine learning & IR)
+
+Deep learning
+
+Answer Selection (a major component of QA systems) is a focus of research.
+
+Types of QA Systems
+
+Conceptual Diagram Explanation (Categories of QA Systems):
+The diagram categorizes QA systems into three main types based on their domain, approach, and underlying mechanisms:
+
+Domain-Based Categorization:
+
+Closed Domain: QA systems designed to answer questions within a very specific, limited topic area (e.g., medical QA system).
+
+Open Domain: QA systems that can answer questions about a wide range of topics, often leveraging large text corpora like the web.
+
+Linguistic/Pattern-Based Approaches:
+
+Linguistic: Systems heavily relying on linguistic rules, parsing, and semantic analysis.
+
+Statistical: Systems employing statistical models derived from large datasets.
+
+Pattern Matching: Systems that identify answers by matching predefined patterns in text.
+
+Retrieval and Reasoning-Based Approaches:
+
+IR/IE based QA System: Systems that primarily use Information Retrieval (IR) to find relevant documents and Information Extraction (IE) to extract answers from them.
+
+Restricted domain QA system: Similar to closed domain, emphasizing a narrow focus for better accuracy.
+
+Rule based QA system: Systems that use a set of predefined rules and ontologies to derive answers.
+
+Categories of QA systems
+
+QA Systems based on NLP and IR:
+
+These systems utilize syntax processing, Named Entity Tagging, and Information Retrieval (IR) techniques.
+
+They often use free text documents from open-domain sources as their data resource.
+
+They typically deal with "wh-type" questions (who, what, when, where, why) and provide query responses in the form of extracted snippets from documents.
+
+QA Systems Reasoning with NLP:
+
+These systems employ Semantic Analysis or high-level reasoning techniques.
+
+They perform tasks on Knowledge Base data resources and are often domain-oriented.
+
+They are not restricted to "wh-type" questions and can provide synthesized responses that go beyond simple text extraction.
+
+QAS Architecture
+
+Conceptual Diagram Explanation (QAS Architecture):
+The diagram illustrates a common architecture for a Question Answering System (QAS), highlighting its main components and their sub-components. The architecture generally involves a pipeline of processing stages:
+
+High-Level Components (Left and Right Bubbles):
+
+Question Processing (1): Handles the user's input question.
+
+Document Processing (2): Manages the collection of documents (corpus) from which answers are sought.
+
+Answer Processing (3): Generates and refines the final answers.
+
+Detailed Sub-Components (Bottom Panel):
+
+Question Processing / Analysis: This phase analyzes the input query to understand its intent and identify key elements.
+
+Question Analysis: Initial understanding of the question.
+
+Question Classification: Categorizing the question type (e.g., factoid, list).
+
+Question Reformulation: Rephrasing the question for better retrieval.
+
+Document Processing / Information Retrieval: This phase finds relevant information from the corpus.
+
+Information Retrieval: Retrieving documents or passages relevant to the processed question.
+
+Paragraph Filtering: Selecting paragraphs or smaller units likely to contain answers.
+
+Paragraph Ordering: Ranking the selected paragraphs by relevance.
+
+Answer Processing / Answer Identification: This final phase extracts and validates the answer.
+
+Answer Identification: Pinpointing specific candidate answers within the retrieved text.
+
+Answer Extraction: Extracting the actual answer text.
+
+Answer Validation: Verifying the correctness and quality of the extracted answer.
+
+This layered architecture shows a typical flow from understanding a user's question to delivering a verified answer, emphasizing that QA is a complex task involving multiple NLP and IR sub-tasks.
+
+Question Types
+
+Question types commonly handled by QA systems:
+
+Factoid:
+
+Simple and fact-based.
+
+Generally starts with "Wh-" words (Who, What, When, Where).
+
+List:
+
+Requires the answer to be in a list of facts or entities.
+
+Casual:
+
+Requires explanations, reasons, or elaborations about an entity/event.
+
+Typically "How" or "Why" type questions.
+
+Confirmation:
+
+Requires answers in the form of "yes" or "no".
+
+Systems need inference mechanisms, world knowledge, and common sense reasoning to reply.
+
+Hypothetical:
+
+Related to any hypothetical event.
+
+Generally begins with "what would happen if".
+
+There are no specific correct answers for these questions, making them challenging for QA.
+
+Answer Selection
+
+Answer selection is one of the important tasks of Question Answering.
+
+It deals with the selection of the correct and suitable answer from a set of candidate answers retrieved based upon a user query in natural language.
+
+Research work has been done in Answer selection using:
+
+Conventional Machine learning & IR methods
+
+Deep learning methods
+
+Conventional Approaches for Answer Selection
+
+Conventional approaches for answer selection use linguistic tools, feature engineering, and external resources. These include:
+
+Tree-edit distance: Measures the similarity between linguistic parse trees.
+
+Support Vector Machine (SVM): A supervised machine learning model used for classification.
+
+Lexical semantic features calculation using WordNet: Leveraging a lexical database to understand word meanings and relationships.
+
+Matching between the words using their semantic relevance: Comparing words based on their meaning rather than just exact matches.
+
+Deep Learning
+
+Deep Learning is a sub-field of Machine Learning that mimics the human brain's structure and function.
+
+Neural Networks are a core component of deep learning. Common types used in NLP for tasks like answer selection include:
+
+Recurrent Neural Network (RNN):
+
+Long-Short Term Memory (LSTM)
+
+Bidirectional LSTM (BiLSTM)
+
+Convolutional Neural Network (CNN):
+
+Attention-based CNN
+
+Literature Review (Deep Learning Approaches for Answer Selection)
+
+Conceptual Table Explanation (Literature Review - Page 26):
+This table summarizes several research papers on applying Deep Learning (DL) approaches to Answer Selection, providing an overview of the author(s), title, DL approach used, dataset, question types addressed, and the reported results (often in metrics like MAP, MRR, or Precision).
+
+Feng et al. (2015): Applied CNN to InsuranceQA dataset for Non-factoid answer selection, achieving Precision 62.8.
+
+Wang et al. (2015): Used Stacked BiLSTM on TREC QA dataset for Factoid questions, reporting MAP 0.7134 and MRR 0.7913.
+
+Lei et al. (2014): Employed CNN on TREC QA for Factoid answer selection, with results MAP 0.7113 and MRR 0.7846.
+
+Tan et al. (2015): Utilized BiLSTM then CNN (with Attention) on TREC QA & InsuranceQA for Non-factoid questions, yielding MAP 72.79 and MRR 82.40.
+
+Wang et al. (2016): Developed Inner Attention based Recurrent Neural Networks (RNN), tested on WikiQA and TREC QA, with results MAP 0.7341/0.7369 and MRR 0.7418/0.8208.
+
+Nie et al. (2017): Implemented an Attention-based encoder-decoder model (BiLSTM) on TREC QA for Factoid questions, reporting MAP 0.7261 and MRR 0.8018.
+
+This table demonstrates the evolution and effectiveness of different neural network architectures for improving answer selection in QA systems across various datasets and question complexities.
+
+Literature Review (Continued)
+
+Conceptual Table Explanation (Literature Review - Page 27):
+This table continues the summary of deep learning literature in Question Answering, focusing on more recent work and hybrid approaches.
+
+Shao et al. (2019): Explored Transformer-Based Neural Networks (BiLSTM) for answer selection in question answering, using WikiQA data. Reported MAP 0.6941 and MRR 0.7077.
+
+Wang et al. (2017): Proposed a Hybrid Framework for Text Modeling with Convolutional RNN (Conv-RNN), evaluated on WikiQA and InsuranceQA. Achieved Accuracy 71.7, MAP 0.7427, and MRR 0.7504.
+
+T. Shao et al. (2019): Presented Collaborative Learning for Answer Selection using CNN and BiLSTM in parallel on Insurance QA. Reported MAP 0.7219 and MRR 0.6756.
+
+The section also includes a reference to a paper on putting QA systems into practice:
+
+B. Kratzwald and S. Feuerriegel, "Putting Question-Answering Systems into Practice: Transfer Learning for Efficient Domain Customization," ACM Trans. Manage. Inf. Syst., vol. 9, pp. 15:1-15:20, Feb. 2019. This highlights the practical challenges and solutions, such as transfer learning for domain customization, in deploying QA systems.
+
+
+
+
+

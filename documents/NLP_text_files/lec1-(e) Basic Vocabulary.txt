@@ -1,0 +1,189 @@
+Basic Vocabulary in NLP
+
+Before building any Natural Language Processing system, it's important to understand some basic concepts and terms. These terms help us describe and process human language in a structured way.
+
+
+
+Example to Begin With:
+
+Let's take a sentence:
+“The cats are chasing mice.”
+
+From this, we get:
+
+Words or Tokens: "The", "cats", "are", "chasing", "mice"
+These are the smallest units of meaning we can extract.
+
+Lexicon
+
+A lexicon is like a smart dictionary for a language. It contains not just words and their meanings, but also:
+
+Their grammatical properties (noun, verb, etc.)
+
+Semantic relationships (synonyms, opposites)
+
+Multi-word expressions and idioms (e.g., "kick the bucket")
+
+So, a lexicon isn't just a word list — it's a full guide to how those words behave in a language.
+
+ Vocabulary
+
+Vocabulary refers to the complete set of unique words found in a collection of documents or a dataset.
+It does not include word meanings or grammar — just the words themselves.
+
+For example:
+If your dataset includes:
+
+“The cat sleeps.”
+
+“The dog sleeps.”
+
+Then your vocabulary is:
+[“the”, “cat”, “sleeps”, “dog”]
+
+Each word is counted only once, even if it appears multiple times.
+
+
+
+Tokenization
+
+Tokenization is the process of splitting text into small parts called tokens.
+Tokens are usually words, but they can also be punctuation marks or subwords.
+
+Example:
+Input: “Cats are running.”
+After tokenization: [“Cats”, “are”, “running”, “.”]
+
+This is often the first step in most NLP tasks. Special tools called tokenizers do this job.
+
+Stemming
+
+Stemming is the process of cutting off prefixes or suffixes from words to get to their root form.
+It doesn't always produce a real word — just a basic stem.
+
+Examples:
+
+“Universal” → “Univers”
+
+“University” → “Univers”
+
+“Player” → “Play”
+
+This is helpful when you want to treat similar forms of a word as one item.
+However, stemming is rough — it might cut too much (over-stemming) or too little (under-stemming).
+
+Popular stemming algorithms include:
+
+Porter Stemmer
+
+Lovins Stemmer
+
+Dawson Stemmer
+
+
+
+Lemmatization
+
+Lemmatization is similar to stemming but smarter.
+It uses grammar rules and a dictionary to reduce a word to its base or dictionary form, called a lemma.
+
+Example:
+Original sentence: “The cats are chasing mice.”
+After lemmatization: “The cat be chase mouse.”
+
+Unlike stemming, lemmatization gives real words, and it understands context.
+It knows the difference between “better” and “good” or “ran” and “run”.
+
+Tools called lemmatizers perform this task. They rely on linguistics and lexical databases like WordNet.
+
+ Difference: Stemming vs Lemmatization
+
+Stemming is fast and simple but may create fake or broken words.
+
+Lemmatization is slower but gives correct and meaningful words.
+
+Stemming uses fixed rules.
+
+Lemmatization uses grammar, context, and dictionary lookups.
+
+
+
+Corpus (Plural: Corpora)
+
+A corpus is a large collection of texts, often used for training or testing NLP models.
+It can include:
+
+News articles
+
+Books
+
+Social media posts
+
+Legal documents
+
+Transcripts of spoken conversations
+
+Examples of known corpora:
+
+Brown Corpus
+
+Dawn News Corpus
+
+BBC News Articles Corpus
+
+You can find datasets on:
+
+Google Dataset Search
+
+Kaggle
+
+
+
+Stop Words
+
+Stop words are very common words in a language that don’t add much meaning by themselves.
+Examples in English include: is, am, are, the, a, an, in, on, at, to, etc.
+
+These are often removed during text processing to focus on the more meaningful words.
+
+
+
+Example: Python Code to Get Stop Words Using spaCy
+
+python
+
+CopyEdit
+
+import spacy
+
+spacy.cli.download("en_core_web_sm")
+
+nlp = spacy.load("en_core_web_sm")
+
+stopwords = nlp.Defaults.stop_words
+
+print(stopwords)
+
+
+
+Text Normalization
+
+Text normalization means converting text into a standard, clean, and consistent format.
+It includes many small steps like:
+
+Lowercasing (converting all text to lowercase)
+
+Tokenization (splitting into words)
+
+Removing stop words
+
+Stemming and lemmatization
+
+Correcting spelling
+
+Handling numbers, dates, and symbols
+
+Expanding abbreviations (e.g., “don’t” → “do not”)
+
+All these steps make the text easier for a machine to read and understand.
+

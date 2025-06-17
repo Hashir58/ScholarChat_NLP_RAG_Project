@@ -1,0 +1,19 @@
+Techniques Used in Dynamo 
+Consistent Hashing: 
+Distributes data (keys) evenly across all nodes, helping maintain balance and avoid overload. 
+Version Vectors: 
+Solves data conflicts by tracking different versions of the same data on multiple nodes. Helps in 
+combining conflicting data versions into one consistent version. 
+Merkle Trees: 
+Used for data synchronization between nodes after a failure. They break data into parts and use 
+checksums to identify mismatches quickly, allowing efficient syncing. 
+Sloppy Quorums: 
+Improves system availability during temporary failures. Instead of strict quorum rules, writes/reads are 
+accepted by available nodes. Later, data is synchronized to maintain consistency. 
+Gossip Protocol: 
+Nodes share system information (like which nodes are active) with a few others, and that information 
+spreads like gossip. This avoids the need for a central controller and helps the system stay updated on 
+membership and failures. 
+Each of these techniques plays a vital role in maintaining Dynamo’s key goals: high availability, 
+scalability, and fault tolerance in a distributed setting. 
+ 

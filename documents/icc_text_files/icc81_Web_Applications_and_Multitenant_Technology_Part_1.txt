@@ -1,0 +1,30 @@
+Web Applications and Multitenant Technology (Part 1) 
+Web Applications 
+(Image Description: "Figure 5.10 The three basic architectural tiers of Web applications." The diagram 
+illustrates a three-tier architecture: 
+ Top: "presentation layer" (lightest orange) 
+ Middle: "application layer" (medium orange) 
+ Bottom: "data layer" (darker orange) 
+A horizontal line separates the area above the "application layer" from the "application layer" 
+itself. On the right, components aligned with layers: 
+ "Web client" on client side (presentation layer) 
+ "Web/application server" on server side (application layer) 
+ "Data storage server" on server side (data layer) 
+This diagram visually represents the logical separation of concerns in typical web application 
+architecture, from user interface (presentation) to business logic (application) to data 
+management (data).) 
+Multitenant Technology 
+(Image Description: The background of the slide is black, featuring a dynamic, abstract design of white 
+and blue light streaks flowing across the screen, possibly representing fiber optics, data streams, or high-
+speed network activity. The title "Multitenant Technology" is in white text overlaid on this background.) 
+Multitenancy allows multiple users (tenants) to access the same application logic simultaneously. Each 
+tenant has its own view of the application that it uses, administers, and customizes as a dedicated 
+instance of the software. Multitenant applications ensure that tenants do not have access to data and 
+configuration information that is not their own. 
+Tenants can individually customize features such as: 
+ User Interface: Tenants can define a specialized “look and feel” for their application interface. 
+ Business Process: Customize rules, logic, and workflows of business processes implemented in 
+the application. 
+ Data Model: Extend the data schema to include, exclude, or rename fields. 
+ Access Control: Independently control access rights for users and groups. 
+ 

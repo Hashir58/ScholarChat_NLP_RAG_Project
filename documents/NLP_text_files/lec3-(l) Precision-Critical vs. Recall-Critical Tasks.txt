@@ -1,0 +1,18 @@
+Precision-Critical vs. Recall-Critical Tasks
+
+Precision-critical tasks:
+
+Time is limited; you want only a few, very accurate results.
+
+It's okay to miss some relevant items as long as the returned ones are very reliable.
+
+Example: Web search for factual info where users want quick, correct answers.
+
+Recall-critical tasks:
+
+Time is less important; missing relevant items is costly.
+
+It’s better to find all relevant items, even if you get some irrelevant ones.
+
+Example: Patent search, where missing a relevant patent could have serious consequences.
+
