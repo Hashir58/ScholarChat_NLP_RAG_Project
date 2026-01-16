@@ -33,5 +33,34 @@ This project implements a Retrieval-Augmented Generation (RAG) pipeline designed
   - At runtime, embeds user queries using `intfloat/e5-base`.
   - Performs rapid similarity search in the FAISS index to retrieve the top `K` (e.g., 4) most relevant document chunks.
 - **Context Assembly & LLM Generation:**
+
   - Compiles retrieved chunks as context for the `LLaMA 3.2-1B` LLM.
   - Generates comprehensive, accurate, and detailed responses based _only_ on the provided context.
+
+  ***
+
+  # Web Chatbot (HTML/CSS + minimal JS)
+
+  This repo includes a lightweight web UI + Python API server for the 568-document RAG pipeline.
+
+  ## Run locally
+
+  1. Install dependencies:
+
+  - `pip install -r requirements.txt`
+
+  2. Start the API server (serves the UI too):
+
+  - `uvicorn server.app:app --reload --host 127.0.0.1 --port 8000`
+
+  Or (simpler):
+
+  - `python -m server.app`
+
+  3. Open:
+
+  - `http://127.0.0.1:8000/`
+
+  Health check:
+
+  - `http://127.0.0.1:8000/health`

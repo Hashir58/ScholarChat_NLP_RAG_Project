@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ScholarChat — RAG Chatbot</title>
+    <link rel="stylesheet" href="http://127.0.0.1:8000/styles.css" />
+</head>
+
+<body>
+    <div class="app">
+        <header class="topbar">
+            <div class="brand">
+                <div class="logo" aria-hidden="true">SC</div>
+                <div class="brand-text">
+                    <h1>ScholarChat</h1>
+                    <p class="subtitle">RAG chatbot over your course materials</p>
+                </div>
+            </div>
+
+            <div class="status" role="status" aria-live="polite">
+                <span class="dot" id="statusDot" aria-hidden="true"></span>
+                <span id="statusText">Connecting…</span>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="chat" aria-label="Chat transcript">
+                <div class="chat-inner" id="chat"></div>
+            </section>
+
+            <aside class="side" aria-label="Project details">
+                <div class="panel lanel">
+                    <h2>About</h2>
+                    <p>
+                        ScholarChat is a multi-domain academic RAG chatbot built over your course materials (NLP, Cloud
+                        Computing, Pakistan Studies, and Sealed Nectar). It retrieves the most relevant documents using
+                        FAISS + E5 embeddings, then generates a context-grounded answer with citations.
+                    </p>
+                    <!-- <ul class="meta">
+                        <li><span>Mode</span><strong id="modeText">Loading</strong></li>
+                        <li><span>Top‑K</span><strong id="topKText">3</strong></li>
+                        <li><span>Threshold</span><strong id="thrText">0.75</strong></li>
+                    </ul> -->
+                </div>
+
+                <div class="panel tanel">
+                    <h2>Tips</h2>
+                    <ul class="tips">
+                        <li>Ask specific questions for better retrieval.</li>
+                        <li>Check “Sources” under answers for citations.</li>
+                        <li>Long answers may take time—keep this tab open.</li>
+                    </ul>
+                </div>
+            </aside>
+        </main>
+
+        <footer class="composer" aria-label="Message composer">
+            <form id="chatForm" class="composer-inner">
+                <label class="sr-only" for="message">Your message</label>
+                <textarea id="message" name="message" rows="1" placeholder="Ask anything about your course materials…"
+                    autocomplete="off" required></textarea>
+
+                <div class="actions">
+                    <button type="button" class="btn ghost" id="clearBtn">Clear</button>
+                    <button type="submit" class="btn" id="sendBtn">Send</button>
+                </div>
+            </form>
+        </footer>
+    </div>
+
+    <script src="http://127.0.0.1:8000/app.js" defer></script>
+</body>
+
+</html>
